@@ -5572,18 +5572,31 @@
     },
     {
       "id": "45e270bf-b301-4641-b6bf-2f855d2a8513",
-      "title": "Mall Rats",
+      "title": "Mallrats",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 2293,
+      "year": 1995,
+      "synopsis": "Both dumped by their girlfriends, two best friends seek refuge in the local mall. Eventually, they decide to try and win back their significant others and take care of their respective nemeses.",
+      "poster_path": "/2ip0sGIMPN0XEN6q3lQIoaNI6tP.jpg",
+      "cast": [
+        "Jason Lee",
+        "Jeremy London",
+        "Shannen Doherty",
+        "Claire Forlani",
+        "Ben Affleck",
+        "Joey Lauren Adams",
+        "Renée Humphrey",
+        "Kevin Smith"
+      ],
+      "directors": [
+        "Kevin Smith"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "fbb16544-1f99-439b-8c8d-e459cf96e1cb",
