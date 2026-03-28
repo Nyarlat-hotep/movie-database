@@ -13167,6 +13167,35 @@
       "id": "e429e626-7b7f-496c-a186-c956ad400111",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "The Fast and the Furious: Tokyo Drift",
+      "year": 2006,
+      "synopsis": "In order to avoid a jail sentence, Sean Boswell heads to Tokyo to live with his military father. In a low-rent section of the city, Sean gets caught up in the underground world of drift racing",
+      "poster_path": "/46xqGOwHbh2TH2avWSw3SMXph4E.jpg",
+      "cast": [
+        "Lucas Black",
+        "Nathalie Kelley",
+        "Sung Kang",
+        "Shad Moss",
+        "Brian Tee",
+        "Leonardo Nam",
+        "Brian Goodman",
+        "Zachery Ty Bryan"
+      ],
+      "directors": [
+        "Justin Lin"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 9615,
+      "id": "88182c6a-03c4-4887-8692-85f3e9a4e7a2",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
