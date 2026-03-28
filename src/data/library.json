@@ -2710,18 +2710,31 @@
     },
     {
       "id": "e0b1e115-2c34-4cca-b556-7bda8987fb21",
-      "title": "Euro Trip",
+      "title": "EuroTrip",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 393273,
-      "year": 2016,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 9352,
+      "year": 2004,
+      "synopsis": "When Scott learns that his longtime cyber-buddy from Berlin is a gorgeous young woman, he and his friends embark on a trip across Europe.",
+      "poster_path": "/iLdO4PwbZCCQSa9rchZMwuJm9xe.jpg",
+      "cast": [
+        "Scott Mechlowicz",
+        "Jacob Pitts",
+        "Michelle Trachtenberg",
+        "Travis Wester",
+        "Vinnie Jones",
+        "Lucy Lawless",
+        "Jessica Boehrs",
+        "Patrick Malahide"
+      ],
+      "directors": [
+        "Jeff Schaffer"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "9ebd8dcc-0758-4d49-949c-ab93b238d4f3",
