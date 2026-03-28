@@ -9599,29 +9599,31 @@
     },
     {
       "id": "c022c712-77a5-4f49-8324-b855a6ee03f3",
-      "title": "The Puppet Master",
+      "title": "Puppetmaster",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 25557,
-      "year": 1994,
-      "synopsis": "The Midwest USA is invaded by stingray-shaped alien slugs that ride on people's backs and control their minds in order to spread their dominion. Government agency reps Sam Givens, Andrew Nivens, and Mary Sefton must stop the aliens.",
-      "poster_path": "/8xJGom6fUqmVhJ7EWprZEHygUis.jpg",
+      "tmdb_id": 26953,
+      "year": 1989,
+      "synopsis": "After being contacted by their mysterious former colleague, four psychics arrive at a secluded hotel where they are stalked by a group of murderous puppets.",
+      "poster_path": "/6bcRspKbsM21HqLcxIBANbts3X7.jpg",
       "cast": [
-        "Donald Sutherland",
-        "Eric Thal",
-        "Julie Warner",
-        "Keith David",
-        "Will Patton",
-        "Richard Belzer",
-        "Tom Mason",
-        "Yaphet Kotto"
+        "Paul Le Mat",
+        "William Hickey",
+        "Irene Miracle",
+        "Jimmie F. Skaggs",
+        "Robin Frates",
+        "Matt Roe",
+        "Kathryn O'Reilly",
+        "Mews Small"
       ],
       "directors": [
-        "Stuart Orme"
+        "David Schmoeller"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "e0971aee-1574-4613-833e-241679f520f5",
