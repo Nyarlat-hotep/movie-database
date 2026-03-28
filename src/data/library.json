@@ -13589,6 +13589,35 @@
       "id": "7c67da0c-3695-4c2e-ac1e-e4ecf881bbb2",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "Star Wars: Episode II - Attack of the Clones",
+      "year": 2002,
+      "synopsis": "Following an assassination attempt on Senator Padmé Amidala, Jedi Knights Anakin Skywalker and Obi-Wan Kenobi investigate a mysterious plot into the heart of the Separatist movement and the beginning of the Clone Wars.",
+      "poster_path": "/oZNPzxqM2s5DyVWab09NTQScDQt.jpg",
+      "cast": [
+        "Hayden Christensen",
+        "Ewan McGregor",
+        "Natalie Portman",
+        "Christopher Lee",
+        "Samuel L. Jackson",
+        "Frank Oz",
+        "Ian McDiarmid",
+        "Pernilla August"
+      ],
+      "directors": [
+        "George Lucas"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 1894,
+      "id": "c859d6ea-aab5-4817-b2ff-836719c5a537",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
