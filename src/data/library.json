@@ -13856,19 +13856,30 @@
     },
     {
       "id": "395ea808-2194-40dd-9b7b-7c88c36cb357",
-      "title": "Johny Quest",
+      "title": "Jonny Quest",
       "seasons_owned": "",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "creators": [],
-      "genres": []
+      "tmdb_id": 962,
+      "year": 1964,
+      "synopsis": "The adventures of the 10-year-old son of a government scientist.",
+      "poster_path": "/r2KUXlkfGdUz8wKir0gznnXymsh.jpg",
+      "cast": [
+        "Tim Matheson",
+        "Mike Road",
+        "Danny Bravo",
+        "Don Messick"
+      ],
+      "creators": [
+        "Doug Wildey",
+        "Joseph Barbera",
+        "William Hanna"
+      ],
+      "genres": [],
+      "_type": "show",
+      "directors": []
     },
     {
       "id": "fcb256c1-0468-4b66-8946-f790cf8d8ee3",
