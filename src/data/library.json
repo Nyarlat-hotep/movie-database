@@ -3490,18 +3490,31 @@
     },
     {
       "id": "34c073ca-a735-42d2-a573-566adc4c6d69",
-      "title": "Girl Interupted",
+      "title": "Girl, Interrupted",
       "formats": [
         "bluray"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 3558,
+      "year": 1999,
+      "synopsis": "Set in the changing world of the late 1960s, Susanna Kaysen's prescribed \"short rest\" from a psychiatrist she had met only once becomes a strange, unknown journey into Alice's Wonderland, where she struggles with the thin line between normal and crazy. Susanna soon realizes how hard it is to get out once she has been committed, and she ultimately has to choose between the world of people who belong inside or the difficult world of reality outside.",
+      "poster_path": "/dOBdatHIVppvmRFw2z7bf9VKJr9.jpg",
+      "cast": [
+        "Winona Ryder",
+        "Angelina Jolie",
+        "Clea DuVall",
+        "Brittany Murphy",
+        "Elisabeth Moss",
+        "Jared Leto",
+        "Jeffrey Tambor",
+        "Vanessa Redgrave"
+      ],
+      "directors": [
+        "James Mangold"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "913ff7f7-80a9-4f3b-a8c5-4bf772948916",
