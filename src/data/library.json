@@ -2893,18 +2893,31 @@
     },
     {
       "id": "df56fc88-59f7-4e7d-bf0a-770fa1a6d002",
-      "title": "Fast and Furious 1-3",
+      "title": "The Fast and the Furious",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 9799,
+      "year": 2001,
+      "synopsis": "Dominic Toretto is a Los Angeles street racer suspected of masterminding a series of big-rig hijackings. When undercover cop Brian O'Conner infiltrates Toretto's iconoclastic crew, he falls for Toretto's sister and must choose a side: the gang or the LAPD.",
+      "poster_path": "/gqY0ITBgT7A82poL9jv851qdnIb.jpg",
+      "cast": [
+        "Paul Walker",
+        "Vin Diesel",
+        "Michelle Rodriguez",
+        "Jordana Brewster",
+        "Rick Yune",
+        "Chad Lindberg",
+        "Johnny Strong",
+        "Matt Schulze"
+      ],
+      "directors": [
+        "Rob Cohen"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "5ef6370c-7c46-4841-bd9f-0c0028f2d351",
