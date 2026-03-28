@@ -13760,19 +13760,34 @@
     },
     {
       "id": "b2396477-008f-4655-bba5-a7a2bd050da2",
-      "title": "Jackass box set",
+      "title": "Jackass",
       "seasons_owned": "",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "creators": [],
-      "genres": []
+      "tmdb_id": 1795,
+      "year": 2000,
+      "synopsis": "Join sadomasochistic superheroes Johnny Knoxville, Bam Margera, and the rest of the Jackass crew as they terrorize your TV screens and everyone that gets in their way (especially themselves) with their own sick and twisted interpretation of physical entertainment.  Their brand of pranks, goofball antics, and unabashed brutal comedy are sure to bring new meaning to the phrase \"Don't Try This At Home!\"",
+      "poster_path": "/q8O8ElquAya9SugLNH6N5TWNE4h.jpg",
+      "cast": [
+        "Johnny Knoxville",
+        "Bam Margera",
+        "Chris Pontius",
+        "Dave England",
+        "Steve-O",
+        "Ehren McGhehey",
+        "Jason 'Wee Man' Acuña",
+        "Ryan Dunn"
+      ],
+      "creators": [
+        "Jeff Tremaine",
+        "Johnny Knoxville",
+        "Spike Jonze"
+      ],
+      "genres": [],
+      "_type": "show",
+      "directors": []
     },
     {
       "id": "5e769eb8-6bda-45da-914e-25c9c6adae55",
