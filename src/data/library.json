@@ -10221,29 +10221,31 @@
     },
     {
       "id": "d03f3712-6b21-4929-88f4-88aa84373a8b",
-      "title": "Trick or Treat",
+      "title": "Trick 'r Treat",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 25438,
-      "year": 1986,
-      "synopsis": "Eddie Weinbauer, a metalhead teen who is bullied at school, looks to his heavy metal superstar idol, Sammi Curr, for guidance. When Curr is killed in a hotel fire, Eddie becomes the recipient of the only copy of Curr's unreleased album, which, when played backwards, brings Sammi back to life. As Halloween approaches, Eddie begins to realize that this isn't only rock 'n roll...it's life and death.",
-      "poster_path": "/ycCrGbfuOEcKSCwxQeKA1VEPs7O.jpg",
+      "tmdb_id": 23202,
+      "year": 2007,
+      "synopsis": "Four interwoven stories that occur on Halloween: an everyday high school principal has a secret life as a serial killer; a college virgin might have just met the one guy for her; a group of teenagers pull a mean prank, and a bitter old recluse receives an uninvited guest.",
+      "poster_path": "/w0nmol4g7n6MFfhfphV7GzHHYjB.jpg",
       "cast": [
-        "Marc Price",
-        "Tony Fields",
-        "Lisa Orgolini",
-        "Doug Savant",
-        "Elaine Joyce",
-        "Glen Morgan",
-        "Gene Simmons",
-        "Ozzy Osbourne"
+        "Brian Cox",
+        "Quinn Lord",
+        "Anna Paquin",
+        "Dylan Baker",
+        "Leslie Bibb",
+        "Tahmoh Penikett",
+        "Rochelle Aytes",
+        "Britt McKillip"
       ],
       "directors": [
-        "Charles Martin Smith"
+        "Michael Dougherty"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "879528bf-142d-4851-a632-d6ec13babdd1",
