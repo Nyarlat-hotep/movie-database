@@ -13024,6 +13024,35 @@
       "id": "2872c03f-b93e-4f66-86ab-49883e0231d6",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "Critters 3",
+      "year": 1991,
+      "synopsis": "As fanged, furious furballs viciously invade an L.A. apartment building and sink their teeth into the low-rent tenants, Josh leads the battle to beat back the conniving critters and save the planet.",
+      "poster_path": "/frjklbq23pRgBjhekEq6drQkrZm.jpg",
+      "cast": [
+        "Aimee Brooks",
+        "John Calvin",
+        "Katherine Cortez",
+        "Leonardo DiCaprio",
+        "Geoffrey Blake",
+        "Diana Bellamy",
+        "William Dennis Hunt",
+        "Frances Bay"
+      ],
+      "directors": [
+        "Kristine Peterson"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 12702,
+      "id": "b50419ea-59ab-412e-9c6c-1b5d42889658",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
