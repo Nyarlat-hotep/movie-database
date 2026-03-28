@@ -1591,26 +1591,32 @@
     },
     {
       "id": "248d0c4f-ebbe-49c6-8982-ef4a5d211557",
-      "title": "Cinderella 2",
+      "title": "Cinderella II: Dreams Come True",
       "formats": [
         "dvd",
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 1126268,
-      "year": 2021,
-      "synopsis": "Hinako, a sober glasses OL, is cheated on by her boyfriend Daiya, who has been living together for 3 years and is about to get married, and the moment she nails a straw doll at the edge-cutting shrine with anger, lightning strikes directly! When you wake up, there is a grim reaper in the form of a clown. From him, Hinako is given the ability to transform into an unparalleled beauty only during the night, and while drowning in the pleasure of going back and forth like revenge for her life, which she had previously had the motto of \"sober and calm\", she meets Ryota, a prince who thinks \"This time he is a man of destiny!\" But is such a double life really, really, okay!?",
-      "poster_path": "/hQZx53cvxyTzIQkjrzraYCVDjJu.jpg",
+      "tmdb_id": 14128,
+      "year": 2002,
+      "synopsis": "As a newly crowned princess, Cinderella quickly learns that life at the Palace - and her royal responsibilities - are more challenging than she had imagined. In three heartwarming tales, Cinderella calls on her animal friends and her Fairy Godmother to help as she brings her own grace and charm to her regal role and discovers that being true to yourself is the best way to make your dreams come true.",
+      "poster_path": "/kEDbtKhZsqPo7ypCzoz3fkq73Pc.jpg",
       "cast": [
-        "Nozomi Ishihara",
-        "Sasa Handa",
-        "Sousuke Yamamoto",
-        "Kêsuke"
+        "Jennifer Hale",
+        "Rob Paulsen",
+        "Corey Burton",
+        "Andre Stojka",
+        "Russi Taylor",
+        "Susanne Blakeslee",
+        "Tress MacNeille",
+        "Holland Taylor"
       ],
       "directors": [
-        "Goshi Kawano"
+        "John Kafka"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "157ff054-15a6-44f0-bd9c-3229e319a53d",
