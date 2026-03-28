@@ -7509,18 +7509,31 @@
     },
     {
       "id": "447fb2f6-5f52-481f-b233-abb4e6ea6ea0",
-      "title": "Star Wars 1, 2, 3",
+      "title": "Star Wars: Episode I - The Phantom Menace",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 1893,
+      "year": 1999,
+      "synopsis": "Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi.",
+      "poster_path": "/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg",
+      "cast": [
+        "Liam Neeson",
+        "Ewan McGregor",
+        "Natalie Portman",
+        "Jake Lloyd",
+        "Ian McDiarmid",
+        "Pernilla August",
+        "Oliver Ford Davies",
+        "Hugh Quarshie"
+      ],
+      "directors": [
+        "George Lucas"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "adae26fe-2bb2-466e-9b0d-196819fb5b89",
