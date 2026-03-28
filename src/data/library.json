@@ -4939,18 +4939,31 @@
     },
     {
       "id": "8322bce5-5ed5-4b36-bb58-cac90c772061",
-      "title": "Kill Bill 1 & 2",
+      "title": "Kill Bill: Vol. 1",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 24,
+      "year": 2003,
+      "synopsis": "An assassin is shot by her ruthless employer, Bill, and other members of their assassination circle – but she lives to plot her vengeance.",
+      "poster_path": "/v7TaX8kXMXs5yFFGR41guUDNcnB.jpg",
+      "cast": [
+        "Uma Thurman",
+        "Lucy Liu",
+        "Vivica A. Fox",
+        "Daryl Hannah",
+        "David Carradine",
+        "Michael Madsen",
+        "Julie Dreyfus",
+        "Chiaki Kuriyama"
+      ],
+      "directors": [
+        "Quentin Tarantino"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "b6f30390-2998-45ca-9d5e-4b4377e2e2d0",
