@@ -13542,6 +13542,35 @@
       "id": "26657244-01cd-4ea9-b076-66d4f0b52cb5",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "The Curse of Robert the Doll",
+      "year": 2016,
+      "synopsis": "A cash strapped student who starts working the night shift at a Museum suspects that one of the exhibits, a creepy vintage doll named Robert, is alive and wreaking havoc after hours.",
+      "poster_path": "/kTWfR2YTsKqOhwgIvUxgoN3wa2x.jpg",
+      "cast": [
+        "Nigel Barber",
+        "Tiffany Ceri",
+        "Suzie Frances Garton",
+        "Lee Bane",
+        "Chris Bell",
+        "Steven Dolton",
+        "Jason Homewood",
+        "Clare Gollop"
+      ],
+      "directors": [
+        "Andrew Jones"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 404461,
+      "id": "7c67da0c-3695-4c2e-ac1e-e4ecf881bbb2",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
