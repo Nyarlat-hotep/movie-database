@@ -1,12 +1,15 @@
 import { useState } from 'react';
+import { Plus } from 'lucide-react';
 import { useAuth } from './hooks/useAuth.js';
 import { useLibrary } from './hooks/useLibrary.js';
 import LoginOverlay from './components/Auth/LoginOverlay.jsx';
 import Navbar from './components/Layout/Navbar.jsx';
+import MobileNav from './components/Layout/MobileNav.jsx';
 import LibraryGrid from './components/Library/LibraryGrid.jsx';
 import DetailModal from './components/Library/DetailModal.jsx';
 import AddEditModal from './components/Admin/AddEditModal.jsx';
 import ConfirmDelete from './components/Admin/ConfirmDelete.jsx';
+import './App.css';
 
 function App() {
   const { user, loading, login, logout } = useAuth();
@@ -47,7 +50,7 @@ function App() {
         onLogout={logout}
       />
 
-      <main style={{ paddingTop: '64px' }}>
+      <main style={{ paddingTop: '64px', paddingBottom: '0' }} className="main-content">
         <LibraryGrid items={filtered} onSelect={setSelected} />
       </main>
 
@@ -55,35 +58,9 @@ function App() {
       <button
         onClick={() => setEditing('new')}
         aria-label="Add title"
-        style={{
-          position: 'fixed',
-          bottom: '2rem',
-          right: '2rem',
-          width: 50,
-          height: 50,
-          borderRadius: '50%',
-          background: 'rgba(255, 119, 0, 0.12)',
-          border: '1px solid rgba(255, 119, 0, 0.45)',
-          color: '#ff7700',
-          fontSize: '1.4rem',
-          lineHeight: 1,
-          boxShadow: '0 0 18px rgba(255, 119, 0, 0.18)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          zIndex: 50,
-          transition: 'all 0.2s ease',
-        }}
-        onMouseEnter={e => {
-          e.currentTarget.style.background = 'rgba(255,119,0,0.22)';
-          e.currentTarget.style.borderColor = '#ff7700';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.background = 'rgba(255,119,0,0.12)';
-          e.currentTarget.style.borderColor = 'rgba(255,119,0,0.45)';
-        }}
+        className="fab-add"
       >
-        +
+        <Plus size={26} strokeWidth={2.5} />
       </button>
 
       <DetailModal
@@ -127,6 +104,12 @@ function App() {
           Saving...
         </div>
       )}
+
+      <MobileNav
+        typeFilter={typeFilter} onTypeFilter={setTypeFilter}
+        formatFilter={formatFilter} onFormatFilter={setFormatFilter}
+        onLogout={logout}
+      />
     </>
   );
 }
