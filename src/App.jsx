@@ -4,6 +4,7 @@ import { useLibrary } from './hooks/useLibrary.js';
 import LoginOverlay from './components/Auth/LoginOverlay.jsx';
 import Navbar from './components/Layout/Navbar.jsx';
 import LibraryGrid from './components/Library/LibraryGrid.jsx';
+import DetailModal from './components/Library/DetailModal.jsx';
 
 function App() {
   const { user, loading, login, logout } = useAuth();
@@ -28,11 +29,12 @@ function App() {
       <main style={{ paddingTop: '64px' }}>
         <LibraryGrid items={filtered} onSelect={setSelected} />
       </main>
-      {selected && (
-        <div style={{ color: '#ff7700', position: 'fixed', bottom: 10, left: 10, fontFamily: 'monospace', fontSize: '0.75rem', background: 'rgba(0,0,0,0.8)', padding: '4px 8px', borderRadius: 4 }}>
-          Selected: {selected.title}
-        </div>
-      )}
+      <DetailModal
+        item={selected}
+        onClose={() => setSelected(null)}
+        onEdit={(item) => console.log('edit', item.title)}
+        onDelete={(item) => console.log('delete', item.title)}
+      />
     </>
   );
 }
