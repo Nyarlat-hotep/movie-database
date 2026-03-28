@@ -13656,6 +13656,35 @@
       "id": "a6f937b1-a7a5-4d6a-98e3-b49c70bca76b",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "Return of the Jedi",
+      "year": 1983,
+      "synopsis": "Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, the Emperor prepares to crush the Rebellion with a more powerful Death Star, and the Rebel fleet mounts a massive attack on the space station. Luke Skywalker confronts Darth Vader in a final climactic duel before the evil Emperor.",
+      "poster_path": "/jQYlydvHm3kUix1f8prMucrplhm.jpg",
+      "cast": [
+        "Mark Hamill",
+        "Harrison Ford",
+        "Carrie Fisher",
+        "Billy Dee Williams",
+        "Anthony Daniels",
+        "Peter Mayhew",
+        "Sebastian Shaw",
+        "Ian McDiarmid"
+      ],
+      "directors": [
+        "Richard Marquand"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 1892,
+      "id": "58b30f09-619e-4bbf-9d02-8bb32e666eee",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
