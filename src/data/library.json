@@ -4456,19 +4456,32 @@
     },
     {
       "id": "dc6d9e6e-ff99-4c42-9f27-fdd3eea96d01",
-      "title": "Interview With a Vampire",
+      "title": "Interview with the Vampire",
       "formats": [
         "dvd",
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 921618,
-      "year": 2010,
-      "synopsis": "One sweltering summer, early in the morning, Kyung-jin, who has stayed up all night with editing work, falls asleep exhausted.\r Kyung-jin wakes up and is visited by a man named the director of a cable broadcasting company. He orders a documentary about a vampire and disappears. Unlike Kyungjin, who feels somewhat reluctant, the manager encourages him to proceed with the vampire project, saying it is an opportunity to save the company.\r While doing some research, Kyung-Jin, who is daunted, accidentally finds out that there is a vampire cafe and decides to meet them...",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 628,
+      "year": 1994,
+      "synopsis": "A vampire relates his epic life story of love, betrayal, loneliness, and dark hunger to an over-curious reporter.",
+      "poster_path": "/2162lAT2MP36MyJd2sttmj5du5T.jpg",
+      "cast": [
+        "Tom Cruise",
+        "Brad Pitt",
+        "Antonio Banderas",
+        "Christian Slater",
+        "Stephen Rea",
+        "Kirsten Dunst",
+        "Domiziana Giordano",
+        "Thandiwe Newton"
+      ],
+      "directors": [
+        "Neil Jordan"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "87cff02d-f464-444a-946c-206043cc5681",
