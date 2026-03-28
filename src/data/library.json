@@ -8701,24 +8701,26 @@
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 328425,
-      "year": 2015,
-      "synopsis": "Simon and Robyn are a young married couple whose life is going as planned until a chance run-in with Simon's high school acquaintance sends their world into a tailspin.",
-      "poster_path": "/kH3qLP8pn68Xq5XwvmPkCyaAU7W.jpg",
+      "tmdb_id": 2046,
+      "year": 2000,
+      "synopsis": "Annie Wilson, young widow and mother of three, makes her living foretelling others' futures⁠—though her own has become cloudier than even she can see. Threatened by a client's violent husband and plagued by visions of a missing local woman, Annie finds herself pulled into a thicket of lies and deception in which her extraordinary gift may ultimately get her killed.",
+      "poster_path": "/nQdBE1P0r4ZrgGqy5EX8sL2kXG6.jpg",
       "cast": [
-        "Joel Edgerton",
-        "Rebecca Hall",
-        "Jason Bateman",
-        "Tim Griffin",
-        "Allison Tolman",
-        "Busy Philipps",
-        "Adam Lazarre-White",
-        "Beau Knapp"
+        "Cate Blanchett",
+        "Giovanni Ribisi",
+        "Keanu Reeves",
+        "Katie Holmes",
+        "Greg Kinnear",
+        "Hilary Swank",
+        "Michael Jeter",
+        "Kim Dickens"
       ],
       "directors": [
-        "Joel Edgerton"
+        "Sam Raimi"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "3b9ca894-e5de-446c-9bdb-a57cc06ba725",
