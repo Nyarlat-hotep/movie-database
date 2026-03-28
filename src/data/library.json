@@ -12931,18 +12931,31 @@
     },
     {
       "id": "aff821a8-98af-47a8-8bea-fa198619a31e",
-      "title": "The Jungle Book - Live Action",
+      "title": "The Jungle Book",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 10714,
+      "year": 1994,
+      "synopsis": "Raised by wild animals since childhood, Mowgli is drawn away from the jungle by the beautiful Kitty. But Mowgli must eventually face corrupt Capt. Boone, who wants both Kitty's hand and the treasures of Monkey City – a place only Mowgli can find.",
+      "poster_path": "/rYoE6cuup9Ofam6AuYaiJLxF9OO.jpg",
+      "cast": [
+        "Jason Scott Lee",
+        "Cary Elwes",
+        "Lena Headey",
+        "Sam Neill",
+        "John Cleese",
+        "Jason Flemyng",
+        "Stefan Kalipha",
+        "Ron Donachie"
+      ],
+      "directors": [
+        "Stephen Sommers"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "3a54c0ba-72d4-4bc8-a8d0-38b580928033",
