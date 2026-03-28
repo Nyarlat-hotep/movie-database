@@ -12620,29 +12620,31 @@
     },
     {
       "id": "b93c90ea-b721-41c7-ab47-6210e45c5951",
-      "title": "Species 2",
+      "title": "Species II",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 1053600,
-      "year": 2023,
-      "synopsis": "Lucía is an eight-year-old girl, who sometimes struggles as the world tries to catch up with the fact that she is trans. As the summer holidays pass, she explores her femininity alongside the women of her family who at the same time reflect on their own femininity.",
-      "poster_path": "/4MEEVVyZ1L9Lr8GeSOyFiGM3cmB.jpg",
+      "tmdb_id": 10216,
+      "year": 1998,
+      "synopsis": "Having just returned from a mission to Mars, Commander Ross isn't exactly himself. He's slowly becoming a terrifying alien entity with one goal -- to procreate with human women! When countless women suffer gruesome deaths after bearing half-alien offspring, scientist Laura Baker and hired assassin Press Lennox use Eve, a more tempered alien clone, to find Ross and his brood. Before long Eve escapes to mate with Ross.",
+      "poster_path": "/8LSBi0bHACZtIiVErUBQ2UXNYLA.jpg",
       "cast": [
-        "Sofía Otero",
-        "Patricia López Arnaiz",
-        "Ane Gabarain",
-        "Itziar Lazkano",
-        "Martxelo Rubio",
-        "Sara Cózar",
-        "Miguel Garcés",
-        "Unax Hayden"
+        "Michael Madsen",
+        "Natasha Henstridge",
+        "Marg Helgenberger",
+        "Mykelti Williamson",
+        "George Dzundza",
+        "James Cromwell",
+        "Sarah Wynter",
+        "Justin Lazard"
       ],
       "directors": [
-        "Estibaliz Urresola Solaguren"
+        "Peter Medak"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "545ed5f0-1ae1-475d-852d-a02bb1fab9d0",
