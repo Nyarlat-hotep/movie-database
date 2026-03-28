@@ -9705,20 +9705,31 @@
     },
     {
       "id": "3c595093-2273-4b49-bb49-603c3e403198",
-      "title": "The Road Warrior",
+      "title": "Mad Max 2",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 339133,
-      "year": 2013,
-      "synopsis": "Two boxers, from opposing worlds become unlikely friends on their journey to becoming World Champions. The only thing standing in their way is each other.",
-      "poster_path": null,
-      "cast": [],
-      "directors": [
-        "Brian Mitchell Jnr"
+      "tmdb_id": 8810,
+      "year": 1981,
+      "synopsis": "Max Rockatansky returns as the heroic loner who drives the dusty roads of a postapocalyptic Australian Outback in an unending search for gasoline. Arrayed against him and the other scraggly defendants of a fuel-depot encampment are the bizarre warriors commanded by the charismatic Lord Humungus, a violent leader whose scruples are as barren as the surrounding landscape.",
+      "poster_path": "/l1KVEhkGDpWRzQ0VqIhZqDDuOim.jpg",
+      "cast": [
+        "Mel Gibson",
+        "Bruce Spence",
+        "Michael Preston",
+        "Max Phipps",
+        "Vernon Wells",
+        "Kjell Nilsson",
+        "Emil Minty",
+        "Virginia Hey"
       ],
-      "genres": []
+      "directors": [
+        "George Miller"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "88cacd44-8228-42cc-bfeb-1a8e555b04be",
