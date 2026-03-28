@@ -5047,29 +5047,31 @@
     },
     {
       "id": "10e6bbd6-8ca7-4845-9af2-c3ac5d8fb8a5",
-      "title": "Kung Pow",
+      "title": "Kung Pow: Enter the Fist",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 1147043,
-      "year": 1973,
-      "synopsis": "Chained together in a ring of mistrust and hate, the good and the bad fight in karate.",
-      "poster_path": "/mNu394uqkNnGVH7QM5upB8pGQbD.jpg",
+      "tmdb_id": 11891,
+      "year": 2002,
+      "synopsis": "A movie within a movie, created to spoof the martial arts genre. Writer/director Steve Oedekerk uses contemporary characters and splices them into a 1970s kung-fu film, weaving the new and old together.  As the main character, The Chosen One, Oedekerk sets off to avenge the deaths of his parents at the hands of kung-fu legend Master Pain. Along the way he encounters some strange characters.",
+      "poster_path": "/gVsZ1hsJ9g11oCCav4N8ccp9bRw.jpg",
       "cast": [
-        "Chin Kang",
-        "Yasuaki Kurata",
-        "Chiang Chao",
-        "Tien Wei Chao",
-        "You-Lun Chen",
-        "Ming-Wen Chin",
-        "Wen-Mei Chou",
-        "Hu Chiu-ping"
+        "Steve Oedekerk",
+        "Lung Fei",
+        "Leo Lee",
+        "Hsieh Ling-ling",
+        "Lau Kar-Wing",
+        "Lin Yan",
+        "Chen Hui-Lou",
+        "Jennifer Tung"
       ],
       "directors": [
-        "Chien Lung"
+        "Steve Oedekerk"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "a35ea7ec-671c-4fee-a8d4-545db79a2f55",
