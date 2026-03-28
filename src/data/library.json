@@ -11830,30 +11830,31 @@
     },
     {
       "id": "1152c870-bfab-45ce-8de4-598ae7548fc2",
-      "title": "Indiana Jones",
+      "title": "Indiana Jones and the Temple of Doom",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 827007,
-      "year": 2021,
-      "synopsis": "Hawaii, May 1977. After the success of Star Wars, George Lucas and Steven Spielberg meet to find a new project to work on together, the former as producer, the latter as director. The story of how the charismatic archaeologist Indiana Jones was born and how his first adventure, released in 1981, triumphed at box offices around the world.",
-      "poster_path": "/r3iQkvEU50t87oiKq6seLJFZMgF.jpg",
+      "tmdb_id": 87,
+      "year": 1984,
+      "synopsis": "After arriving in India, Indiana Jones is asked by a desperate village to find a mystical stone. He agrees – and stumbles upon a secret cult plotting a terrible plan in the catacombs of an ancient palace.",
+      "poster_path": "/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg",
       "cast": [
-        "Nathalie Labarthe",
         "Harrison Ford",
-        "Steven Spielberg",
-        "George Lucas",
-        "Omar Sharif",
-        "Stella Stevens",
-        "Nana Mouskouri",
-        "Gene Shalit"
+        "Kate Capshaw",
+        "Ke Huy Quan",
+        "Amrish Puri",
+        "Roshan Seth",
+        "Philip Stone",
+        "Roy Chiao",
+        "David Yip"
       ],
       "directors": [
-        "Clélia Cohen",
-        "Antoine Coursat"
+        "Steven Spielberg"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "621a6e4f-0cf0-48cd-930d-fbc785b53d3b",
