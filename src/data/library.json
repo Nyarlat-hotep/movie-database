@@ -1537,18 +1537,31 @@
     },
     {
       "id": "c3cb5292-4ea3-4cf7-a4d4-bb555daa00bf",
-      "title": "Christmas Vacation - Chevy",
+      "title": "National Lampoon's Christmas Vacation",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 5825,
+      "year": 1989,
+      "synopsis": "It's Christmastime, and the Griswolds are preparing for a family seasonal celebration. But things never run smoothly for Clark, his wife Ellen, and their two kids. Clark's continual bad luck is worsened by his obnoxious family guests, but he manages to keep going, knowing that his Christmas bonus is due soon.",
+      "poster_path": "/oat42hUw8XzKYUmfy0YLAxYd484.jpg",
+      "cast": [
+        "Chevy Chase",
+        "Beverly D'Angelo",
+        "Juliette Lewis",
+        "Johnny Galecki",
+        "John Randolph",
+        "Diane Ladd",
+        "E.G. Marshall",
+        "Doris Roberts"
+      ],
+      "directors": [
+        "Jeremiah S. Chechik"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "67ad8ab8-eaf1-4a41-bca5-4b93a167fa55",
