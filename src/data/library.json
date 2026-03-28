@@ -8566,20 +8566,31 @@
     },
     {
       "id": "cca0fd97-5a46-46a8-9320-3a28649fdbe6",
-      "title": "The Exorcist 3",
+      "title": "The Exorcist III",
       "formats": [
         "bluray"
       ],
       "notes": "",
-      "tmdb_id": 1140075,
-      "year": 2005,
-      "synopsis": "This film visualizes the unprecedented bizarre phenomenon that occurred in Tomika-cho, Gifu Prefecture, which was reported in the news, as well as other true horrors of our time in which a curse has possessed people.",
-      "poster_path": "/cp7OzlYaw4YNkn2WgFjaqmzjoSe.jpg",
-      "cast": [],
-      "directors": [
-        "Takeshima Hitoshi"
+      "tmdb_id": 11587,
+      "year": 1990,
+      "synopsis": "On the fifteenth anniversary of the exorcism that claimed Father Damien Karras' life, Police Lieutenant Kinderman's world is once again shattered when a boy is found decapitated and savagely crucified.",
+      "poster_path": "/rhSftgj3vwpIDSP8v67N8KEubmz.jpg",
+      "cast": [
+        "George C. Scott",
+        "Ed Flanders",
+        "Brad Dourif",
+        "Jason Miller",
+        "Nicol Williamson",
+        "Scott Wilson",
+        "Nancy Fish",
+        "George DiCenzo"
       ],
-      "genres": []
+      "directors": [
+        "William Peter Blatty"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "13d04990-5d71-45e8-af61-a3b06f88c3dc",
