@@ -12407,29 +12407,31 @@
     },
     {
       "id": "7fd19bbe-d8e0-47ef-928b-05a1989e38b5",
-      "title": "Richie Rich",
+      "title": "Ri¢hie Ri¢h",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 107793,
-      "year": 2007,
-      "synopsis": "Chased by mafia boss Kreda over a mistaken €2 million debt, club president Ryszard Ochódzki follows consigliere Maria Wafel’s advice to sell land to Father Pudło, only to hatch an even bigger bank fraud with banker Koziczek to raise the cash. Flush with stolen funds and briefly enjoying political office, he hides the money in the Molibdenów home, but just as he and coach Jarząbek plan to retrieve it, contract killer Dukan closes in.",
-      "poster_path": "/t1mzQoBMawIh5NWKTNJ4lWr47AA.jpg",
+      "tmdb_id": 11011,
+      "year": 1994,
+      "synopsis": "Billionaire heir Richie Rich has it all, including Reggie Jackson as a batting coach and Claudia Schiffer as a personal trainer -- but no playmates. What's more, scoundrel Laurence Van Dough is scheming to take over the family empire. Uh-oh! Enter faithful butler Cadbury to save the day.",
+      "poster_path": "/qgGh5d0IHAZRlHIdFS3XWVygumR.jpg",
       "cast": [
-        "Stanisław Tym",
-        "Zofia Merle",
-        "Marek Kondrat",
-        "Krzysztof Kowalewski",
-        "Anna Korcz",
-        "Jerzy Turek",
-        "Marian Glinka",
-        "Wiktor Zborowski"
+        "Macaulay Culkin",
+        "John Larroquette",
+        "Edward Herrmann",
+        "Christine Ebersole",
+        "Jonathan Hyde",
+        "Michael Maccarone",
+        "Joel Robinson",
+        "Jonathan Hilario"
       ],
       "directors": [
-        "Stanisław Tym"
+        "Donald Petrie"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "2195ba8e-ec2a-43e5-949a-5b9e74fc1b39",
