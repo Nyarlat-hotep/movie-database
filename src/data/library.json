@@ -11130,29 +11130,31 @@
     },
     {
       "id": "3007a17b-0ef6-425f-843c-7bfeddc23244",
-      "title": "Batman and Robin",
+      "title": "Batman & Robin",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 93560,
-      "year": 1949,
-      "synopsis": "This 15-chapter serial pits Batman and Robin against The Wizard, who uses a device that allows him to control machinery to hold the city hostage.",
-      "poster_path": "/411pEyeqP5rLS6Zc9batSRL0c8G.jpg",
+      "tmdb_id": 415,
+      "year": 1997,
+      "synopsis": "Batman and his sidekick Robin attempt to the foil the sinister schemes of a deranged set of new villains, most notably the melancholy Mr. Freeze, who wants to make Gotham City into an arctic region, and the sultry Poison Ivy, a botanical femme fatale. As the Dynamic Duo contend with these bad guys, a third hero, Batgirl, joins the ranks of the city's crime-fighters.",
+      "poster_path": "/i7hEUpDuMN2LOrCEifFyGSHZQSY.jpg",
       "cast": [
-        "Robert Lowery",
-        "Johnny Duncan",
-        "Lyle Talbot",
-        "Jane Adams",
-        "Ralph Graves",
-        "Don C. Harvey",
-        "William Fawcett",
-        "Leonard Penn"
+        "George Clooney",
+        "Chris O'Donnell",
+        "Arnold Schwarzenegger",
+        "Uma Thurman",
+        "Alicia Silverstone",
+        "Michael Gough",
+        "Pat Hingle",
+        "Elle Macpherson"
       ],
       "directors": [
-        "Spencer Gordon Bennet"
+        "Joel Schumacher"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "11e04218-7aba-4ce6-9879-42228519851c",
