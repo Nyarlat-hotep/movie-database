@@ -14312,6 +14312,35 @@
       "id": "edaa837b-20cb-43b0-bf3c-870cc80408fc",
       "_type": "show",
       "genres": []
+    },
+    {
+      "title": "Merlin",
+      "year": 1998,
+      "synopsis": "A retelling of the legend of King Arthur from the perspective of the wizard Merlin. Sam Neill stars in the title role in a story that covers not only the rise and fall of Camelot but also the phase in the legendary history of Britain that precedes it.",
+      "poster_path": "/ra2F5ufWFV9qDMcZR1VbCfKZO2Z.jpg",
+      "cast": [
+        "Sam Neill",
+        "Paul Curran",
+        "Isabella Rossellini",
+        "Jeremy Sheffield",
+        "Lena Headey",
+        "Martin Short",
+        "Mark Jax",
+        "Helena Bonham Carter"
+      ],
+      "directors": [],
+      "creators": [
+        "Steve Barron"
+      ],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 41691,
+      "id": "f141bc90-9c0f-44e7-82f8-e17dba475b6e",
+      "_type": "show",
+      "genres": []
     }
   ]
 }
