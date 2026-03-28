@@ -7193,25 +7193,31 @@
     },
     {
       "id": "d8f35fcd-1123-4013-8a74-eaf5643f3b0d",
-      "title": "Sleepy Hallow",
+      "title": "Sleepy Hollow",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 1193486,
-      "year": 1997,
-      "synopsis": "\"The Legend of Sleepy Hollow\" dominates as Halloween comes to Oakdale. Wishbone imagines himself as Ichabod Crane while Joe and his two schoolmates participate in Oakdale's scavenger hunt.",
-      "poster_path": "/fyBHXfVgG8ieJAFLQ4MYbQ89TrC.jpg",
+      "tmdb_id": 2668,
+      "year": 1999,
+      "synopsis": "Skeptical young detective Ichabod Crane gets transferred to the hamlet of Sleepy Hollow, New York, where he is tasked with investigating the decapitations of three people – murders the townsfolk attribute to a legendary specter, The Headless Horseman.",
+      "poster_path": "/1GuK965FLJxqUw9fd1pmvjbFAlv.jpg",
       "cast": [
-        "Larry Brantley",
-        "Christie Abbott",
-        "Mary Chris Wall",
-        "Jordan Wall"
+        "Johnny Depp",
+        "Christina Ricci",
+        "Miranda Richardson",
+        "Michael Gambon",
+        "Casper Van Dien",
+        "Jeffrey Jones",
+        "Richard Griffiths",
+        "Ian McDiarmid"
       ],
       "directors": [
-        "Rick Duffield"
+        "Tim Burton"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "5381bb20-5689-4a1b-8708-1509cd2a1faf",
