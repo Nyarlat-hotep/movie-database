@@ -95,25 +95,6 @@
   margin: 0 0.2rem;
 }
 
-.navbar-logout {
-  padding: 0.35rem 0.85rem;
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 6px;
-  color: rgba(255, 255, 255, 0.6);
-  background: transparent;
-  flex-shrink: 0;
-  transition: all 0.2s ease;
-}
-
-.navbar-logout:hover {
-  color: #ff7700;
-  border-color: rgba(255, 119, 0, 0.25);
-  background: transparent;
-}
 
 /* ── Mobile: hide filters and logout from top bar ── */
 @media (max-width: 640px) {

@@ -4,7 +4,6 @@ export default function Navbar({
   search, onSearch,
   typeFilter, onTypeFilter,
   formatFilter, onFormatFilter,
-  onLogout,
 }) {
   return (
     <nav className="navbar">
@@ -45,8 +44,6 @@ export default function Navbar({
           VHS
         </button>
       </div>
-
-      <button className="navbar-logout" onClick={onLogout}>Logout</button>
     </nav>
   );
 }

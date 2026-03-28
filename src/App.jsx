@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus } from 'lucide-react';
+import { Plus, LogOut } from 'lucide-react';
 import { useAuth } from './hooks/useAuth.js';
 import { useLibrary } from './hooks/useLibrary.js';
 import LoginOverlay from './components/Auth/LoginOverlay.jsx';
@@ -47,8 +47,12 @@ function App() {
         search={search}         onSearch={setSearch}
         typeFilter={typeFilter} onTypeFilter={setTypeFilter}
         formatFilter={formatFilter} onFormatFilter={setFormatFilter}
-        onLogout={logout}
       />
+
+      {/* Floating logout button */}
+      <button onClick={logout} aria-label="Logout" className="fab-logout">
+        <LogOut size={16} strokeWidth={2} />
+      </button>
 
       <main style={{ paddingTop: '64px', paddingBottom: '0' }} className="main-content">
         <LibraryGrid items={filtered} onSelect={setSelected} />

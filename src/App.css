@@ -56,6 +56,37 @@
   }
 }
 
+.fab-logout {
+  position: fixed;
+  top: 14px;
+  right: 1.25rem;
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.fab-logout:hover {
+  color: #ff7700;
+  border-color: rgba(255, 119, 0, 0.5);
+  background: rgba(255, 119, 0, 0.08);
+}
+
+/* Hide on mobile — mobile nav has its own logout icon */
+@media (max-width: 640px) {
+  .fab-logout { display: none; }
+}
+
 @media (max-width: 640px) {
   .main-content {
     padding-top: 56px !important;
