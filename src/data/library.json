@@ -12535,29 +12535,36 @@
     },
     {
       "id": "34a626a0-f3a7-475d-9305-e99b79411ef3",
-      "title": "Snow White",
+      "title": "Snow White and the Seven Dwarfs",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 447273,
-      "year": 2025,
-      "synopsis": "Following the benevolent King's disappearance, the Evil Queen dominated the once fair land with a cruel streak. Princess Snow White flees the castle when the Queen, in her jealousy over Snow White's inner beauty, tries to kill her. Deep into the dark woods, she stumbles upon seven magical dwarves and a young bandit named Jonathan. Together, they strive to survive the Queen's relentless pursuit and aspire to take back the kingdom.",
-      "poster_path": "/xWWg47tTfparvjK0WJNX4xL8lW2.jpg",
+      "tmdb_id": 408,
+      "year": 1938,
+      "synopsis": "A beautiful girl, Snow White, takes refuge in the forest in the house of seven dwarfs to hide from her stepmother, the wicked Queen. The Queen is jealous because she wants to be known as \"the fairest in the land,\" and Snow White's beauty surpasses her own.",
+      "poster_path": "/3VAHfuNb6Z7UiW12iYKANSPBl8m.jpg",
       "cast": [
-        "Rachel Zegler",
-        "Emilia Faucher",
-        "Gal Gadot",
-        "Andrew Burnap",
-        "Andrew Barth Feldman",
-        "Jeremy Swift",
-        "Jason Kravits",
-        "Martin Klebba"
+        "Adriana Caselotti",
+        "Lucille La Verne",
+        "Harry Stockwell",
+        "Roy Atwell",
+        "Pinto Colvig",
+        "Otis Harlan",
+        "Scotty Mattraw",
+        "Billy Gilbert"
       ],
       "directors": [
-        "Marc Webb"
+        "David Hand",
+        "Ben Sharpsteen",
+        "William Cottrell",
+        "Larry Morey",
+        "Perce Pearce",
+        "Wilfred Jackson"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "c81669a8-bdaf-41de-8151-034406c8cc38",
