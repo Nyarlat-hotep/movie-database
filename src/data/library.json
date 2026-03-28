@@ -5179,18 +5179,31 @@
     },
     {
       "id": "1780f382-acb7-4f54-afd6-387b9e44d93a",
-      "title": "Legend (Tom Hardy)",
+      "title": "Legend",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 11976,
+      "year": 1985,
+      "synopsis": "Set in a timeless mythical forest inhabited by fairies, goblins, unicorns and mortals, this fantastic story follows a mystical forest dweller, chosen by fate, to undertake a heroic quest. He must save the beautiful Princess  Lili and defeat the demonic Lord of Darkness, or the world will be plunged into a never-ending ice age.",
+      "poster_path": "/6n3PQSYpZRK5YPk2w8JEwED7AZk.jpg",
+      "cast": [
+        "Tom Cruise",
+        "Mia Sara",
+        "Tim Curry",
+        "David Bennent",
+        "Alice Playten",
+        "Billy Barty",
+        "Cork Hubbert",
+        "Peter O'Farrell"
+      ],
+      "directors": [
+        "Ridley Scott"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "c11c62b8-1a10-45a3-ba2c-b4c1cf72922f",
