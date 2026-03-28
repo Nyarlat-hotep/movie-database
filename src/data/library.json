@@ -13637,6 +13637,35 @@
       "id": "58b30f09-619e-4bbf-9d02-8bb32e666eee",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "The Naked Gun 2½: The Smell of Fear",
+      "year": 1991,
+      "synopsis": "Bumbling lieutenant Frank Drebin is out to foil the big boys in the energy industry, who intend to suppress technology that will put them out of business.",
+      "poster_path": "/v9niLQWVzVPB1cP1ThNdEaLZG1Q.jpg",
+      "cast": [
+        "Leslie Nielsen",
+        "Priscilla Presley",
+        "George Kennedy",
+        "O. J. Simpson",
+        "Robert Goulet",
+        "Richard Griffiths",
+        "Jacqueline Brookes",
+        "Anthony James"
+      ],
+      "directors": [
+        "David Zucker"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 37137,
+      "id": "2bd71c42-de72-418a-bcd9-fc636d164522",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
