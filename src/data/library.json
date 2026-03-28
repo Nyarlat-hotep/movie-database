@@ -13224,6 +13224,35 @@
       "id": "88182c6a-03c4-4887-8692-85f3e9a4e7a2",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "Ghostbusters II",
+      "year": 1989,
+      "synopsis": "The discovery of a massive river of ectoplasm and a resurgence of spectral activity allows the staff of Ghostbusters to revive the business.",
+      "poster_path": "/yObYPMA58DnTMvJooFW7GG6jWAt.jpg",
+      "cast": [
+        "Bill Murray",
+        "Dan Aykroyd",
+        "Sigourney Weaver",
+        "Harold Ramis",
+        "Rick Moranis",
+        "Ernie Hudson",
+        "Annie Potts",
+        "Peter MacNicol"
+      ],
+      "directors": [
+        "Ivan Reitman"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 2978,
+      "id": "34d72b6f-b68b-4393-96d6-51a286e516fd",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
