@@ -9146,33 +9146,6 @@
       "genres": []
     },
     {
-      "id": "65985be4-937a-4b08-a319-9f2847a98fc9",
-      "title": "The Matrix",
-      "formats": [
-        "dvd"
-      ],
-      "notes": "",
-      "tmdb_id": 603,
-      "year": 1999,
-      "synopsis": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
-      "poster_path": "/p96dm7sCMn4VYAStA6siNz30G1r.jpg",
-      "cast": [
-        "Keanu Reeves",
-        "Laurence Fishburne",
-        "Carrie-Anne Moss",
-        "Hugo Weaving",
-        "Gloria Foster",
-        "Joe Pantoliano",
-        "Marcus Chong",
-        "Julian Arahanga"
-      ],
-      "directors": [
-        "Lana Wachowski",
-        "Lilly Wachowski"
-      ],
-      "genres": []
-    },
-    {
       "id": "19842466-8410-441e-8afd-488653e496cb",
       "title": "The Meg",
       "formats": [
