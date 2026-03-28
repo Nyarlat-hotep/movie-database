@@ -9200,18 +9200,31 @@
     },
     {
       "id": "260d8ebc-53f0-4327-a612-7ba6577d1b6e",
-      "title": "The Naked Gun Trilogy",
+      "title": "The Naked Gun: From the Files of Police Squad!",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 37136,
+      "year": 1988,
+      "synopsis": "When the bumbling Lieutenant Frank Drebin investigates events following the shooting of his partner, he stumbles upon an attempt to assassinate Queen Elizabeth II.",
+      "poster_path": "/zT0mhZqZQJE1gSY5Eg9qcGP4NYo.jpg",
+      "cast": [
+        "Leslie Nielsen",
+        "Priscilla Presley",
+        "Ricardo Montalban",
+        "George Kennedy",
+        "O. J. Simpson",
+        "Susan Beaubian",
+        "Nancy Marchand",
+        "Raye Birk"
+      ],
+      "directors": [
+        "David Zucker"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "499c1366-3f75-455d-8dad-43ce658acb18",
