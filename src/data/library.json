@@ -12191,20 +12191,32 @@
     },
     {
       "id": "04b0683a-c9e6-4129-80b4-c5e54ee0a7b3",
-      "title": "Matrix",
+      "title": "The Matrix",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 411948,
-      "year": 1971,
-      "synopsis": "A piece of abstract cinema by John Whitney. A series squares follow a 3-dimensional track, each one with a slight delay after the other.",
-      "poster_path": "/wwGvUPEM6MRiXv3gRNaVUlUCHiT.jpg",
-      "cast": [],
-      "directors": [
-        "John Whitney Sr."
+      "tmdb_id": 603,
+      "year": 1999,
+      "synopsis": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+      "poster_path": "/p96dm7sCMn4VYAStA6siNz30G1r.jpg",
+      "cast": [
+        "Keanu Reeves",
+        "Laurence Fishburne",
+        "Carrie-Anne Moss",
+        "Hugo Weaving",
+        "Gloria Foster",
+        "Joe Pantoliano",
+        "Marcus Chong",
+        "Julian Arahanga"
       ],
-      "genres": []
+      "directors": [
+        "Lana Wachowski",
+        "Lilly Wachowski"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "eda3d5af-7ff4-480f-b94e-da8ac4f7778c",
