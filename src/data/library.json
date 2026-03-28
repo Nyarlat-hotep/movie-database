@@ -13318,19 +13318,29 @@
     },
     {
       "id": "fd928b0d-342e-4b1f-9258-715ae395ac0c",
-      "title": "Dextors Laboratory",
+      "title": "Dexter's Laboratory",
       "seasons_owned": "1",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "creators": [],
-      "genres": []
+      "tmdb_id": 4229,
+      "year": 1996,
+      "synopsis": "Dexter, a boy-genius with a secret laboratory, constantly battles his sister Dee Dee, who always gains access despite his best efforts to keep her out, as well as his arch-rival and neighbor, Mandark.",
+      "poster_path": "/inJJn8lUPWdvdy2h259UnoHWVqC.jpg",
+      "cast": [
+        "Candi Milo",
+        "Kat Cressida",
+        "Jeff Bennett",
+        "Kath Soucie",
+        "Eddie Deezen"
+      ],
+      "creators": [
+        "Genndy Tartakovsky"
+      ],
+      "genres": [],
+      "_type": "show",
+      "directors": []
     },
     {
       "id": "1b84773d-e4f0-40c7-ab31-0e15e50969bd",
