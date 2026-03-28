@@ -4858,29 +4858,31 @@
     },
     {
       "id": "c5ca348e-15d9-4b0d-a79e-42d4b219e9d9",
-      "title": "Joyride",
+      "title": "Joy Ride",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 762361,
-      "year": 2022,
-      "synopsis": "12-year-old Mully has lost his mother and discovers his debt-ridden father stealing the charity money they've raised in her name. Grabbing the cash, Mully steals a taxi and is shocked to find a woman, Joy, in the back seat with a baby. A straight-talking solicitor who didn't expect to get pregnant, Joy is struggling with motherhood and planning to give her baby to a friend who will raise the child as her own. She joins Mully on a wild journey across Ireland, stealing cars, hitch-hiking, catching ferries and breaking police barricades.",
-      "poster_path": "/yJHwqLB5U3joO6sqVajDevGsRnz.jpg",
+      "tmdb_id": 10866,
+      "year": 2001,
+      "synopsis": "Three young people on a road trip from Colorado to New Jersey talk to a trucker on their CB radio, then must escape when he turns out to be a psychotic killer.",
+      "poster_path": "/1LVGjf1QWgkNNPQssZtuT1GYKoP.jpg",
       "cast": [
-        "Olivia Colman",
-        "Charlie Reid",
-        "Lochlann Ó Mearáin",
-        "Olwen Fouéré",
-        "Florence Adebambo",
-        "Tommy Tiernan",
-        "David Pearse",
-        "Ruth McCabe"
+        "Steve Zahn",
+        "Paul Walker",
+        "Leelee Sobieski",
+        "Jessica Bowman",
+        "Stuart Stone",
+        "Basil Wallace",
+        "Brian Leckner",
+        "Mary Wickliffe"
       ],
       "directors": [
-        "Emer Reynolds"
+        "John Dahl"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "ff8d92b5-5a4e-4e1f-bdf2-ee44883f8b3c",
