@@ -489,18 +489,31 @@
     },
     {
       "id": "d060f3a8-0030-4bb1-a931-c73a64feea60",
-      "title": "Amerian Psycho",
+      "title": "American Psycho",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 1359,
+      "year": 2000,
+      "synopsis": "A wealthy New York investment banking executive hides his alternate psychopathic ego from his co-workers and friends as he escalates deeper into his illogical, gratuitous fantasies.",
+      "poster_path": "/9uGHEgsiUXjCNq8wdq4r49YL8A1.jpg",
+      "cast": [
+        "Christian Bale",
+        "Justin Theroux",
+        "Josh Lucas",
+        "Bill Sage",
+        "Chloë Sevigny",
+        "Reese Witherspoon",
+        "Samantha Mathis",
+        "Matt Ross"
+      ],
+      "directors": [
+        "Mary Harron"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "ef18522e-dded-4eb3-b0cb-8132fd492d24",
