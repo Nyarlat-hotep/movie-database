@@ -9280,18 +9280,31 @@
     },
     {
       "id": "6e0a6354-eb23-4157-be1e-a744bffa86bc",
-      "title": "The Other Bolyn Girl",
+      "title": "The Other Boleyn Girl",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 12184,
+      "year": 2008,
+      "synopsis": "A sumptuous and sensual tale of intrigue, romance and betrayal set against the backdrop of a defining moment in European history: two beautiful sisters, Anne and Mary Boleyn, driven by their family's blind ambition, compete for the love of the handsome and passionate King Henry VIII.",
+      "poster_path": "/q2lgC8mmAltWTkbqPM8n5EYF4XL.jpg",
+      "cast": [
+        "Natalie Portman",
+        "Scarlett Johansson",
+        "Eric Bana",
+        "Jim Sturgess",
+        "Mark Rylance",
+        "Kristin Scott Thomas",
+        "David Morrissey",
+        "Benedict Cumberbatch"
+      ],
+      "directors": [
+        "Justin Chadwick"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "4964a2d6-f439-46e6-b250-aebf5a0eb550",
