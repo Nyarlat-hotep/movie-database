@@ -12163,18 +12163,31 @@
     },
     {
       "id": "6eb2a0f3-c6ca-4748-8455-7cd48b801bf1",
-      "title": "Mary Shelly's Frankenstein",
+      "title": "Mary Shelley's Frankenstein",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 3036,
+      "year": 1994,
+      "synopsis": "Victor Frankenstein is a promising young doctor who, devastated by the death of his mother during childbirth, becomes obsessed with bringing the dead back to life. His experiments lead to the creation of a monster, which Frankenstein has put together with the remains of corpses. It's not long before Frankenstein regrets his actions.",
+      "poster_path": "/bOwCAQsZlEKrwhPi1ejY6BS8jpL.jpg",
+      "cast": [
+        "Robert De Niro",
+        "Kenneth Branagh",
+        "Tom Hulce",
+        "Helena Bonham Carter",
+        "Aidan Quinn",
+        "Ian Holm",
+        "Richard Briers",
+        "John Cleese"
+      ],
+      "directors": [
+        "Kenneth Branagh"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "04b0683a-c9e6-4129-80b4-c5e54ee0a7b3",
