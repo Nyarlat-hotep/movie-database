@@ -3523,24 +3523,26 @@
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 1297842,
-      "year": 2026,
-      "synopsis": "A small goat with big dreams gets a once-in-a-lifetime shot to join the pros and play roarball, a high-intensity, co-ed, full-contact sport dominated by the fastest, fiercest animals in the world.",
-      "poster_path": "/wfuqMlaExcoYiUEvKfVpUTt1v4u.jpg",
+      "tmdb_id": 9430,
+      "year": 1999,
+      "synopsis": "A supermarket clerk decides to step in for an absent drug dealer, setting off an explosive, comedic chain of events.",
+      "poster_path": "/kP0OOAa4GTZSUPW8fgPbk1OmKEW.jpg",
       "cast": [
-        "Caleb McLaughlin",
-        "Gabrielle Union",
-        "Stephen Curry",
-        "Aaron Pierre",
-        "Nicola Coughlan",
-        "David Harbour",
-        "Nick Kroll",
-        "Jenifer Lewis"
+        "Sarah Polley",
+        "Timothy Olyphant",
+        "Katie Holmes",
+        "Desmond Askew",
+        "Jay Mohr",
+        "Scott Wolf",
+        "Taye Diggs",
+        "William Fichtner"
       ],
       "directors": [
-        "Tyree Dillihay"
+        "Doug Liman"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "603c724f-be08-4f2b-9f7c-0948cd3fc247",
