@@ -13671,19 +13671,23 @@
     },
     {
       "id": "85accdbb-871a-4fa7-8154-569d1ecd82b1",
-      "title": "Herule Poirot",
+      "title": "Agatha Christie's Poirot",
       "seasons_owned": "1, 2, 3, 4",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
+      "tmdb_id": 790,
+      "year": 1989,
+      "synopsis": "From England to Egypt, accompanied by his elegant and trustworthy sidekicks, the intelligent yet eccentrically-refined Belgian detective Hercule Poirot pits his wits against a collection of first class deceptions.",
+      "poster_path": "/6f4IVfbn8knb7RjdZlGLuW5guDc.jpg",
+      "cast": [
+        "David Suchet"
+      ],
       "creators": [],
-      "genres": []
+      "genres": [],
+      "_type": "show",
+      "directors": []
     },
     {
       "id": "b2396477-008f-4655-bba5-a7a2bd050da2",
