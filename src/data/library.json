@@ -4776,18 +4776,31 @@
     },
     {
       "id": "75782ed1-6bfe-4d24-95cc-40273f8970fa",
-      "title": "John Wick 1 & 2",
+      "title": "John Wick",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 245891,
+      "year": 2014,
+      "synopsis": "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
+      "poster_path": "/wXqWR7dHncNRbxoEGybEy7QTe9h.jpg",
+      "cast": [
+        "Keanu Reeves",
+        "Michael Nyqvist",
+        "Alfie Allen",
+        "Willem Dafoe",
+        "Dean Winters",
+        "Adrianne Palicki",
+        "Omer Barnea",
+        "Toby Leonard Moore"
+      ],
+      "directors": [
+        "Chad Stahelski"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "bce86bae-b5e2-4591-8930-e9804c20b743",
