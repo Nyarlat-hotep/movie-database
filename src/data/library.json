@@ -3756,30 +3756,32 @@
     },
     {
       "id": "57ce4c96-8c36-441c-bfcf-025c92960f83",
-      "title": "Halloween 2",
+      "title": "Halloween II",
       "formats": [
         "dvd",
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 433044,
-      "year": 2015,
-      "synopsis": "High school student Nanami lives in Tokyo, Japan. She waits for Halloween because she enjoys dressing up in costumes with her friends. One day, Nanami’s father tells her about a mysterious serial murder case that takes place year on Halloween. Her father works as the chief editor at an occult magazine. At first, Nanami doesn't care about the serial murders, but frightening incidents keep taking place around her.",
-      "poster_path": null,
+      "tmdb_id": 11281,
+      "year": 1981,
+      "synopsis": "After failing to kill stubborn survivor Laurie and taking a bullet or six from former psychiatrist Dr. Sam Loomis, Michael Myers has followed Laurie to the Haddonfield Memorial Hospital, where she's been admitted for Myers' attempt on her life. The institution proves to be particularly suited to serial killers, however, as Myers cuts, stabs and slashes his way through hospital staff to reach his favorite victim.",
+      "poster_path": "/xyBX7rFmNB4nM2RBW3042RQPFG2.jpg",
       "cast": [
-        "Rena Takeda",
-        "Mizuki Masuda",
-        "Shiori Toyoizumi",
-        "Chie Sasaki",
-        "Katsumasa Ue",
-        "Yusuke Oba",
-        "Tetsuya Nakanishi",
-        "Reiko Igarashi"
+        "Jamie Lee Curtis",
+        "Donald Pleasence",
+        "Charles Cyphers",
+        "Jeffrey Kramer",
+        "Lance Guest",
+        "Pamela Susan Shoop",
+        "Hunter von Leer",
+        "Dick Warlock"
       ],
       "directors": [
-        "Yosuke Yamashita"
+        "Rick Rosenthal"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "77ff647c-9a35-4c16-91f0-ef9132fa26bb",
