@@ -4967,18 +4967,31 @@
     },
     {
       "id": "b6f30390-2998-45ca-9d5e-4b4377e2e2d0",
-      "title": "Killer Clowns from Outerspace",
+      "title": "Killer Klowns from Outer Space",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 16296,
+      "year": 1988,
+      "synopsis": "Aliens disguised as clowns crash land on Earth in a rural town to capture unsuspecting victims in cotton candy cocoons for later consumption.",
+      "poster_path": "/nOC22f6kzrKPWXBoYr2XNWfMFEh.jpg",
+      "cast": [
+        "Grant Cramer",
+        "Suzanne Snyder",
+        "John Allen Nelson",
+        "John Vernon",
+        "Royal Dano",
+        "Christopher Titus",
+        "Michael S. Siegel",
+        "Peter Licassi"
+      ],
+      "directors": [
+        "Stephen Chiodo"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "2d804506-63e0-4808-9d2c-0c2799882d77",
