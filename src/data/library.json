@@ -3205,24 +3205,26 @@
         "bluray"
       ],
       "notes": "",
-      "tmdb_id": 58151,
-      "year": 2011,
-      "synopsis": "A teenager suspects his new neighbour is a vampire. Unable to convince anyone, he tries to enlist the help of a self-proclaimed vampire hunter and magician.",
-      "poster_path": "/ySQ3v4Fzpy3fePs86eoLiDzwLYM.jpg",
+      "tmdb_id": 11797,
+      "year": 1985,
+      "synopsis": "Charley Brewster, a high school student, accidentally discovers the true and creepy nature of Jerry Dandrige, his dashing and enigmatic new neighbor; but no one seems willing to believe him.",
+      "poster_path": "/euIh75MwNDrYkTEVSkw7VXWGXoE.jpg",
       "cast": [
-        "Anton Yelchin",
-        "Colin Farrell",
-        "Toni Collette",
-        "David Tennant",
-        "Imogen Poots",
-        "Christopher Mintz-Plasse",
-        "Dave Franco",
-        "Reid Ewing"
+        "Chris Sarandon",
+        "William Ragsdale",
+        "Amanda Bearse",
+        "Roddy McDowall",
+        "Stephen Geoffreys",
+        "Jonathan Stark",
+        "Dorothy Fielding",
+        "Art Evans"
       ],
       "directors": [
-        "Craig Gillespie"
+        "Tom Holland"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "fab9218f-168c-498e-88d2-7a95a36f1d2a",
