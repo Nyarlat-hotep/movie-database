@@ -12696,30 +12696,31 @@
     },
     {
       "id": "e6e0a049-78c6-4d86-9ce8-a9a97ff87742",
-      "title": "Tall Tale",
+      "title": "Tall Tale: The Unbelievable Adventure",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 458252,
-      "year": 2017,
-      "synopsis": "When Apollo, a kindhearted cricket, lands in the village of the Funny Little Bugs, the whole kingdom is about to be disrupted.",
-      "poster_path": "/laSXfFwQ5Ce5eSCIEBOl3RaohqN.jpg",
+      "tmdb_id": 41841,
+      "year": 1995,
+      "synopsis": "A young boy draws on the inspiration of legendary western characters to find the strength to fight an evil land baron in the old west who wants to steal his family's farm and destroy their idyllic community. When Daniel Hackett sees his father Jonas gravely wounded by the villainous Stiles, his first urge is for his family to flee the danger, and give up their life on a farm which Daniel has come to despise anyway. Going alone to a lake to try to decide what to do, he falls asleep on a boat and wakes to find himself in the wild west, in the company of such \"tall tale\" legends as Pecos Bill, Paul Bunyan, John Henry and Calamity Jane. Together, they battle the same villains Daniel is facing in his \"real\" world, ending with a heroic confrontation in which the boy stands up to Stiles and his henchmen, and rallies his neighbors to fight back against land grabbers who want to destroy their town.",
+      "poster_path": "/di43EvahPBbdTgZrBxx8yZjvFu8.jpg",
       "cast": [
-        "Kev Adams",
-        "Virginie Efira",
-        "Emmanuel Curtil",
-        "Anne Tilloy",
-        "Céline Melloul",
-        "Jeanfi Janssens",
-        "Vincent Ropion",
-        "Jérémie Covillault"
+        "Patrick Swayze",
+        "Oliver Platt",
+        "Roger Aaron Brown",
+        "Nick Stahl",
+        "Scott Glenn",
+        "Stephen Lang",
+        "Jared Harris",
+        "Catherine O'Hara"
       ],
       "directors": [
-        "Antoon Krings",
-        "Arnaud Bouron"
+        "Jeremiah S. Chechik"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "329fa6e1-ac25-46d6-a6ab-d296bafeac3a",
