@@ -2787,18 +2787,31 @@
     },
     {
       "id": "429b2d33-084c-4f68-b912-4f593cba6a60",
-      "title": "Evil Dead 2 (BRl",
+      "title": "Evil Dead II",
       "formats": [
-        "dvd"
+        "bluray"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 765,
+      "year": 1987,
+      "synopsis": "Ash Williams and his girlfriend Linda find a log cabin in the woods with a voice recording from an archeologist who had recorded himself reciting ancient chants from \"The Book of the Dead.\" As they play the recording an evil power is unleashed taking over Linda's body.",
+      "poster_path": "/4zqCKJVHUolGs6C5AZwAZqLWixW.jpg",
+      "cast": [
+        "Bruce Campbell",
+        "Sarah Berry",
+        "Dan Hicks",
+        "Kassie DePaiva",
+        "Ted Raimi",
+        "Denise Bixler",
+        "Richard Domeier",
+        "John Peakes"
+      ],
+      "directors": [
+        "Sam Raimi"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "d4a2ab87-917f-4157-a2f8-aaed1f664b76",
