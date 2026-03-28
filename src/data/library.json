@@ -1908,18 +1908,31 @@
     },
     {
       "id": "c30bcd67-8c14-44bf-ae57-ae0100f1f3d3",
-      "title": "Critters 1-4",
+      "title": "Critters",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 3980,
+      "year": 1986,
+      "synopsis": "Carnivorous aliens arrive unannounced at a Kansas family farm; two intergalactic bounty hunters soon follow, determined to blow them off the planet.",
+      "poster_path": "/dxBy4WePZY06Bk5KvXb4K3UnjCy.jpg",
+      "cast": [
+        "Dee Wallace",
+        "M. Emmet Walsh",
+        "Billy Green Bush",
+        "Scott Grimes",
+        "Nadine Van der Velde",
+        "Don Keith Opper",
+        "Lin Shaye",
+        "Billy Zane"
+      ],
+      "directors": [
+        "Stephen Herek"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "d67108f0-d4e3-4307-aa47-f6877d8f669a",
