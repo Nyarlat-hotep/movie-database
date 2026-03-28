@@ -43,7 +43,7 @@ export default async function handler(req, res) {
       method: 'PUT',
       headers,
       body: JSON.stringify({
-        message: 'chore: update library.json',
+        message: 'chore: update library.json [vercel skip]',
         content,
         sha,
       }),
