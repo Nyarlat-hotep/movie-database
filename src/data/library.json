@@ -3358,18 +3358,31 @@
     },
     {
       "id": "fa047fc7-187c-482c-820c-d5ad71f4a2de",
-      "title": "Ghostbusters 1 & 2",
+      "title": "Ghostbusters",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 620,
+      "year": 1984,
+      "synopsis": "After losing their university jobs, three parapsychologists start a ghost-catching business in New York City and uncover a supernatural threat that could destroy the world.",
+      "poster_path": "/7E8nLijS9AwwUEPu2oFYOVKhdFA.jpg",
+      "cast": [
+        "Bill Murray",
+        "Dan Aykroyd",
+        "Sigourney Weaver",
+        "Harold Ramis",
+        "Rick Moranis",
+        "Annie Potts",
+        "William Atherton",
+        "Ernie Hudson"
+      ],
+      "directors": [
+        "Ivan Reitman"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "50cf9f92-7483-44ca-93c7-65c58f4851e9",
