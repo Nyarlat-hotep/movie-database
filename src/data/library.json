@@ -14521,6 +14521,34 @@
       "id": "f141bc90-9c0f-44e7-82f8-e17dba475b6e",
       "_type": "show",
       "genres": []
+    },
+    {
+      "title": "The Addams Family",
+      "year": 1964,
+      "synopsis": "A satirical inversion of the ideal of the perfect American nuclear family, they are an eccentric wealthy family who delight in everything grotesque and macabre, and are never really aware that people find them bizarre or frightening. In fact, they themselves are often terrified by \"normal\" people.",
+      "poster_path": "/twfSYEw4cp5KS9HaxSLh6Q0Bmi6.jpg",
+      "cast": [
+        "Carolyn Jones",
+        "John Astin",
+        "Jackie Coogan",
+        "Ted Cassidy",
+        "Marie Blake",
+        "Lisa Loring",
+        "Ken Weatherwax"
+      ],
+      "directors": [],
+      "creators": [
+        "Charles Addams"
+      ],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 14009,
+      "id": "a9e01065-0859-46c3-a9de-b92ec5223ee6",
+      "_type": "show",
+      "genres": []
     }
   ]
 }
