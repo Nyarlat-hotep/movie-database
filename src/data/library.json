@@ -12995,6 +12995,35 @@
       "id": "5a8a19f1-4d4a-445e-ad5d-98c11f3cc70b",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "Critters 2",
+      "year": 1988,
+      "synopsis": "Three bounty hunters from space fly back to the town of Grovers Bend, hoping to save local residents from a new batch of Critter eggs.",
+      "poster_path": "/5rR3dVJXnXskkBBWKbLg5EDKWtT.jpg",
+      "cast": [
+        "Scott Grimes",
+        "Liane Curtis",
+        "Don Keith Opper",
+        "Barry Corbin",
+        "Tom Hodges",
+        "Sam Anderson",
+        "Lindsay Parker",
+        "Herta Ware"
+      ],
+      "directors": [
+        "Mick Garris"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 10127,
+      "id": "2872c03f-b93e-4f66-86ab-49883e0231d6",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
