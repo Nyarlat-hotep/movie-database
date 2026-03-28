@@ -14450,19 +14450,32 @@
     },
     {
       "id": "5b6a8f1a-203f-4a10-8147-a9a5ab9f9370",
-      "title": "Vival La Bam",
-      "seasons_owned": "1-5",
+      "title": "Viva La Bam",
+      "seasons_owned": "1, 2, 3, 4, 5",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "creators": [],
-      "genres": []
+      "tmdb_id": 2293,
+      "year": 2003,
+      "synopsis": "Viva La Bam was an American reality television series that stars Bam Margera and his friends and family. The show was a spin-off from MTV's Jackass, in which Margera and most of the main cast had appeared. Each episode had a specific theme, mission, or challenge which was normally accomplished by performing pranks, skateboarding, and enlisting the help of friends, relations and experts. Although partly improvised, the show was supported by a greater degree of planning and organization.",
+      "poster_path": "/2187ShssSo0D0yRvUL5vwkIRGCu.jpg",
+      "cast": [
+        "Bam Margera",
+        "Ryan Dunn",
+        "April Margera",
+        "Brandon DiCamillo",
+        "Chris Raab",
+        "Phil Margera",
+        "Vincent Margera",
+        "Rake Yohn"
+      ],
+      "creators": [
+        "Bam Margera"
+      ],
+      "genres": [],
+      "_type": "show",
+      "directors": []
     },
     {
       "title": "Arabian Nights",
