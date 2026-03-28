@@ -13727,6 +13727,35 @@
       "cast": [],
       "creators": [],
       "genres": []
+    },
+    {
+      "title": "Arabian Nights",
+      "year": 2000,
+      "synopsis": "Targeted for assassination by his first wife and his evil brother, a young sultan must marry by the next full moon or he will lose his kingdom. His uncertainty over his newfound bride causes her to stall the sultan with a series of fantastic stories to ease the tension and stall her impending execution.",
+      "poster_path": "/oMLISBzw6QDo60h2C1NGUL00puS.jpg",
+      "cast": [
+        "Mili Avital",
+        "Alan Bates",
+        "James Frain",
+        "Rufus Sewell",
+        "Tchéky Karyo",
+        "Dougray Scott",
+        "Jason Scott Lee",
+        "Vanessa-Mae"
+      ],
+      "directors": [],
+      "creators": [
+        "Peter Barnes"
+      ],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 20658,
+      "id": "edaa837b-20cb-43b0-bf3c-870cc80408fc",
+      "_type": "show",
+      "genres": []
     }
   ]
 }
