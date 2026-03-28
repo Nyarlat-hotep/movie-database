@@ -13053,6 +13053,35 @@
       "id": "b50419ea-59ab-412e-9c6c-1b5d42889658",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "Critters 4",
+      "year": 1992,
+      "synopsis": "A super strain of genetically engineered mutants are designed to take over the universe, hungry to conquer the galaxy, with an appetite for mankind.",
+      "poster_path": "/k1Xio02tnxgyFA9PnlP2OSCIK2C.jpg",
+      "cast": [
+        "Don Keith Opper",
+        "Paul Whitthorne",
+        "Angela Bassett",
+        "Anders Hove",
+        "Eric DaRe",
+        "Brad Dourif",
+        "Terrence Mann",
+        "Martine Beswick"
+      ],
+      "directors": [
+        "Rupert Harvey"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 12525,
+      "id": "affc464a-0ecf-427e-8106-81bac061e360",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
