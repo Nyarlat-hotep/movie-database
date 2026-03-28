@@ -13123,19 +13123,26 @@
     },
     {
       "id": "acb59cd9-abea-4c34-98bb-eb5a05e25632",
-      "title": "Chapelles Show",
-      "seasons_owned": "1",
+      "title": "Chappelle's Show",
+      "seasons_owned": "1, 2, 3",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "creators": [],
-      "genres": []
+      "tmdb_id": 713,
+      "year": 2003,
+      "synopsis": "Dave Chappelle's singular point of view is unleashed through a combination of laidback stand-up and street-smart sketches.",
+      "poster_path": "/aHpTmNU2wLHokoVpzcnh2VQBJOI.jpg",
+      "cast": [
+        "Dave Chappelle"
+      ],
+      "creators": [
+        "Neal Brennan",
+        "Dave Chappelle"
+      ],
+      "genres": [],
+      "_type": "show",
+      "directors": []
     },
     {
       "id": "bf84fdcd-3e8c-4157-adac-a6006e4d0738",
