@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Exo+2:wght@300;400;500;600&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --space-dark: #050505;
+  --space-medium: #0a0a0a;
+  --electric-blue: #ff7700;
+  --neon-purple: #cc2200;
+  --cyan: #ffaa33;
+  --badge-bluray: #22d3ee;
+  --badge-vhs: #f5c842;
+  --glass-white: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --font-display: 'Orbitron', 'Rajdhani', sans-serif;
+  --font-body: 'Exo 2', system-ui, sans-serif;
+  --font-mono: 'Share Tech Mono', monospace;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+  background: var(--space-dark);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-white);
+  color: var(--text-primary);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  border-color: var(--electric-blue);
+  background: rgba(255, 119, 0, 0.1);
+}
+
+input {
+  font-family: var(--font-mono);
+  background: rgba(0,0,0,0.3);
+  border: 1px solid rgba(255,119,0,0.3);
+  border-radius: 8px;
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--electric-blue);
+  box-shadow: 0 0 15px rgba(255,119,0,0.3);
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.2); }
