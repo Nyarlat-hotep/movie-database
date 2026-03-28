@@ -5337,27 +5337,29 @@
     },
     {
       "id": "c862f0eb-3462-48ad-9b3f-c52f29dac5b2",
-      "title": "Linkin Park",
+      "title": "Linkin Park: Live in Texas",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 1388676,
-      "year": 2024,
-      "synopsis": "",
-      "poster_path": "/5AAqvBso9wAZNRgY51wF9Kt79an.jpg",
+      "tmdb_id": 40444,
+      "year": 2003,
+      "synopsis": "Live in Texas is the first live album and third DVD by American rock band Linkin Park.  The band's main setlist includes songs from their studio albums Hybrid Theory and Meteora, as well as one song from their remix album Reanimation. The live album peaked at #23 on the Billboard 200, and it has sold 1.1 million copies in the United States.",
+      "poster_path": "/7b6aV79bXuoNktnP7oKfUzZGBka.jpg",
       "cast": [
+        "Chester Bennington",
         "Mike Shinoda",
-        "Emily Armstrong",
-        "Dave Farrell",
+        "Brad Delson",
         "Joe Hahn",
-        "Colin Brittain",
-        "Alex Feder"
+        "Rob Bourdon",
+        "Dave Farrell"
       ],
       "directors": [
-        "Mark Ritchie"
+        "Kimo Proudfoot"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "a8cb23ff-89f4-46d0-832f-5da31ecc0511",
