@@ -11,7 +11,7 @@
   padding: 0 2rem;
   background: rgba(5, 5, 5, 0.92);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 119, 0, 0.12);
+  border-bottom: 1px solid rgba(255, 119, 0, 0.28);
 }
 
 .navbar-title {
@@ -37,7 +37,7 @@
 }
 
 .navbar-search::placeholder {
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 1px;
 }
 
@@ -57,12 +57,12 @@
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 20px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.7);
   transition: all 0.2s ease;
 }
 
 .filter-chip:hover {
-  border-color: rgba(255, 119, 0, 0.35);
+  border-color: rgba(255, 119, 0, 0.6);
   color: var(--text-primary);
   background: transparent;
 }
@@ -91,7 +91,7 @@
 .filter-divider {
   width: 1px;
   height: 18px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.22);
   margin: 0 0.2rem;
 }
 
@@ -101,9 +101,9 @@
   font-size: 0.6rem;
   letter-spacing: 1px;
   text-transform: uppercase;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 6px;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
   background: transparent;
   flex-shrink: 0;
   transition: all 0.2s ease;
