@@ -55,7 +55,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 20px;
   color: rgba(255, 255, 255, 0.45);
   transition: all 0.2s ease;
