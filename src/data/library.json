@@ -13354,6 +13354,35 @@
       "id": "74777dea-867a-429f-8994-e58974c8c547",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "John Wick: Chapter 2",
+      "year": 2017,
+      "synopsis": "John Wick is forced out of retirement by a former associate looking to seize control of a shadowy international assassins’ guild. Bound by a blood oath to aid him, Wick travels to Rome and does battle against some of the world’s most dangerous killers.",
+      "poster_path": "/hXWBc0ioZP3cN4zCu6SN3YHXZVO.jpg",
+      "cast": [
+        "Keanu Reeves",
+        "Common",
+        "Laurence Fishburne",
+        "Riccardo Scamarcio",
+        "Ruby Rose",
+        "Lance Reddick",
+        "Peter Stormare",
+        "Bridget Moynahan"
+      ],
+      "directors": [
+        "Chad Stahelski"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 324552,
+      "id": "2a97c17d-6f6f-4a22-a877-30055f51327e",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
