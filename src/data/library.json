@@ -13299,6 +13299,35 @@
       "id": "34d72b6f-b68b-4393-96d6-51a286e516fd",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "Raiders of the Lost Ark",
+      "year": 1981,
+      "synopsis": "When Dr. Indiana Jones – the tweed-suited professor who just happens to be a celebrated archaeologist – is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
+      "poster_path": "/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
+      "cast": [
+        "Harrison Ford",
+        "Karen Allen",
+        "Paul Freeman",
+        "John Rhys-Davies",
+        "Ronald Lacey",
+        "Wolf Kahler",
+        "Anthony Higgins",
+        "Denholm Elliott"
+      ],
+      "directors": [
+        "Steven Spielberg"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 85,
+      "id": "74777dea-867a-429f-8994-e58974c8c547",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
