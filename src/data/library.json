@@ -13359,19 +13359,29 @@
     },
     {
       "id": "1b84773d-e4f0-40c7-ab31-0e15e50969bd",
-      "title": "East Bound and Down",
+      "title": "Eastbound & Down",
       "seasons_owned": "1",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "creators": [],
-      "genres": []
+      "tmdb_id": 8624,
+      "year": 2009,
+      "synopsis": "Years after he turned his back on his hometown, a burned-out major league ballplayer returns to teach phys ed at his old middle school.",
+      "poster_path": "/grAnpm6mv6aipoGeS0yS6RuTZSG.jpg",
+      "cast": [
+        "Danny McBride",
+        "Steve Little",
+        "Katy Mixon"
+      ],
+      "creators": [
+        "Danny McBride",
+        "Jody Hill",
+        "Ben Best"
+      ],
+      "genres": [],
+      "_type": "show",
+      "directors": []
     },
     {
       "id": "8a3221a1-bd2c-415c-8c5b-6ca9502f34dc",
