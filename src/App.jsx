@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, LogOut } from 'lucide-react';
+import { Plus, LogOut, Shuffle } from 'lucide-react';
 import { useAuth } from './hooks/useAuth.js';
 import { useLibrary } from './hooks/useLibrary.js';
 import LoginOverlay from './components/Auth/LoginOverlay.jsx';
@@ -57,6 +57,18 @@ function App() {
       <main style={{ paddingTop: '64px', paddingBottom: '0' }} className="main-content">
         <LibraryGrid items={filtered} onSelect={setSelected} />
       </main>
+
+      {/* Floating random button */}
+      <button
+        onClick={() => {
+          if (filtered.length === 0) return;
+          setSelected(filtered[Math.floor(Math.random() * filtered.length)]);
+        }}
+        aria-label="Random title"
+        className="fab-random"
+      >
+        <Shuffle size={22} strokeWidth={2} />
+      </button>
 
       {/* Floating add button */}
       <button

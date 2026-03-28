@@ -34,6 +34,7 @@
   font-size: 0.82rem;
   height: 38px;
   padding: 0 1rem;
+  border-radius: 25px;
 }
 
 .navbar-search::placeholder {
