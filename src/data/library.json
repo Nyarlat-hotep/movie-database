@@ -10763,29 +10763,31 @@
     },
     {
       "id": "5f1cc80c-fc16-4fcc-9948-56c5f70e67d0",
-      "title": "Willy Wonka",
+      "title": "Charlie and the Chocolate Factory",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 252,
-      "year": 1971,
-      "synopsis": "When eccentric candy man Willy Wonka promises a lifetime supply of sweets and a tour of his chocolate factory to five lucky kids, penniless Charlie Bucket seeks the golden ticket that will make him a winner.",
-      "poster_path": "/vmpsZkrs4Uvkp9r1atL8B3frA63.jpg",
+      "tmdb_id": 118,
+      "year": 2005,
+      "synopsis": "A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.",
+      "poster_path": "/iKP6wg3c6COUe8gYutoGG7qcPnO.jpg",
       "cast": [
-        "Gene Wilder",
-        "Jack Albertson",
-        "Peter Ostrum",
-        "Roy Kinnear",
-        "Julie Dawn Cole",
-        "Leonard Stone",
-        "Denise Nickerson",
-        "Nora Denney"
+        "Johnny Depp",
+        "Freddie Highmore",
+        "David Kelly",
+        "Helena Bonham Carter",
+        "Noah Taylor",
+        "Missi Pyle",
+        "James Fox",
+        "Deep Roy"
       ],
       "directors": [
-        "Mel Stuart"
+        "Tim Burton"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "d22c88e7-ca6b-428c-bfcc-cfb5fa9be210",
