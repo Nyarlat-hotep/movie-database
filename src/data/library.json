@@ -13411,6 +13411,35 @@
       "id": "2a97c17d-6f6f-4a22-a877-30055f51327e",
       "_type": "movie",
       "genres": []
+    },
+    {
+      "title": "Kill Bill: Vol. 2",
+      "year": 2004,
+      "synopsis": "The Bride unwaveringly continues on her roaring rampage of revenge against the band of assassins who had tried to kill her and her unborn child. She visits each of her former associates one-by-one, checking off the victims on her Death List Five until there's nothing left to do … but kill Bill.",
+      "poster_path": "/2yhg0mZQMhDyvUQ4rG1IZ4oIA8L.jpg",
+      "cast": [
+        "Uma Thurman",
+        "David Carradine",
+        "Daryl Hannah",
+        "Michael Madsen",
+        "Gordon Liu Chia-Hui",
+        "Michael Parks",
+        "Perla Haney-Jardine",
+        "Vivica A. Fox"
+      ],
+      "directors": [
+        "Quentin Tarantino"
+      ],
+      "creators": [],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 393,
+      "id": "26657244-01cd-4ea9-b076-66d4f0b52cb5",
+      "_type": "movie",
+      "genres": []
     }
   ],
   "shows": [
