@@ -11656,29 +11656,31 @@
     },
     {
       "id": "34f6f8f8-f1d2-45dd-bbfd-ee701e3a61cd",
-      "title": "Halloween 3",
+      "title": "Halloween III: Season of the Witch",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 656980,
-      "year": 2019,
-      "synopsis": "Things have gotten a lot more violent at the farm, and Carl must get to the bottom of it to help Lucy and Darren solve the strange re-occurrences. The DVD and Blu-ray extras have not been completed, and a contract needs to be signed to enable distribution of the behind the scenes. Carl has one last chance to prove his gift as a Paranormal Investigator.",
-      "poster_path": "/gW5I0cgxOqNzcNAGkc85aTbuHsc.jpg",
+      "tmdb_id": 10676,
+      "year": 1982,
+      "synopsis": "After a terrified toy salesman is mysteriously attacked and brought to the hospital, clutching the year's most popular Halloween mask, Dr. Daniel Challis sets out to investigate the strange events and finds himself thrust into a nightmarish conspiracy.",
+      "poster_path": "/WABfdeaThFYXCySGIOvRNv2sSW.jpg",
       "cast": [
-        "Carl Medland",
-        "Mumtaz Yildirimlar",
-        "Darren Earl Williams",
-        "Lucy French",
-        "Caroline Burns Cooke",
-        "Nicole Faraday",
-        "Robert Gray",
-        "Harvey Smith"
+        "Tom Atkins",
+        "Stacey Nelkin",
+        "Dan O'Herlihy",
+        "Michael Currie",
+        "Ralph Strait",
+        "Jadeen Barbor",
+        "Brad Schacter",
+        "Garn Stephens"
       ],
       "directors": [
-        "Carl Medland"
+        "Tommy Lee Wallace"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "ba42639b-8d36-4f49-a3f5-0448fcf2b491",
