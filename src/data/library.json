@@ -2357,18 +2357,31 @@
     },
     {
       "id": "29ba5683-fae2-4fee-bd62-f57997259340",
-      "title": "Dracula 1930",
+      "title": "Dracula",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 138,
+      "year": 1931,
+      "synopsis": "A British estate agent travels to Transylvania to meet the mysterious Count Dracula, who is interested in leasing a London castle. After Dracula enslaves the agent and drives him to insanity, the pair return to London together, where Dracula, a secret bloodsucker, begins preying on socialites.",
+      "poster_path": "/ueVSPt7vAba0XScHWTDWS5tNxYX.jpg",
+      "cast": [
+        "Bela Lugosi",
+        "Helen Chandler",
+        "David Manners",
+        "Dwight Frye",
+        "Edward Van Sloan",
+        "Herbert Bunston",
+        "Frances Dade",
+        "Joan Standing"
+      ],
+      "directors": [
+        "Tod Browning"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "93dc79f0-6045-4058-ac81-9f3f682b19a2",
