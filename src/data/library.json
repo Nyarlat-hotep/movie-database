@@ -7537,24 +7537,31 @@
     },
     {
       "id": "adae26fe-2bb2-466e-9b0d-196819fb5b89",
-      "title": "Star Wars 4",
+      "title": "Star Wars",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 1401520,
-      "year": 1988,
-      "synopsis": "Features \"The Crystal Cloak / The Wish Plant\", \"The Totem Master / A Gift for Shodu\", \"Horville's Hut of Horrors / The Tragic Flute\" and \"Just My Luck / Bringing Up Norky\".",
-      "poster_path": "/saiNR4fizrCrnv8kUrMFJpsW4uK.jpg",
+      "tmdb_id": 11,
+      "year": 1977,
+      "synopsis": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+      "poster_path": "/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
       "cast": [
-        "James Cranna",
-        "Sue Murphy",
-        "Denny Delk"
+        "Mark Hamill",
+        "Harrison Ford",
+        "Carrie Fisher",
+        "Peter Cushing",
+        "Alec Guinness",
+        "Anthony Daniels",
+        "Kenny Baker",
+        "Peter Mayhew"
       ],
       "directors": [
-        "Dale Schott"
+        "George Lucas"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "94bec0e3-06e6-4e50-b865-44513966ef4a",
