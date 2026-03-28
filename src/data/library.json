@@ -8012,20 +8012,31 @@
     },
     {
       "id": "0e5087a7-9c73-45c0-aeda-f32987ead1fb",
-      "title": "The Bride of Frankenstein",
+      "title": "Bride of Frankenstein",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 773620,
-      "year": 1968,
-      "synopsis": "Bakedano's experimental approach to the bride of Frankenstein's story.",
-      "poster_path": "/9dmJA89lxa5cr2HyzPzJl8qyhQo.jpg",
-      "cast": [],
-      "directors": [
-        "José Julián Bakedano"
+      "tmdb_id": 229,
+      "year": 1935,
+      "synopsis": "Dr. Frankenstein and his monster both turn out to be alive after being attacked by an angry mob. The now-chastened scientist attempts to escape his past, but a former mentor forces him to assist with the creation of a new creature.",
+      "poster_path": "/5241zUwe7rC17MNc2QpCBKKdp1N.jpg",
+      "cast": [
+        "Boris Karloff",
+        "Colin Clive",
+        "Valerie Hobson",
+        "Ernest Thesiger",
+        "Elsa Lanchester",
+        "Gavin Gordon",
+        "Douglas Walton",
+        "Una O'Connor"
       ],
-      "genres": []
+      "directors": [
+        "James Whale"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "a51fcbdb-24d1-4cc8-a4fb-b0e54f089e57",
