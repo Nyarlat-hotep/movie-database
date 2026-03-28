@@ -11024,18 +11024,31 @@
     },
     {
       "id": "2a1171fc-729a-4130-9df8-976430aaed1c",
-      "title": "Amityville Horror 1970",
+      "title": "The Amityville Horror",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 11449,
+      "year": 1979,
+      "synopsis": "George Lutz, his wife Kathy, and their three children have just moved into a beautiful, and improbably cheap, Victorian mansion nestled in the sleepy coastal town of Amityville, Long Island. However, their dream home is concealing a horrific past and soon each member of the Lutz family is plagued with increasingly strange and violent visions and impulses.",
+      "poster_path": "/7VMscq0659xKmcXzd86de1DGV4W.jpg",
+      "cast": [
+        "James Brolin",
+        "Margot Kidder",
+        "Rod Steiger",
+        "Don Stroud",
+        "Murray Hamilton",
+        "John Larch",
+        "Natasha Ryan",
+        "K.C. Martel"
+      ],
+      "directors": [
+        "Stuart Rosenberg"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "d0943537-ed49-4bc5-8f15-3423fccf9be3",
