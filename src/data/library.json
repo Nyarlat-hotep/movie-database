@@ -4830,18 +4830,31 @@
     },
     {
       "id": "e5ba6365-0cdf-4bd1-bb55-99721e171c81",
-      "title": "Journey to the mysterous island",
+      "title": "Journey 2: The Mysterious Island",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 72545,
+      "year": 2012,
+      "synopsis": "Sean Anderson partners with his mom's boyfriend on a mission to find his grandfather, who is thought to be missing on a mythical island.",
+      "poster_path": "/uFm2vnp9LhHx5MNo1Ego6O3vUhl.jpg",
+      "cast": [
+        "Dwayne Johnson",
+        "Josh Hutcherson",
+        "Vanessa Hudgens",
+        "Luis Guzmán",
+        "Michael Caine",
+        "Kristin Davis",
+        "Anna Colwell",
+        "Stephen Caudill"
+      ],
+      "directors": [
+        "Brad Peyton"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "c5ca348e-15d9-4b0d-a79e-42d4b219e9d9",
