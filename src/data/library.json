@@ -13189,19 +13189,30 @@
     },
     {
       "id": "d48d2e1f-a984-4fc9-9fcc-0c7b3516907e",
-      "title": "Courage the Cowardly Dog ssn",
+      "title": "Courage the Cowardly Dog",
       "seasons_owned": "1",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "creators": [],
-      "genres": []
+      "tmdb_id": 2085,
+      "year": 1999,
+      "synopsis": "The bizarre misadventures of a cowardly dog named Courage and his elderly owners in a farmhouse in Nowhere, Kansas.",
+      "poster_path": "/uJQsBgzlrgZpjeB5fHBtJQA04nS.jpg",
+      "cast": [
+        "Marty Grabstein",
+        "Thea White",
+        "Simon Prebble",
+        "Billie Lou Watt",
+        "Paul Schoeffler",
+        "Arthur Anderson"
+      ],
+      "creators": [
+        "John R. Dilworth"
+      ],
+      "genres": [],
+      "_type": "show",
+      "directors": []
     },
     {
       "id": "fd928b0d-342e-4b1f-9258-715ae395ac0c",
