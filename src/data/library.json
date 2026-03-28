@@ -6783,18 +6783,31 @@
     },
     {
       "id": "5fb997ab-7941-4c76-a077-861f765300b0",
-      "title": "Robert the Doll 1-2",
+      "title": "Robert",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 356149,
+      "year": 2015,
+      "synopsis": "A family is terrorized by an evil doll named Robert, which seems to come to life after an elderly housekeeper is dismissed. As the attacks grow more intense, the parents struggle with their disbelief and fear while trying to break the curse before it's too late.",
+      "poster_path": "/cP3giyle6Dq2Ii9hqps5c44h0Aa.jpg",
+      "cast": [
+        "Suzie Frances Garton",
+        "Lee Bane",
+        "Flynn Allen",
+        "Judith Haley",
+        "Cyd Casados",
+        "Samuel Hutchison",
+        "Megan Lockhurst",
+        "Ryan Michaels"
+      ],
+      "directors": [
+        "Andrew Jones"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "3274bc68-40a6-42f7-a5c4-45ac64cc1650",
