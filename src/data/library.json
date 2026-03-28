@@ -10889,29 +10889,31 @@
     },
     {
       "id": "1f9d8530-28f0-44ac-b1f7-1a132d5acdc7",
-      "title": "9 to 5",
+      "title": "Nine to Five",
       "formats": [
         "vhs"
       ],
       "notes": "",
-      "tmdb_id": 192396,
-      "year": 1982,
-      "synopsis": "A woman named Chieko Kuwano is hired as an assistant manager at a large corporate office in Japan. She’s smart, sexy, and willing to do almost anything for her sex-starved new boss but, since he’s married, his deviant behavior makes her uncomfortable. Fed up with the boss and his perverted ways, the ladies in the building band together to enact their own special kind of revenge… that is, after they have a lesbian three-way slumber party, of course!",
-      "poster_path": "/aU163RntrteVd7K7IIZJkM5xNuW.jpg",
+      "tmdb_id": 19494,
+      "year": 1980,
+      "synopsis": "Three female employees of a sexist, egotistical, lying, hypocritical bigot find a way to turn the tables on him.",
+      "poster_path": "/3nm6kWMFzxGtJb4UEuDB0lDWpcD.jpg",
       "cast": [
-        "Junko Asahina",
-        "Shin'ichi Arai",
-        "Yûzô Hidaka",
-        "Tamaki Komiyama",
-        "Masakazu Kuwayama",
-        "Nami Misaki",
-        "Yoichiro Sanada",
-        "Hitoshi Takagi"
+        "Jane Fonda",
+        "Lily Tomlin",
+        "Dolly Parton",
+        "Dabney Coleman",
+        "Sterling Hayden",
+        "Elizabeth Wilson",
+        "Henry Jones",
+        "Lawrence Pressman"
       ],
       "directors": [
-        "Katsuhiko Fujii"
+        "Colin Higgins"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "da83cf82-af8a-4f89-a027-9656bbdef0d6",
