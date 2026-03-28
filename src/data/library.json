@@ -14106,19 +14106,30 @@
     },
     {
       "id": "3058ad3e-f3da-4713-8100-dd1b9311b33d",
-      "title": "Scoobie Doo",
+      "title": "Scooby-Doo, Where Are You!",
       "seasons_owned": "",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "creators": [],
-      "genres": []
+      "tmdb_id": 926,
+      "year": 1969,
+      "synopsis": "Fred, Daphne, Velma, Shaggy, and the talking dog, Scooby-Doo, travel on the Mystery Machine van, in search of weird mysteries to solve.",
+      "poster_path": "/lTzUSCtXR77CmGmEHcaxpxu2b4h.jpg",
+      "cast": [
+        "Casey Kasem",
+        "Don Messick",
+        "Frank Welker",
+        "Heather North",
+        "Patricia Stevens"
+      ],
+      "creators": [
+        "Joe Ruby",
+        "Ken Spears"
+      ],
+      "genres": [],
+      "_type": "show",
+      "directors": []
     },
     {
       "id": "d3a5b6dc-261c-4aeb-a505-c27562f1027b",
