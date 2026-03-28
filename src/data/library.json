@@ -7906,18 +7906,31 @@
     },
     {
       "id": "b70b7bcd-aad1-4976-bf16-ad4ab6d53d2d",
-      "title": "The Black Dhalia",
+      "title": "The Black Dahlia",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 9676,
+      "year": 2006,
+      "synopsis": "In 1940s Los Angeles, two former boxers-turned-cops must grapple with corruption, narcissism, stag films and family madness as they pursue the killer of an aspiring young actress.",
+      "poster_path": "/su7yuXqGUHICfoijtcSaxWLE34Y.jpg",
+      "cast": [
+        "Josh Hartnett",
+        "Scarlett Johansson",
+        "Aaron Eckhart",
+        "Hilary Swank",
+        "Mia Kirshner",
+        "Mike Starr",
+        "Fiona Shaw",
+        "Patrick Fischler"
+      ],
+      "directors": [
+        "Brian De Palma"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "ff6c37b7-794d-4170-bf6a-d06809ccd115",
