@@ -10577,20 +10577,31 @@
     },
     {
       "id": "9e3c3115-9cb8-4cf2-8b87-487ce6448a1a",
-      "title": "Water World",
+      "title": "Waterworld",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 941769,
-      "year": null,
-      "synopsis": "Documentary on people's struggle in Chile related to their territory, their homes and the way their organize.",
-      "poster_path": null,
-      "cast": [],
-      "directors": [
-        "Renato Dennis"
+      "tmdb_id": 9804,
+      "year": 1995,
+      "synopsis": "In a futuristic world where the polar ice caps have melted and made Earth a liquid planet, a beautiful barmaid rescues a mutant seafarer from a floating island prison. They escape, along with her young charge, Enola, and sail off aboard his ship. But the trio soon becomes the target of a menacing pirate who covets the map to 'Dryland'—which is tattooed on Enola's back.",
+      "poster_path": "/X4UyUO5jgzs3c5YafnmYKLKKYw.jpg",
+      "cast": [
+        "Kevin Costner",
+        "Dennis Hopper",
+        "Jeanne Tripplehorn",
+        "Tina Majorino",
+        "R. D. Call",
+        "Gerard Murphy",
+        "Michael Jeter",
+        "Rick Aviles"
       ],
-      "genres": []
+      "directors": [
+        "Kevin Reynolds"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "fbf4950e-34ec-43e0-b5f6-ec216239406b",
