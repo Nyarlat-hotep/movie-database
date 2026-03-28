@@ -28,7 +28,7 @@ export function useLibrary() {
   async function saveLibrary(updatedLibrary) {
     setSaving(true);
     try {
-      const res = await fetch('/.netlify/functions/save-library', {
+      const res = await fetch('/api/save-library', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedLibrary),

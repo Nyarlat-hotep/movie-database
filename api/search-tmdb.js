@@ -1,26 +1,19 @@
 const TMDB_BASE = 'https://api.themoviedb.org/3';
 
-exports.handler = async (event) => {
-  if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method not allowed' };
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  let query, type;
-  try {
-    const body = JSON.parse(event.body || '{}');
-    query = body.query;
-    type = body.type || 'movie';
-  } catch {
-    return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON body' }) };
-  }
+  const { query, type = 'movie' } = req.body;
 
   if (!query) {
-    return { statusCode: 400, body: JSON.stringify({ error: 'query is required' }) };
+    return res.status(400).json({ error: 'query is required' });
   }
 
   const apiKey = process.env.TMDB_API_KEY;
   if (!apiKey) {
-    return { statusCode: 500, body: JSON.stringify({ error: 'TMDB_API_KEY not configured' }) };
+    return res.status(500).json({ error: 'TMDB_API_KEY not configured' });
   }
 
   const endpoint = type === 'tv' ? 'search/tv' : 'search/movie';
@@ -62,9 +55,5 @@ exports.handler = async (event) => {
     })
   );
 
-  return {
-    statusCode: 200,
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(enriched),
-  };
-};
+  return res.status(200).json(enriched);
+}

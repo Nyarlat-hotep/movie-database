@@ -26,7 +26,7 @@ export default function AddEditModal({ item, onSave, onClose }) {
     setSearching(true);
     setTmdbResults([]);
     try {
-      const res = await fetch('/.netlify/functions/search-tmdb', {
+      const res = await fetch('/api/search-tmdb', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: searchQuery, type: type === 'show' ? 'tv' : 'movie' }),

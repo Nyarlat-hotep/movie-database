@@ -1,24 +1,18 @@
 const GITHUB_API = 'https://api.github.com';
 
-exports.handler = async (event) => {
-  if (event.httpMethod !== 'POST') {
-    return { statusCode: 405, body: 'Method not allowed' };
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  let library;
-  try {
-    library = JSON.parse(event.body);
-  } catch {
-    return { statusCode: 400, body: JSON.stringify({ error: 'Invalid JSON body' }) };
-  }
-
+  const library = req.body;
   const token = process.env.GITHUB_TOKEN;
   const owner = process.env.GITHUB_OWNER;
   const repo = process.env.GITHUB_REPO;
   const filePath = 'src/data/library.json';
 
   if (!token || !owner || !repo) {
-    return { statusCode: 500, body: JSON.stringify({ error: 'GitHub env vars not configured' }) };
+    return res.status(500).json({ error: 'GitHub env vars not configured' });
   }
 
   const headers = {
@@ -36,16 +30,13 @@ exports.handler = async (event) => {
 
   if (!getRes.ok) {
     const err = await getRes.json();
-    return { statusCode: 500, body: JSON.stringify({ error: `Could not fetch file SHA: ${err.message}` }) };
+    return res.status(500).json({ error: `Could not fetch file SHA: ${err.message}` });
   }
 
   const current = await getRes.json();
   const sha = current.sha;
-
-  // Encode updated library as base64
   const content = Buffer.from(JSON.stringify(library, null, 2)).toString('base64');
 
-  // Commit updated file
   const putRes = await fetch(
     `${GITHUB_API}/repos/${owner}/${repo}/contents/${filePath}`,
     {
@@ -61,12 +52,8 @@ exports.handler = async (event) => {
 
   if (!putRes.ok) {
     const err = await putRes.json();
-    return { statusCode: 500, body: JSON.stringify({ error: err.message }) };
+    return res.status(500).json({ error: err.message });
   }
 
-  return {
-    statusCode: 200,
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ok: true }),
-  };
-};
+  return res.status(200).json({ ok: true });
+}
