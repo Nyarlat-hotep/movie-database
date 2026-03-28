@@ -1,0 +1,66 @@
+.list-view {
+  padding: 1rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  width: 100%;
+}
+
+.list-row:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.list-row:hover {
+  background: rgba(255, 119, 0, 0.06);
+  border-color: rgba(255, 119, 0, 0.15);
+}
+
+.list-title {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: var(--text-primary);
+}
+
+.list-year {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.35);
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.list-empty {
+  padding: 6rem 0;
+  text-align: center;
+  font-family: var(--font-mono);
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .list-view {
+    padding: 0.5rem 1rem 4rem;
+  }
+
+  .list-row {
+    padding: 0.65rem 0.5rem;
+  }
+}

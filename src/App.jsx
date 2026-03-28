@@ -6,6 +6,7 @@ import LoginOverlay from './components/Auth/LoginOverlay.jsx';
 import Navbar from './components/Layout/Navbar.jsx';
 import MobileNav from './components/Layout/MobileNav.jsx';
 import LibraryGrid from './components/Library/LibraryGrid.jsx';
+import ListView from './components/Library/ListView.jsx';
 import DetailModal from './components/Library/DetailModal.jsx';
 import AddEditModal from './components/Admin/AddEditModal.jsx';
 import ConfirmDelete from './components/Admin/ConfirmDelete.jsx';
@@ -24,6 +25,7 @@ function App() {
   const [selected, setSelected]   = useState(null);  // item shown in DetailModal
   const [editing, setEditing]     = useState(null);  // item or 'new'
   const [deleting, setDeleting]   = useState(null);  // item pending delete
+  const [view, setView]           = useState('grid'); // 'grid' | 'list'
 
   if (loading) return null;
   if (!user) return <LoginOverlay onLogin={login} />;
@@ -47,6 +49,7 @@ function App() {
         search={search}         onSearch={setSearch}
         typeFilter={typeFilter} onTypeFilter={setTypeFilter}
         formatFilter={formatFilter} onFormatFilter={setFormatFilter}
+        view={view} onViewChange={setView}
       />
 
       {/* Floating logout button */}
@@ -55,7 +58,10 @@ function App() {
       </button>
 
       <main style={{ paddingTop: '64px', paddingBottom: '0' }} className="main-content">
-        <LibraryGrid items={filtered} onSelect={setSelected} />
+        {view === 'grid'
+          ? <LibraryGrid items={filtered} onSelect={setSelected} />
+          : <ListView items={filtered} onSelect={setSelected} />
+        }
       </main>
 
       {/* Floating random button */}
