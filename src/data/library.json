@@ -5835,25 +5835,31 @@
     },
     {
       "id": "96bd459d-4d9b-4512-9244-7ad28f2bf3fc",
-      "title": "Monkey Bone",
+      "title": "Monkeybone",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": 1126437,
-      "year": 1960,
-      "synopsis": "",
-      "poster_path": "/s05eYT3o6rs6JN5CoRO6orySHHk.jpg",
+      "tmdb_id": 23685,
+      "year": 2001,
+      "synopsis": "After a car crash sends repressed cartoonist Stu into a coma, he and the mischievous Monkeybone, his hilarious alter-ego, wake up in a wacked-out waystation for lost souls. When Monkeybone takes over Stu's body and escapes to wreak havoc on the real world, Stu has to find a way to stop him before his sister pulls the plug on reality forever!",
+      "poster_path": "/lgH7Wej9922C1MQv0wciAfesKH8.jpg",
       "cast": [
-        "Lingtong Liu",
-        "Lingtong Qi",
-        "Xiao Changshun"
+        "Brendan Fraser",
+        "Bridget Fonda",
+        "John Turturro",
+        "Chris Kattan",
+        "Giancarlo Esposito",
+        "Rose McGowan",
+        "Dave Foley",
+        "Megan Mullally"
       ],
       "directors": [
-        "Yu Zhongying",
-        "Yang Xiao-Zhong"
+        "Henry Selick"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "f785accf-fe14-4957-9173-5ba8bc17b341",
