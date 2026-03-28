@@ -3157,18 +3157,31 @@
     },
     {
       "id": "10e67874-1186-42d4-8421-e0a3643452e4",
-      "title": "Friday the 13th 2009",
+      "title": "Friday the 13th",
       "formats": [
         "dvd"
       ],
       "notes": "",
-      "tmdb_id": null,
-      "year": null,
-      "synopsis": "",
-      "poster_path": null,
-      "cast": [],
-      "directors": [],
-      "genres": []
+      "tmdb_id": 13207,
+      "year": 2009,
+      "synopsis": "A group of young adults visit a boarded up campsite named Crystal Lake where they soon encounter the mysterious Jason Voorhees and his deadly intentions.",
+      "poster_path": "/88wlJ4teYlck4hJ2bnlxBrAVh0m.jpg",
+      "cast": [
+        "Jared Padalecki",
+        "Danielle Panabaker",
+        "Amanda Righetti",
+        "Travis Van Winkle",
+        "Aaron Yoo",
+        "Derek Mears",
+        "Julianna Guill",
+        "Arlen Escarpeta"
+      ],
+      "directors": [
+        "Marcus Nispel"
+      ],
+      "genres": [],
+      "_type": "movie",
+      "creators": []
     },
     {
       "id": "63bc15f8-0e6c-48c4-bf41-1415163af3cd",
