@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         contents: [{
           parts: [
             { inline_data: { mime_type: 'image/jpeg', data: imageBase64 } },
-            { text: 'This is a photo of a shelf of physical media (DVDs, Blu-rays, VHS tapes) at a thrift store. List every movie and TV show title you can see, one per line. Only include titles — no actor names, studio names, or other text. Include partially visible titles if readable.' }
+            { text: 'This is a photo of a shelf of physical media (DVDs, Blu-rays, VHS tapes). Your task: output ONLY a plain list of movie and TV show titles, one per line. Rules: (1) No intro sentence, no header, no commentary — start directly with the first title. (2) No bullet points, numbers, dashes, or any prefix characters. (3) Only titles — no actor names, director names, studio logos, or rating labels. (4) Include every title you can read, even if partially visible. (5) Do not group or categorize. Just one title per line, nothing else.' }
           ]
         }]
       })
@@ -30,7 +30,7 @@ export default async function handler(req, res) {
   const titles = raw
     .split('\n')
     .map(l => l.replace(/^[\d\.\-\*\)\s]+/, '').trim())
-    .filter(Boolean);
+    .filter(l => l.length > 0 && !l.endsWith(':') && l.length < 100);
 
   return res.status(200).json({ titles });
 }

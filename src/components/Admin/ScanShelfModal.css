@@ -124,6 +124,36 @@
 
 .scan-preview-clear:hover { color: rgba(255, 255, 255, 0.7); }
 
+/* Progress bar */
+.scan-progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.scan-progress-bar {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.scan-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff7700, #ffaa33);
+  border-radius: 2px;
+  transition: width 0.2s ease-out;
+  box-shadow: 0 0 8px rgba(255, 119, 0, 0.6);
+}
+
+.scan-progress-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 119, 0, 0.7);
+}
+
 /* Capture actions */
 .scan-capture-actions {
   display: flex;

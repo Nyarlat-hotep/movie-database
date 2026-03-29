@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { v4 as uuidv4 } from 'uuid';
 import { Upload, Camera, X, ScanLine, Search, Plus } from 'lucide-react';
@@ -29,6 +29,7 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
   const [preview, setPreview] = useState(null);
   const [imageBase64, setImageBase64] = useState(null);
   const [scanning, setScanning] = useState(false);
+  const [scanProgress, setScanProgress] = useState(0);
   const [titles, setTitles] = useState([]);
   const [checked, setChecked] = useState({});
   const [searching, setSearching] = useState(false);
@@ -52,6 +53,17 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
     setImageBase64(b64);
   }
 
+  // Animate progress bar while scanning
+  useEffect(() => {
+    if (!scanning) { setScanProgress(0); return; }
+    setScanProgress(0);
+    // Ramp to 85% over ~8s, then stall until done
+    const interval = setInterval(() => {
+      setScanProgress(p => p < 85 ? p + (85 - p) * 0.06 : p);
+    }, 200);
+    return () => clearInterval(interval);
+  }, [scanning]);
+
   async function handleScan() {
     if (!imageBase64) return;
     setScanning(true);
@@ -64,8 +76,9 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Scan failed');
       const detected = data.titles || [];
+      setScanProgress(100);
+      await new Promise(r => setTimeout(r, 350)); // let bar finish
       setTitles(detected);
-      // Check new titles by default, un-check already owned
       const init = {};
       detected.forEach(t => { init[t] = !ownedTitles.has(t.toLowerCase()); });
       setChecked(init);
@@ -190,10 +203,20 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
               </div>
             )}
 
+            {scanning && (
+              <div className="scan-progress-wrap">
+                <div className="scan-progress-bar">
+                  <div className="scan-progress-fill" style={{ width: `${scanProgress}%` }} />
+                </div>
+                <span className="scan-progress-label">Scanning shelf...</span>
+              </div>
+            )}
+
             <div className="scan-capture-actions">
               <button
                 className="scan-camera-btn"
                 onClick={() => cameraInputRef.current.click()}
+                disabled={scanning}
               >
                 <Camera size={16} />
                 Take Photo
