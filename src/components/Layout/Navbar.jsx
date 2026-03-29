@@ -20,16 +20,18 @@ export default function Navbar({
       />
 
       {/* Mobile-only view toggle (next to search) */}
-      <button
-        className={`view-toggle mobile-only ${view === 'list' ? 'active' : ''}`}
-        onClick={() => onViewChange(view === 'grid' ? 'list' : 'grid')}
-        aria-label="Toggle view"
-      >
-        {view === 'grid' ? <List size={18} strokeWidth={1.8} /> : <LayoutGrid size={18} strokeWidth={1.8} />}
-      </button>
+      <div className="view-toggle-wrap mobile-only">
+        <div className={`view-pill ${view === 'list' ? 'right' : ''}`} />
+        <button className={`view-opt ${view === 'grid' ? 'active' : ''}`} onClick={() => onViewChange('grid')} aria-label="Grid view">
+          <LayoutGrid size={15} strokeWidth={1.8} />
+        </button>
+        <button className={`view-opt ${view === 'list' ? 'active' : ''}`} onClick={() => onViewChange('list')} aria-label="List view">
+          <List size={15} strokeWidth={1.8} />
+        </button>
+      </div>
 
       <div className="navbar-filters">
-        {['all', 'movies', 'shows'].map(type => (
+        {['All', 'Movies', 'Shows'].map(type => (
           <button
             key={type}
             className={`filter-chip ${typeFilter === type ? 'active' : ''}`}
@@ -58,13 +60,15 @@ export default function Navbar({
         <div className="filter-divider" />
 
         {/* Desktop-only view toggle (next to filters) */}
-        <button
-          className={`view-toggle desktop-only ${view === 'list' ? 'active' : ''}`}
-          onClick={() => onViewChange(view === 'grid' ? 'list' : 'grid')}
-          aria-label="Toggle view"
-        >
-          {view === 'grid' ? <List size={16} strokeWidth={1.8} /> : <LayoutGrid size={16} strokeWidth={1.8} />}
-        </button>
+        <div className="view-toggle-wrap desktop-only">
+          <div className={`view-pill ${view === 'list' ? 'right' : ''}`} />
+          <button className={`view-opt ${view === 'grid' ? 'active' : ''}`} onClick={() => onViewChange('grid')} aria-label="Grid view">
+            <LayoutGrid size={14} strokeWidth={1.8} />
+          </button>
+          <button className={`view-opt ${view === 'list' ? 'active' : ''}`} onClick={() => onViewChange('list')} aria-label="List view">
+            <List size={14} strokeWidth={1.8} />
+          </button>
+        </div>
       </div>
     </nav>
   );

@@ -50,11 +50,10 @@
 }
 
 .filter-chip {
-  padding: 0.35rem 0.85rem;
+  padding: 10px 14px;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
+  font-size: 12px;
   letter-spacing: 2px;
-  text-transform: uppercase;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 20px;
@@ -96,31 +95,59 @@
   margin: 0 0.2rem;
 }
 
-.view-toggle {
+.view-toggle-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 3px;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+.view-pill {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 28px;
+  height: 28px;
+  background: rgba(255, 119, 0, 0.18);
+  border: 1px solid rgba(255, 119, 0, 0.55);
+  border-radius: 14px;
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+
+.view-pill.right {
+  transform: translateX(28px);
+}
+
+.view-opt {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   padding: 0;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  color: rgba(255, 255, 255, 0.5);
-  flex-shrink: 0;
-  transition: all 0.2s ease;
+  border: none;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.2s ease;
 }
 
-.view-toggle:hover {
-  border-color: rgba(255, 119, 0, 0.5);
+.view-opt.active {
   color: #ff7700;
-  background: rgba(255, 119, 0, 0.08);
 }
 
-.view-toggle.active {
-  border-color: rgba(255, 119, 0, 0.6);
-  color: #ff7700;
-  background: rgba(255, 119, 0, 0.1);
+.view-opt:hover:not(.active) {
+  color: rgba(255, 255, 255, 0.75);
+  background: transparent;
+  border-color: transparent;
 }
 
 .mobile-only { display: none; }
