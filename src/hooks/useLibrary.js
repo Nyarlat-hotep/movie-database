@@ -61,11 +61,22 @@ export function useLibrary() {
     return saveLibrary(updated);
   }
 
+  function addItems(items) {
+    const newMovies = items.filter(i => i._type === 'movie');
+    const newShows  = items.filter(i => i._type === 'show');
+    const updated = {
+      movies: [...library.movies, ...newMovies],
+      shows:  [...library.shows,  ...newShows],
+    };
+    return saveLibrary(updated);
+  }
+
   return {
+    library,
     filtered, search, setSearch,
     typeFilter, setTypeFilter,
     formatFilter, setFormatFilter,
-    addItem, editItem, removeItem,
+    addItem, addItems, editItem, removeItem,
     saving,
   };
 }

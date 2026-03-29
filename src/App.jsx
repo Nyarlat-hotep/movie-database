@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, LogOut, Shuffle } from 'lucide-react';
+import { Plus, LogOut, Shuffle, Camera } from 'lucide-react';
 import { useAuth } from './hooks/useAuth.js';
 import { useLibrary } from './hooks/useLibrary.js';
 import LoginOverlay from './components/Auth/LoginOverlay.jsx';
@@ -10,15 +10,17 @@ import ListView from './components/Library/ListView.jsx';
 import DetailModal from './components/Library/DetailModal.jsx';
 import AddEditModal from './components/Admin/AddEditModal.jsx';
 import ConfirmDelete from './components/Admin/ConfirmDelete.jsx';
+import ScanShelfModal from './components/Admin/ScanShelfModal.jsx';
 import './App.css';
 
 function App() {
   const { user, loading, login, logout } = useAuth();
   const {
+    library,
     filtered, search, setSearch,
     typeFilter, setTypeFilter,
     formatFilter, setFormatFilter,
-    addItem, editItem, removeItem,
+    addItem, addItems, editItem, removeItem,
     saving,
   } = useLibrary();
 
@@ -26,6 +28,7 @@ function App() {
   const [editing, setEditing]     = useState(null);  // item or 'new'
   const [deleting, setDeleting]   = useState(null);  // item pending delete
   const [view, setView]           = useState('grid'); // 'grid' | 'list'
+  const [scanning, setScanning]   = useState(false); // shelf scanner modal
 
   if (loading) return null;
   if (!user) return <LoginOverlay onLogin={login} />;
@@ -63,6 +66,15 @@ function App() {
           : <ListView items={filtered} onSelect={setSelected} />
         }
       </main>
+
+      {/* Floating scan button */}
+      <button
+        onClick={() => setScanning(true)}
+        aria-label="Scan shelf"
+        className="fab-scan"
+      >
+        <Camera size={22} strokeWidth={2} />
+      </button>
 
       {/* Floating random button */}
       <button
@@ -105,6 +117,14 @@ function App() {
         onConfirm={handleDelete}
         onCancel={() => setDeleting(null)}
       />
+
+      {scanning && (
+        <ScanShelfModal
+          library={library}
+          addItems={addItems}
+          onClose={() => setScanning(false)}
+        />
+      )}
 
       {saving && (
         <div style={{
