@@ -102,7 +102,7 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
       const frameData = ctx.getImageData(0, 0, 320, 180).data;
 
       const score = lastDiffDataRef.current ? diffFrames(frameData, lastDiffDataRef.current) : 1;
-      if (score < 0.07) return;
+      if (score < 0.18) return;
 
       lastDiffDataRef.current = new Uint8ClampedArray(frameData); // copy, not reference
 
@@ -187,15 +187,24 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
     setProcessProgress({ done: 0, total: capturedFrames.length, titles: 0 });
 
     const allTitles = new Set();
+    const BATCH_SIZE = 3;
 
-    for (let i = 0; i < capturedFrames.length; i++) {
+    // Group frames into batches of 3 — each batch = 1 API call
+    const batches = [];
+    for (let i = 0; i < capturedFrames.length; i += BATCH_SIZE) {
+      batches.push(capturedFrames.slice(i, i + BATCH_SIZE));
+    }
+
+    setProcessProgress({ done: 0, total: batches.length, titles: 0 });
+
+    for (let i = 0; i < batches.length; i++) {
       if (i > 0) await new Promise(r => setTimeout(r, 6000)); // 10 RPM = 6s between calls
 
       try {
         const res = await fetch('/api/scan-shelf', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ imageBase64: capturedFrames[i] }),
+          body: JSON.stringify({ frames: batches[i] }),
         });
 
         if (res.status === 429) {
@@ -206,10 +215,10 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
         const data = await res.json();
         if (data.titles) data.titles.forEach(t => allTitles.add(t));
       } catch {
-        // skip failed frame, continue
+        // skip failed batch, continue
       }
 
-      setProcessProgress({ done: i + 1, total: capturedFrames.length, titles: allTitles.size });
+      setProcessProgress({ done: i + 1, total: batches.length, titles: allTitles.size });
     }
 
     setProcessing(false);
