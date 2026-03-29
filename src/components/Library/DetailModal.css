@@ -24,20 +24,6 @@
   box-shadow: 0 0 60px rgba(255, 119, 0, 0.12), 0 30px 60px rgba(0, 0, 0, 0.65);
 }
 
-.detail-modal::before,
-.detail-modal::after {
-  content: '';
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border-color: rgba(255, 119, 0, 0.65);
-  border-style: solid;
-  pointer-events: none;
-  z-index: 1;
-}
-.detail-modal::before { top: 12px; left: 12px; border-width: 2px 0 0 2px; border-radius: 2px 0 0 0; }
-.detail-modal::after  { bottom: 12px; right: 12px; border-width: 0 2px 2px 0; border-radius: 0 0 2px 0; }
-
 .detail-poster-col {
   background: #080808;
   border-radius: 16px 0 0 16px;
