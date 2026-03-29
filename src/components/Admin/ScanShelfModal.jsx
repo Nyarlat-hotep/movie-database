@@ -102,7 +102,7 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
       const frameData = ctx.getImageData(0, 0, 320, 180).data;
 
       const score = lastDiffDataRef.current ? diffFrames(frameData, lastDiffDataRef.current) : 1;
-      if (score < 0.18) return;
+      if (score < 0.25) return;
 
       lastDiffDataRef.current = new Uint8ClampedArray(frameData); // copy, not reference
 
@@ -186,14 +186,24 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
     setProcessing(true);
     setProcessProgress({ done: 0, total: capturedFrames.length, titles: 0 });
 
-    const allTitles = new Set();
-    const BATCH_SIZE = 3;
+    // Normalize-aware dedup: key = lowercase title, value = first-seen casing
+    const titleMap = new Map();
+    const addTitles = (incoming) => {
+      incoming.forEach(t => {
+        const key = t.toLowerCase().trim();
+        if (key && !titleMap.has(key)) titleMap.set(key, t.trim());
+      });
+    };
 
-    // Group frames into batches of 3 — each batch = 1 API call
-    const batches = [];
-    for (let i = 0; i < capturedFrames.length; i += BATCH_SIZE) {
-      batches.push(capturedFrames.slice(i, i + BATCH_SIZE));
-    }
+    const BATCH_SIZE = 3;
+    // If ≤15 frames, send them all in one call for best cross-frame deduplication
+    const batches = capturedFrames.length <= 15
+      ? [capturedFrames]
+      : (() => {
+          const b = [];
+          for (let i = 0; i < capturedFrames.length; i += BATCH_SIZE) b.push(capturedFrames.slice(i, i + BATCH_SIZE));
+          return b;
+        })();
 
     setProcessProgress({ done: 0, total: batches.length, titles: 0 });
 
@@ -213,16 +223,16 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
         }
 
         const data = await res.json();
-        if (data.titles) data.titles.forEach(t => allTitles.add(t));
+        if (data.titles) addTitles(data.titles);
       } catch {
         // skip failed batch, continue
       }
 
-      setProcessProgress({ done: i + 1, total: batches.length, titles: allTitles.size });
+      setProcessProgress({ done: i + 1, total: batches.length, titles: titleMap.size });
     }
 
     setProcessing(false);
-    applyResults([...allTitles]);
+    applyResults([...titleMap.values()]);
   }
 
   // ── Shared results logic ──
