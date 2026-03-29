@@ -33,7 +33,7 @@
 @media (max-width: 640px) {
   .fab-scan {
     bottom: 72px;
-    right: 8.5rem;
+    right: 9.25rem;
     width: 52px;
     height: 52px;
   }
@@ -74,7 +74,7 @@
 @media (max-width: 640px) {
   .fab-random {
     bottom: 72px;
-    right: 4.75rem;
+    right: 5.25rem;
     width: 52px;
     height: 52px;
   }
