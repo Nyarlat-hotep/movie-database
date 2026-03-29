@@ -16,7 +16,7 @@ export default async function handler(req, res) {
         contents: [{
           parts: [
             { inline_data: { mime_type: 'image/jpeg', data: imageBase64 } },
-            { text: 'This is a photo of a shelf of physical media (DVDs, Blu-rays, VHS tapes). Your task: output ONLY a plain list of movie and TV show titles, one per line. Rules: (1) No intro sentence, no header, no commentary — start directly with the first title. (2) No bullet points, numbers, dashes, or any prefix characters. (3) Only titles — no actor names, director names, studio logos, or rating labels. (4) Include every title you can read, even if partially visible. (5) Do not group or categorize. Just one title per line, nothing else.' }
+            { text: 'This is a photo of a shelf of physical media (DVDs, Blu-rays, VHS tapes). Your task: output ONLY a plain list of movie and TV show titles, one per line. Rules: (1) No intro sentence, no header, no commentary — start directly with the first title. (2) No bullet points, numbers, dashes, or any prefix characters. (3) Only titles — no actor names, director names, studio logos, or rating labels. (4) Only include titles you can read completely and confidently — skip any title that is obscured, cut off at the edge, partially hidden, or unclear. (5) Do not group or categorize. Just one title per line, nothing else.' }
           ]
         }]
       })
@@ -30,7 +30,16 @@ export default async function handler(req, res) {
   const titles = raw
     .split('\n')
     .map(l => l.replace(/^[\d\.\-\*\)\s]+/, '').trim())
-    .filter(l => l.length > 0 && !l.endsWith(':') && l.length < 100);
+    .filter(l => {
+      if (!l || l.length < 2) return false;       // too short
+      if (l.endsWith(':')) return false;           // intro sentence
+      if (l.length > 100) return false;            // too long to be a title
+      if (/\.{2,}$/.test(l)) return false;         // ends with ellipsis (truncated)
+      if (/\.\.\.$/.test(l)) return false;         // explicit ellipsis
+      if (/[—–]\s*$/.test(l)) return false;        // ends with dash (cut off)
+      if (/^\w{1,3}$/.test(l)) return false;       // single short word fragment
+      return true;
+    });
 
   return res.status(200).json({ titles });
 }
