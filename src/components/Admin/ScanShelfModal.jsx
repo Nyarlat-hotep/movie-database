@@ -107,9 +107,11 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
       lastDiffDataRef.current = new Uint8ClampedArray(frameData); // copy, not reference
 
       const full = fullCanvasRef.current;
-      full.width = video.videoWidth;
-      full.height = video.videoHeight;
-      full.getContext('2d').drawImage(video, 0, 0);
+      const maxW = 800;
+      const scale = Math.min(maxW / video.videoWidth, 1);
+      full.width = Math.round(video.videoWidth * scale);
+      full.height = Math.round(video.videoHeight * scale);
+      full.getContext('2d').drawImage(video, 0, 0, full.width, full.height);
 
       const b64 = full.toDataURL('image/jpeg', 0.85).split(',')[1];
       setCapturedFrames(prev => [...prev, b64]);
@@ -196,14 +198,10 @@ export default function ScanShelfModal({ library, addItems, onClose }) {
     };
 
     const BATCH_SIZE = 3;
-    // If ≤15 frames, send them all in one call for best cross-frame deduplication
-    const batches = capturedFrames.length <= 15
-      ? [capturedFrames]
-      : (() => {
-          const b = [];
-          for (let i = 0; i < capturedFrames.length; i += BATCH_SIZE) b.push(capturedFrames.slice(i, i + BATCH_SIZE));
-          return b;
-        })();
+    const batches = [];
+    for (let i = 0; i < capturedFrames.length; i += BATCH_SIZE) {
+      batches.push(capturedFrames.slice(i, i + BATCH_SIZE));
+    }
 
     setProcessProgress({ done: 0, total: batches.length, titles: 0 });
 
