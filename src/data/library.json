@@ -14606,6 +14606,31 @@
       "id": "1f8cae49-a72a-453a-b05b-9d2c5ad2a6fb",
       "_type": "show",
       "genres": []
+    },
+    {
+      "title": "Rocko's Modern Life",
+      "year": 1993,
+      "synopsis": "Rocko is a wallaby who has emigrated to America from Australia. He lives in O-Town and tries to get through life but, of course, comes across a multitude of dilemmas and misadventures he must get through. Other characters include Rocko's best friend, Heffer, a steer who has been raised by wolves, Filbert, a paranoid hypochondriac turtle, Rocko's faithful (but none-too-bright) dog Spunky, and Ed Bighead who detests Rocko and hates having him for a next door neighbor. On this show, Rocko has such adventures as trying to adapt to a new vacuum cleaner, having Heffer move in temporarily after his parents kick him out, and going to a movie theater.",
+      "poster_path": "/ydi5M4Dq10Doi9PPkkN95T8ao7Z.jpg",
+      "cast": [
+        "Carlos Alazraqui",
+        "Tom Kenny",
+        "Mr. Lawrence",
+        "Charlie Adler"
+      ],
+      "directors": [],
+      "creators": [
+        "Joe Murray"
+      ],
+      "seasons_owned": "",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 657,
+      "id": "f4baa260-4c44-48a2-924f-bb53ecab3983",
+      "_type": "show",
+      "genres": []
     }
   ]
 }
