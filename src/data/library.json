@@ -14388,7 +14388,7 @@
     {
       "id": "f8e684d9-f439-4ed9-b435-a429eb0767cc",
       "title": "Three's Company",
-      "seasons_owned": "2",
+      "seasons_owned": "1, 2",
       "formats": [
         "dvd"
       ],
@@ -14408,7 +14408,9 @@
         "Johnnie Mortimer",
         "Brian Cooke"
       ],
-      "genres": []
+      "genres": [],
+      "_type": "show",
+      "directors": []
     },
     {
       "id": "f42a54ee-c8da-4e5a-90df-529879c1ff50",
