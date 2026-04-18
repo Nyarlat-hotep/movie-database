@@ -14685,6 +14685,34 @@
       "id": "42e2c9dc-db1e-4d82-af1c-18982cbef412",
       "_type": "show",
       "genres": []
+    },
+    {
+      "title": "Angel",
+      "year": 1999,
+      "synopsis": "The vampire Angel, cursed with a soul, moves to Los Angeles and aids people with supernatural-related problems while questing for his own redemption. A spin-off from Buffy the Vampire Slayer.",
+      "poster_path": "/7dRU3wdMJba3PedicxEYSks0oJx.jpg",
+      "cast": [
+        "David Boreanaz",
+        "Amy Acker",
+        "Alexis Denisof",
+        "J. August Richards",
+        "James Marsters",
+        "Andy Hallett"
+      ],
+      "directors": [],
+      "creators": [
+        "Joss Whedon",
+        "David Greenwalt"
+      ],
+      "seasons_owned": "1",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 2426,
+      "id": "2e4d55ed-7f60-41bc-92fc-0005b4e6fad6",
+      "_type": "show",
+      "genres": []
     }
   ]
 }
