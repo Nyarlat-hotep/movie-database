@@ -14388,7 +14388,7 @@
     {
       "id": "f8e684d9-f439-4ed9-b435-a429eb0767cc",
       "title": "Three's Company",
-      "seasons_owned": "1, 2",
+      "seasons_owned": "2",
       "formats": [
         "dvd"
       ],
@@ -14408,9 +14408,7 @@
         "Johnnie Mortimer",
         "Brian Cooke"
       ],
-      "genres": [],
-      "_type": "show",
-      "directors": []
+      "genres": []
     },
     {
       "id": "f42a54ee-c8da-4e5a-90df-529879c1ff50",
@@ -14656,6 +14654,35 @@
       "notes": "",
       "tmdb_id": 4229,
       "id": "7882e21f-08d6-4a7c-8117-8c2613f54ee8",
+      "_type": "show",
+      "genres": []
+    },
+    {
+      "title": "Firefly",
+      "year": 2002,
+      "synopsis": "In the year 2517, the universe is a vast frontier where lawlessness reigns and adventure awaits! Join Captain Malcolm Reynolds and his ragtag crew aboard the spaceship Serenity as they navigate the fringes of society, battling the oppressive Alliance and facing off against ruthless bounty hunters.",
+      "poster_path": "/vZcKsy4sGAvWMVqLluwYuoi11Kj.jpg",
+      "cast": [
+        "Nathan Fillion",
+        "Gina Torres",
+        "Alan Tudyk",
+        "Morena Baccarin",
+        "Adam Baldwin",
+        "Jewel Staite",
+        "Sean Maher",
+        "Summer Glau"
+      ],
+      "directors": [],
+      "creators": [
+        "Joss Whedon"
+      ],
+      "seasons_owned": "All",
+      "formats": [
+        "dvd"
+      ],
+      "notes": "",
+      "tmdb_id": 1437,
+      "id": "42e2c9dc-db1e-4d82-af1c-18982cbef412",
       "_type": "show",
       "genres": []
     }
