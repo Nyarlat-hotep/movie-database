@@ -1,7 +1,7 @@
 .fab-random {
   position: fixed;
   bottom: 2rem;
-  right: 6rem;
+  right: 6.25rem;
   width: 58px;
   height: 58px;
   border-radius: 50%;
@@ -33,7 +33,7 @@
 @media (max-width: 640px) {
   .fab-random {
     bottom: 72px;
-    right: 4.75rem;
+    right: 5.25rem;
     width: 52px;
     height: 52px;
   }

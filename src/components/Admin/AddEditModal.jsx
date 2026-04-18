@@ -89,15 +89,9 @@ export default function AddEditModal({ item, onSave, onClose }) {
         <div className="add-edit-heading">{isEdit ? 'Edit Title' : 'Add Title'}</div>
 
         {!isEdit && (
-          <div className="type-row">
-            <label className="type-radio">
-              <input type="radio" name="type" value="movie" checked={type === 'movie'} onChange={() => setType('movie')} />
-              Movie
-            </label>
-            <label className="type-radio">
-              <input type="radio" name="type" value="show" checked={type === 'show'} onChange={() => setType('show')} />
-              TV Show
-            </label>
+          <div className="type-toggle">
+            <div className={`type-toggle-opt${type === 'movie' ? ' active' : ''}`} onClick={() => setType('movie')}>Movie</div>
+            <div className={`type-toggle-opt${type === 'show'  ? ' active' : ''}`} onClick={() => setType('show')}>TV Show</div>
           </div>
         )}
 
