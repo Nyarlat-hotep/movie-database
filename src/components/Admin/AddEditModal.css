@@ -207,6 +207,7 @@
 
 @media (max-width: 600px) {
   .form-fields { gap: 1.4rem; }
+  .form-row { flex-wrap: wrap; }
 }
 
 .form-actions {
