@@ -22,10 +22,10 @@ export default function Navbar({
       {/* Mobile-only view toggle (next to search) */}
       <div className="view-toggle-wrap mobile-only">
         <div className={`view-pill ${view === 'list' ? 'right' : ''}`} />
-        <button className={`view-opt ${view === 'grid' ? 'active' : ''}`} onClick={() => onViewChange('grid')} aria-label="Grid view">
+        <button className={`view-opt ${view === 'grid' ? 'active' : ''}`} onClick={() => onViewChange('grid')} aria-label="Grid view" data-tooltip="Grid">
           <LayoutGrid size={15} strokeWidth={1.8} />
         </button>
-        <button className={`view-opt ${view === 'list' ? 'active' : ''}`} onClick={() => onViewChange('list')} aria-label="List view">
+        <button className={`view-opt ${view === 'list' ? 'active' : ''}`} onClick={() => onViewChange('list')} aria-label="List view" data-tooltip="List">
           <List size={15} strokeWidth={1.8} />
         </button>
       </div>
@@ -62,10 +62,10 @@ export default function Navbar({
         {/* Desktop-only view toggle (next to filters) */}
         <div className="view-toggle-wrap desktop-only">
           <div className={`view-pill ${view === 'list' ? 'right' : ''}`} />
-          <button className={`view-opt ${view === 'grid' ? 'active' : ''}`} onClick={() => onViewChange('grid')} aria-label="Grid view">
+          <button className={`view-opt ${view === 'grid' ? 'active' : ''}`} onClick={() => onViewChange('grid')} aria-label="Grid view" data-tooltip="Grid">
             <LayoutGrid size={14} strokeWidth={1.8} />
           </button>
-          <button className={`view-opt ${view === 'list' ? 'active' : ''}`} onClick={() => onViewChange('list')} aria-label="List view">
+          <button className={`view-opt ${view === 'list' ? 'active' : ''}`} onClick={() => onViewChange('list')} aria-label="List view" data-tooltip="List">
             <List size={14} strokeWidth={1.8} />
           </button>
         </div>

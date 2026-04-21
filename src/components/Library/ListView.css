@@ -4,6 +4,15 @@
   flex-direction: column;
 }
 
+.list-count {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.28);
+  padding: 0 1rem 0.75rem;
+}
+
 .list-row {
   display: flex;
   align-items: center;
@@ -29,12 +38,41 @@
   border-color: rgba(255, 119, 0, 0.15);
 }
 
+.list-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
 .list-title {
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 0.3px;
   color: var(--text-primary);
+}
+
+.list-format-tag {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.list-format-tag--bluray {
+  background: rgba(80, 160, 255, 0.12);
+  border: 1px solid rgba(80, 160, 255, 0.3);
+  color: rgba(120, 190, 255, 0.85);
+}
+
+.list-format-tag--vhs {
+  background: rgba(255, 119, 0, 0.1);
+  border: 1px solid rgba(255, 119, 0, 0.28);
+  color: rgba(255, 160, 60, 0.85);
 }
 
 .list-year {
