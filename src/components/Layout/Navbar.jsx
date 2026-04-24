@@ -1,4 +1,5 @@
-import { LayoutGrid, List } from 'lucide-react';
+import { useState } from 'react';
+import { LayoutGrid, List, Search, X } from 'lucide-react';
 import './Navbar.css';
 
 export default function Navbar({
@@ -7,27 +8,55 @@ export default function Navbar({
   formatFilter, onFormatFilter,
   view, onViewChange,
 }) {
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  const handleSearchToggle = () => {
+    setSearchOpen(!searchOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-title">Vault</div>
 
-      <input
-        className="navbar-search"
-        type="text"
-        placeholder="Search titles..."
-        value={search}
-        onChange={e => onSearch(e.target.value)}
-      />
+      <div className="navbar-right">
+        {/* Mobile search bar (expands from icon) */}
+        <div className="navbar-search-wrap mobile-only">
+          <input
+            className={`navbar-search ${searchOpen ? 'open' : ''}`}
+            type="text"
+            placeholder="Search titles..."
+            value={search}
+            onChange={e => onSearch(e.target.value)}
+            autoFocus={searchOpen}
+          />
+          <button
+            className={`navbar-search-icon ${searchOpen ? 'open' : ''}`}
+            onClick={handleSearchToggle}
+            aria-label={searchOpen ? 'Close search' : 'Open search'}
+          >
+            {searchOpen ? <X size={18} strokeWidth={2} /> : <Search size={18} strokeWidth={2} />}
+          </button>
+        </div>
 
-      {/* Mobile-only view toggle (next to search) */}
-      <div className="view-toggle-wrap mobile-only">
-        <div className={`view-pill ${view === 'list' ? 'right' : ''}`} />
-        <button className={`view-opt ${view === 'grid' ? 'active' : ''}`} onClick={() => onViewChange('grid')} aria-label="Grid view" data-tooltip="Grid">
-          <LayoutGrid size={15} strokeWidth={1.8} />
-        </button>
-        <button className={`view-opt ${view === 'list' ? 'active' : ''}`} onClick={() => onViewChange('list')} aria-label="List view" data-tooltip="List">
-          <List size={15} strokeWidth={1.8} />
-        </button>
+        {/* Desktop search bar (always visible) */}
+        <input
+          className="navbar-search desktop-only"
+          type="text"
+          placeholder="Search titles..."
+          value={search}
+          onChange={e => onSearch(e.target.value)}
+        />
+
+        {/* Mobile-only view toggle */}
+        <div className="view-toggle-wrap mobile-only">
+          <div className={`view-pill ${view === 'list' ? 'right' : ''}`} />
+          <button className={`view-opt ${view === 'grid' ? 'active' : ''}`} onClick={() => onViewChange('grid')} aria-label="Grid view" data-tooltip="Grid">
+            <LayoutGrid size={15} strokeWidth={1.8} />
+          </button>
+          <button className={`view-opt ${view === 'list' ? 'active' : ''}`} onClick={() => onViewChange('list')} aria-label="List view" data-tooltip="List">
+            <List size={15} strokeWidth={1.8} />
+          </button>
+        </div>
       </div>
 
       <div className="navbar-filters">
