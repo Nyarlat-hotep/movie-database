@@ -5,7 +5,7 @@
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: rgba(255, 119, 0, 0.08);
+  background: rgba(255, 119, 0, 0.1);
   border: 1.5px solid rgba(255, 119, 0, 0.7);
   color: #ff7700;
   display: flex;
@@ -46,7 +46,7 @@
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: rgba(255, 119, 0, 0.15);
+  background: rgba(255, 119, 0, 0.1);
   border: 1.5px solid rgba(255, 119, 0, 0.7);
   color: #ff7700;
   display: flex;
@@ -55,36 +55,19 @@
   z-index: 50;
   cursor: pointer;
   box-shadow:
-    0 0 18px rgba(255, 119, 0, 0.55),
-    0 0 40px rgba(255, 119, 0, 0.25),
+    0 0 12px rgba(255, 119, 0, 0.25),
     0 4px 16px rgba(0, 0, 0, 0.5);
   transition: all 0.25s ease;
-  animation: fab-pulse 3s ease-in-out infinite;
 }
 
 .fab-add:hover {
   background: rgba(255, 119, 0, 0.28);
   border-color: #ff7700;
   box-shadow:
-    0 0 28px rgba(255, 119, 0, 0.75),
-    0 0 60px rgba(255, 119, 0, 0.35),
+    0 0 22px rgba(255, 119, 0, 0.55),
+    0 0 45px rgba(255, 119, 0, 0.25),
     0 6px 24px rgba(0, 0, 0, 0.5);
   transform: scale(1.08);
-}
-
-@keyframes fab-pulse {
-  0%, 100% {
-    box-shadow:
-      0 0 18px rgba(255, 119, 0, 0.55),
-      0 0 40px rgba(255, 119, 0, 0.25),
-      0 4px 16px rgba(0, 0, 0, 0.5);
-  }
-  50% {
-    box-shadow:
-      0 0 26px rgba(255, 119, 0, 0.75),
-      0 0 55px rgba(255, 119, 0, 0.38),
-      0 4px 16px rgba(0, 0, 0, 0.5);
-  }
 }
 
 /* On mobile, move fab above bottom nav */
