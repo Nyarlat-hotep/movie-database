@@ -218,4 +218,7 @@
   .navbar-logout {
     display: none;
   }
+  .view-opt[data-tooltip]::after {
+    display: none;
+  }
 }
