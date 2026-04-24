@@ -3,6 +3,11 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  // Bypass auth in local dev — VAULT_PASSWORD stays Sensitive in Vercel
+  if (process.env.VERCEL_ENV === 'development') {
+    return res.status(200).json({ ok: true });
+  }
+
   const { password } = req.body;
   const correct = process.env.VAULT_PASSWORD;
 

@@ -103,7 +103,7 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   padding: 3px;
-  gap: 0;
+  gap: 4px;
   flex-shrink: 0;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .view-pill.right {
-  transform: translateX(28px);
+  transform: translateX(32px);
 }
 
 .view-opt {
