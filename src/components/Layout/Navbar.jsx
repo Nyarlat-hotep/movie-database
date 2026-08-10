@@ -60,13 +60,17 @@ export default function Navbar({
       </div>
 
       <div className="navbar-filters">
-        {['All', 'Movies', 'Shows'].map(type => (
+        {[
+          { key: 'all',    label: 'All'    },
+          { key: 'movies', label: 'Movies' },
+          { key: 'shows',  label: 'Shows'  },
+        ].map(({ key, label }) => (
           <button
-            key={type}
-            className={`filter-chip ${typeFilter === type ? 'active' : ''}`}
-            onClick={() => onTypeFilter(type)}
+            key={key}
+            className={`filter-chip ${typeFilter === key ? 'active' : ''}`}
+            onClick={() => onTypeFilter(key)}
           >
-            {type}
+            {label}
           </button>
         ))}
 
