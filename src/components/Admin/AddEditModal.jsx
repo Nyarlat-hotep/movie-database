@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronDown } from 'lucide-react';
 import { v4 as uuidv4 } from 'uuid';
 import { artworkUrl } from '../../utils/format.js';
 import {
@@ -104,6 +105,8 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
   const [message, setMessage] = useState(null); // {tone:'empty'|'error', text}
   const [pending, setPending] = useState([]);   // queued entries, add mode only
   const [savingAll, setSavingAll] = useState(false);
+  // Manual entry is the exception, not the default route — keep it folded away.
+  const [manualOpen, setManualOpen] = useState(false);
   const resetTimer = useRef(null);
   const searchInput = useRef(null);
 
@@ -161,6 +164,9 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
           tone: 'empty',
           text: `No results for "${query}" on ${type.sourceName}. Check the spelling, or enter it by hand below.`,
         });
+        // The message points at the manual form, so open it rather than making
+        // them find it.
+        setManualOpen(true);
       } else {
         setResults(data);
       }
@@ -426,8 +432,29 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
           </div>
         )}
 
+        {!isEdit && (
+          <button
+            type="button"
+            className={`manual-toggle ${manualOpen ? 'open' : ''}`}
+            onClick={() => setManualOpen(o => !o)}
+            aria-expanded={manualOpen}
+          >
+            <ChevronDown size={14} strokeWidth={2} />
+            <span>Enter one by hand</span>
+          </button>
+        )}
+
+        <AnimatePresence initial={false}>
+        {(isEdit || manualOpen) && (
+        <motion.div
+          key="manual-form"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: 'auto', opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
+          style={{ overflow: 'hidden' }}
+        >
         <div className="form-fields">
-          {!isEdit && <div className="form-manual-heading">Or enter one by hand</div>}
           {field('Title', 'title')}
 
           <div className="form-row">
@@ -469,6 +496,9 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
             </div>
           ))}
         </div>
+        </motion.div>
+        )}
+        </AnimatePresence>
 
         <div className="form-actions">
           <button className="btn-cancel" onClick={onClose}>Cancel</button>
@@ -476,13 +506,15 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
             <button className="btn-save" onClick={handleSaveEdit}>Save</button>
           ) : (
             <>
-              <button
-                className="btn-add-list"
-                onClick={handleAddToList}
-                disabled={!form.title.trim()}
-              >
-                Add to list
-              </button>
+              {manualOpen && (
+                <button
+                  className="btn-add-list"
+                  onClick={handleAddToList}
+                  disabled={!form.title.trim()}
+                >
+                  Add to list
+                </button>
+              )}
               <button
                 className="btn-save"
                 onClick={handleSaveAll}
