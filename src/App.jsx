@@ -98,6 +98,7 @@ function App() {
       {editing && (
         <AddEditModal
           item={editing === 'new' ? null : editing}
+          activeTypeKey={typeFilter}
           onSave={handleSave}
           onClose={() => setEditing(null)}
         />

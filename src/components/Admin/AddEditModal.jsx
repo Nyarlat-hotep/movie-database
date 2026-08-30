@@ -26,13 +26,21 @@ const LIST_FIELDS = [
   'artists', 'developers', 'publishers', 'platforms',
 ];
 
-export default function AddEditModal({ item, onSave, onClose }) {
+// Default facet for a new record of this type — DVD for film/TV, CD for music,
+// nothing for games (they filter on platforms).
+const defaultFacets = (typeKey) => {
+  const facets = MEDIA_TYPES[typeKey].facets;
+  return facets?.length ? [facets[0]] : [];
+};
+
+export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, onClose }) {
   const isEdit = !!item;
-  const [typeKey, setTypeKey] = useState(() => (item ? mediaTypeOf(item).key : 'movies'));
+  // Editing keeps the item's own type; adding follows the tab you came from.
+  const [typeKey, setTypeKey] = useState(() => (item ? mediaTypeOf(item).key : activeTypeKey));
   const type = MEDIA_TYPES[typeKey];
 
   const [form, setForm] = useState(() => {
-    if (!item) return { ...BLANK_FORM, formats: ['dvd'] };
+    if (!item) return { ...BLANK_FORM, formats: defaultFacets(typeKey) };
     const loaded = { ...BLANK_FORM, ...item };
     for (const field of LIST_FIELDS) loaded[field] = fromList(item[field]);
     return loaded;
@@ -47,8 +55,7 @@ export default function AddEditModal({ item, onSave, onClose }) {
     setTypeKey(nextKey);
     // Facets are type-scoped, so carrying DVD into a music record makes no
     // sense. Reset to the new type's default.
-    const next = MEDIA_TYPES[nextKey];
-    setForm(f => ({ ...f, formats: next.facets?.[0] ? [next.facets[0]] : [] }));
+    setForm(f => ({ ...f, formats: defaultFacets(nextKey) }));
     setResults([]);
     setSelectedKey(null);
   };
