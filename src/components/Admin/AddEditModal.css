@@ -419,7 +419,14 @@
   transition: color 0.18s ease;
 }
 
-.manual-toggle:hover { color: rgba(255, 119, 0, 0.8); background: transparent; }
+.manual-toggle:hover {
+  background: rgba(255, 119, 0, 0.07);
+  color: #ff7700;
+  /* the global button:hover turns every border orange — keep the separator neutral */
+  border-top-color: rgba(255, 255, 255, 0.07);
+  border-radius: 0;
+}
+
 .manual-toggle.open { color: #ff7700; }
 
 .manual-toggle svg { transition: transform 0.25s ease; flex-shrink: 0; }
