@@ -452,3 +452,26 @@
     max-width: 100%;
   }
 }
+
+/* Search outcome when there's nothing to show as result cards. */
+.search-message {
+  margin-bottom: 1.25rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.63rem;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+}
+
+.search-message--empty {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.search-message--error {
+  background: rgba(204, 34, 0, 0.1);
+  border: 1px solid rgba(204, 34, 0, 0.4);
+  color: #ff6b4a;
+}

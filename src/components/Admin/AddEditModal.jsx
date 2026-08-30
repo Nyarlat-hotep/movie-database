@@ -101,6 +101,7 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
   const [selectedKey, setSelectedKey] = useState(null);
   const [searching, setSearching] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [message, setMessage] = useState(null); // {tone:'empty'|'error', text}
   const [pending, setPending] = useState([]);   // queued entries, add mode only
   const [savingAll, setSavingAll] = useState(false);
   const resetTimer = useRef(null);
@@ -126,24 +127,48 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
     setForm(f => ({ ...f, formats: defaultFacets(nextKey) }));
     setResults([]);
     setSelectedKey(null);
+    setMessage(null);
   };
 
   const handleSearch = async () => {
-    if (!searchQuery.trim()) return;
+    const query = searchQuery.trim();
+    if (!query) return;
     clearTimeout(resetTimer.current);
     setSearching(true);
     setResults([]);
+    setMessage(null);
     setProgress(8);
     try {
       const res = await fetch(type.searchEndpoint, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: searchQuery, ...type.searchPayload }),
+        body: JSON.stringify({ query, ...type.searchPayload }),
       });
       const data = await res.json();
-      setResults(Array.isArray(data) ? data : []);
+
+      if (!res.ok) {
+        // A failed request is not the same as a title that isn't in the
+        // database — saying "no results" here would send you hunting for a
+        // typo when the real problem is a missing API key or a dead upstream.
+        setMessage({
+          tone: 'error',
+          text: data?.error
+            ? `${type.sourceName} search failed — ${data.error}`
+            : `${type.sourceName} search failed (${res.status}).`,
+        });
+      } else if (!Array.isArray(data) || data.length === 0) {
+        setMessage({
+          tone: 'empty',
+          text: `No results for "${query}" on ${type.sourceName}. Check the spelling, or enter it by hand below.`,
+        });
+      } else {
+        setResults(data);
+      }
     } catch {
-      // search failed silently — user can still fill manually
+      setMessage({
+        tone: 'error',
+        text: `Couldn't reach ${type.sourceName}. Check your connection, or enter it by hand below.`,
+      });
     } finally {
       setSearching(false);
       setProgress(100);
@@ -328,6 +353,12 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
             <div className="search-progress-label">
               {searching ? `Searching ${type.sourceName}...` : 'Done'}
             </div>
+          </div>
+        )}
+
+        {message && (
+          <div className={`search-message search-message--${message.tone}`} role="status">
+            {message.text}
           </div>
         )}
 
