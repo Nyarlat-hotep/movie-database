@@ -113,7 +113,13 @@
 
 @media (max-width: 640px) {
   .main-content {
-    padding-top: 56px !important;
+    /* 56px bar + the sub-filter row that sits under it */
+    padding-top: 98px !important;
     padding-bottom: 68px;
+  }
+
+  /* No sub-filter row: while searching, or a type with no facets yet */
+  .main-content--no-facets {
+    padding-top: 56px !important;
   }
 }

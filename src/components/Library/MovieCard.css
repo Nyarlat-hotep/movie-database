@@ -5,8 +5,16 @@
   cursor: pointer;
   background: #0d0d0d;
   border: 1px solid rgba(255, 255, 255, 0.14);
-  aspect-ratio: 2 / 3;
+  /* Ratio comes from the media-type registry: 2:3 film/TV, 1:1 music, 3:4 games */
+  aspect-ratio: var(--card-ratio, 2 / 3);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+/* Search results mix media types, so every card is forced to 2:3 and the art is
+   letterboxed rather than cropped — keeps grid rows even. */
+.movie-card--uniform .movie-card-poster {
+  object-fit: contain;
+  background: #0d0d0d;
 }
 
 .movie-card:hover {
@@ -80,20 +88,16 @@
   text-transform: uppercase;
 }
 
-.badge-bluray {
-  background: rgba(34, 211, 238, 0.18);
-  border: 1px solid rgba(34, 211, 238, 0.45);
-  color: #22d3ee;
-}
-
-.badge-vhs {
-  background: rgba(245, 200, 66, 0.18);
-  border: 1px solid rgba(245, 200, 66, 0.45);
-  color: #f5c842;
-}
-
-.badge-show {
+/* Media type (TV / MUSIC / GAME) — always the accent colour */
+.badge-type {
   background: rgba(255, 119, 0, 0.18);
   border: 1px solid rgba(255, 119, 0, 0.4);
   color: #ff7700;
+}
+
+/* Format or platform — colour supplied per facet from the registry */
+.badge-facet {
+  background: color-mix(in srgb, var(--badge-color) 18%, transparent);
+  border: 1px solid color-mix(in srgb, var(--badge-color) 45%, transparent);
+  color: var(--badge-color);
 }

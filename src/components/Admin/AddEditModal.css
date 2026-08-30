@@ -44,7 +44,8 @@
 }
 
 .type-toggle-opt {
-  padding: 0.42rem 1.1rem;
+  /* Four options now, so trim the horizontal padding to keep it on one line */
+  padding: 0.42rem 0.85rem;
   font-family: var(--font-mono);
   font-size: 0.65rem;
   letter-spacing: 2px;

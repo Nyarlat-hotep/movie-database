@@ -1,49 +1,23 @@
-import { LogOut, Film, Tv, LayoutGrid, Disc3, CassetteTape } from 'lucide-react';
+import { LogOut } from 'lucide-react';
+import { MEDIA_TYPE_LIST } from '../../utils/mediaTypes.js';
 import './MobileNav.css';
 
-export default function MobileNav({
-  typeFilter, onTypeFilter,
-  formatFilter, onFormatFilter,
-  onLogout,
-}) {
-  const typeItems = [
-    { key: 'all',    label: 'All',    Icon: LayoutGrid },
-    { key: 'movies', label: 'Movies', Icon: Film       },
-    { key: 'shows',  label: 'Shows',  Icon: Tv         },
-  ];
-
+// Icon-only: four media types plus logout is the most that fits a 60px bar at
+// 320px wide. Sub-filters live in the scrollable row under the top bar.
+export default function MobileNav({ typeFilter, onTypeFilter, isSearching, onLogout }) {
   return (
     <nav className="mobile-nav">
       <div className="mobile-nav-types">
-        {typeItems.map(({ key, label, Icon }) => (
+        {MEDIA_TYPE_LIST.map(({ key, label, icon: Icon }) => (
           <button
             key={key}
-            className={`mobile-nav-item ${typeFilter === key ? 'active' : ''}`}
+            className={`mobile-nav-item ${!isSearching && typeFilter === key ? 'active' : ''}`}
             onClick={() => onTypeFilter(key)}
+            aria-label={label}
           >
-            <Icon size={18} strokeWidth={1.8} />
-            <span>{label}</span>
+            <Icon size={20} strokeWidth={1.8} />
           </button>
         ))}
-      </div>
-
-      <div className="mobile-nav-divider" />
-
-      <div className="mobile-nav-formats">
-        <button
-          className={`mobile-nav-format ${formatFilter === 'bluray' ? 'active-bluray' : ''}`}
-          onClick={() => onFormatFilter(formatFilter === 'bluray' ? null : 'bluray')}
-        >
-          <Disc3 size={16} strokeWidth={1.8} />
-          <span>BR</span>
-        </button>
-        <button
-          className={`mobile-nav-format ${formatFilter === 'vhs' ? 'active-vhs' : ''}`}
-          onClick={() => onFormatFilter(formatFilter === 'vhs' ? null : 'vhs')}
-        >
-          <CassetteTape size={16} strokeWidth={1.8} />
-          <span>VHS</span>
-        </button>
       </div>
 
       <div className="mobile-nav-divider" />

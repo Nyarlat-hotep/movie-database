@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { TMDB_POSTER_URL } from '../../utils/format.js';
+import { artworkUrl } from '../../utils/format.js';
+import { mediaTypeOf, facetLabel, facetColor } from '../../utils/mediaTypes.js';
 import './DetailModal.css';
 
 export default function DetailModal({ item, onClose, onEdit, onDelete }) {
@@ -13,10 +14,17 @@ export default function DetailModal({ item, onClose, onEdit, onDelete }) {
 
   if (!item) return null;
 
-  const posterUrl = TMDB_POSTER_URL(item.poster_path, 'w500');
-  const isShow = item._type === 'show';
-  const credits = isShow ? item.creators : item.directors;
-  const creditsLabel = isShow ? 'Created by' : 'Directed by';
+  const type = mediaTypeOf(item);
+  const posterUrl = artworkUrl(item.poster_path, 'w500');
+  const facets = (item[type.facetField] || []);
+
+  // Per-type secondary line: seasons for shows, label/tracks for music,
+  // systems for games.
+  const detailLine =
+    item._type === 'show'  ? (item.seasons_owned && `Seasons: ${item.seasons_owned}`)
+  : item._type === 'music' ? [item.label, item.track_count && `${item.track_count} tracks`].filter(Boolean).join(' · ')
+  : item._type === 'game'  ? (item.platforms || []).join(', ')
+  : null;
 
   return (
     <AnimatePresence>
@@ -37,7 +45,7 @@ export default function DetailModal({ item, onClose, onEdit, onDelete }) {
         >
           <button className="detail-close" onClick={onClose}>✕</button>
 
-          <div className="detail-poster-col">
+          <div className="detail-poster-col" style={{ '--card-ratio': type.aspectRatio }}>
             {posterUrl
               ? <img className="detail-poster" src={posterUrl} alt={item.title} />
               : <div className="detail-poster-fallback">{item.title}</div>
@@ -49,16 +57,22 @@ export default function DetailModal({ item, onClose, onEdit, onDelete }) {
               <div className="detail-title">{item.title}</div>
               <div className="detail-meta" style={{ marginTop: '0.4rem' }}>
                 {item.year && <span className="detail-year">{item.year}</span>}
-                {item.runtime && <span className="detail-runtime">{item.runtime} min</span>}
               </div>
               <div className="detail-badges" style={{ marginTop: '0.5rem' }}>
-                {isShow && <span className="badge badge-show">TV</span>}
-                {item.formats.includes('bluray') && <span className="badge badge-bluray">BR</span>}
-                {item.formats.includes('vhs') && <span className="badge badge-vhs">VHS</span>}
+                {type.typeBadge && <span className="badge badge-type">{type.typeBadge}</span>}
+                {facets.filter(f => f !== 'dvd').map(facet => (
+                  <span
+                    key={facet}
+                    className="badge badge-facet"
+                    style={{ '--badge-color': facetColor(facet) }}
+                  >
+                    {facetLabel(facet)}
+                  </span>
+                ))}
               </div>
-              {isShow && item.seasons_owned && (
+              {detailLine && (
                 <div className="detail-seasons" style={{ marginTop: '0.5rem' }}>
-                  Seasons: {item.seasons_owned}
+                  {detailLine}
                 </div>
               )}
             </div>
@@ -70,19 +84,14 @@ export default function DetailModal({ item, onClose, onEdit, onDelete }) {
               </div>
             )}
 
-            {credits?.length > 0 && (
-              <div>
-                <div className="detail-section-label">{creditsLabel}</div>
-                <div className="detail-people">{credits.join(', ')}</div>
-              </div>
-            )}
-
-            {item.cast?.length > 0 && (
-              <div>
-                <div className="detail-section-label">Cast</div>
-                <div className="detail-people">{item.cast.join(', ')}</div>
-              </div>
-            )}
+            {type.creditFields.map(({ field, label }) => (
+              item[field]?.length > 0 && (
+                <div key={field}>
+                  <div className="detail-section-label">{label}</div>
+                  <div className="detail-people">{item[field].join(', ')}</div>
+                </div>
+              )
+            ))}
 
             <div className="detail-admin-actions">
               <button className="btn-edit" onClick={() => onEdit(item)}>Edit</button>

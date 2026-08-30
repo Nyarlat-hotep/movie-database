@@ -63,13 +63,23 @@
   flex-shrink: 0;
 }
 
-.list-format-tag--bluray {
-  background: rgba(80, 160, 255, 0.12);
-  border: 1px solid rgba(80, 160, 255, 0.3);
-  color: rgba(120, 190, 255, 0.85);
+/* Colour comes from the registry, so list tags match the card badges */
+.list-format-tag {
+  background: color-mix(in srgb, var(--tag-color) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tag-color) 30%, transparent);
+  color: var(--tag-color);
 }
 
-.list-format-tag--vhs {
+/* Media type (TV / MUSIC / GAME) — leads the row so list view distinguishes
+   types, which it previously did not. */
+.list-type-tag {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  border-radius: 3px;
+  flex-shrink: 0;
   background: rgba(255, 119, 0, 0.1);
   border: 1px solid rgba(255, 119, 0, 0.28);
   color: rgba(255, 160, 60, 0.85);

@@ -15,9 +15,9 @@ import './App.css';
 function App() {
   const { user, loading, login, logout } = useAuth();
   const {
-    filtered, search, setSearch,
+    filtered, search, setSearch, isSearching,
     typeFilter, setTypeFilter,
-    formatFilter, setFormatFilter,
+    facetFilter, setFacetFilter, facetOptions,
     addItem, editItem, removeItem,
     saving,
   } = useLibrary();
@@ -46,9 +46,9 @@ function App() {
   return (
     <>
       <Navbar
-        search={search}         onSearch={setSearch}
+        search={search}         onSearch={setSearch}   isSearching={isSearching}
         typeFilter={typeFilter} onTypeFilter={setTypeFilter}
-        formatFilter={formatFilter} onFormatFilter={setFormatFilter}
+        facetFilter={facetFilter} onFacetFilter={setFacetFilter} facetOptions={facetOptions}
         view={view} onViewChange={setView}
       />
 
@@ -57,9 +57,12 @@ function App() {
         <LogOut size={16} strokeWidth={2} />
       </button>
 
-      <main style={{ paddingTop: '64px', paddingBottom: '0' }} className="main-content">
+      <main
+        style={{ paddingTop: '64px', paddingBottom: '0' }}
+        className={`main-content ${isSearching || facetOptions.length === 0 ? 'main-content--no-facets' : ''}`}
+      >
         {view === 'grid'
-          ? <LibraryGrid items={filtered} onSelect={setSelected} />
+          ? <LibraryGrid items={filtered} onSelect={setSelected} uniform={isSearching} />
           : <ListView items={filtered} onSelect={setSelected} />
         }
       </main>
@@ -129,7 +132,7 @@ function App() {
 
       <MobileNav
         typeFilter={typeFilter} onTypeFilter={setTypeFilter}
-        formatFilter={formatFilter} onFormatFilter={setFormatFilter}
+        isSearching={isSearching}
         onLogout={logout}
       />
     </>

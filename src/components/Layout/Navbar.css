@@ -105,10 +105,22 @@
 .navbar-filters {
   display: flex;
   gap: 0.4rem;
-  flex-shrink: 0;
   align-items: center;
   margin-right: 2.75rem;
+  /* Four type chips plus derived platform chips can outgrow the bar on a
+     narrow desktop window — scroll rather than collide with the search input. */
+  flex-shrink: 1;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+
+.navbar-filters::-webkit-scrollbar { display: none; }
+
+.navbar-filters .filter-chip { flex-shrink: 0; }
+
+/* Search spans all media, so the tab selection reads as inactive while typing */
+.navbar-filters.searching { opacity: 0.4; }
 
 .filter-chip {
   padding: 10px 14px;
@@ -135,18 +147,17 @@
   box-shadow: 0 0 8px rgba(255, 119, 0, 0.15);
 }
 
-.filter-chip.active-bluray {
-  background: rgba(34, 211, 238, 0.1);
-  border-color: #22d3ee;
-  color: #22d3ee;
-  box-shadow: 0 0 8px rgba(34, 211, 238, 0.15);
+/* Facet chips (formats + platforms) take their colour from the registry */
+.filter-chip.active-facet {
+  background: color-mix(in srgb, var(--facet-color) 10%, transparent);
+  border-color: var(--facet-color);
+  color: var(--facet-color);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--facet-color) 15%, transparent);
 }
 
-.filter-chip.active-vhs {
-  background: rgba(245, 200, 66, 0.1);
-  border-color: #f5c842;
-  color: #f5c842;
-  box-shadow: 0 0 8px rgba(245, 200, 66, 0.15);
+.filter-chip--facet:hover {
+  border-color: var(--facet-color);
+  color: var(--facet-color);
 }
 
 .filter-divider {
@@ -270,6 +281,33 @@
 
   .navbar-filters {
     display: none;
+  }
+
+  /* Sub-filters get their own scrollable row under the bar — the bottom nav
+     only has room for the four type icons. The navbar is fixed, so this sits
+     directly beneath it without changing its height. */
+  .navbar-facets-mobile {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    background: rgba(5, 5, 5, 1);
+    border-bottom: 1px solid rgba(255, 119, 0, 0.28);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .navbar-facets-mobile::-webkit-scrollbar { display: none; }
+
+  .navbar-facets-mobile .filter-chip {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
   }
 
   .mobile-only { display: flex; }

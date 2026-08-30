@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import MovieCard from './MovieCard.jsx';
 import './LibraryGrid.css';
 
-export default function LibraryGrid({ items, onSelect }) {
+export default function LibraryGrid({ items, onSelect, uniform = false }) {
   if (items.length === 0) {
     return (
       <div className="library-grid">
@@ -20,7 +20,7 @@ export default function LibraryGrid({ items, onSelect }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: Math.min(i * 0.008, 0.25), duration: 0.25 }}
         >
-          <MovieCard item={item} onClick={onSelect} />
+          <MovieCard item={item} onClick={onSelect} uniform={uniform} />
         </motion.div>
       ))}
     </div>

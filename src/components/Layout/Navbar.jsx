@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { LayoutGrid, List, Search, X } from 'lucide-react';
+import { MEDIA_TYPE_LIST, facetLabel, facetColor } from '../../utils/mediaTypes.js';
 import './Navbar.css';
 
 export default function Navbar({
-  search, onSearch,
+  search, onSearch, isSearching,
   typeFilter, onTypeFilter,
-  formatFilter, onFormatFilter,
+  facetFilter, onFacetFilter, facetOptions,
   view, onViewChange,
 }) {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -13,6 +14,17 @@ export default function Navbar({
   const handleSearchToggle = () => {
     setSearchOpen(!searchOpen);
   };
+
+  const facetChips = facetOptions.map(facet => (
+    <button
+      key={facet}
+      className={`filter-chip filter-chip--facet ${facetFilter === facet ? 'active-facet' : ''}`}
+      style={{ '--facet-color': facetColor(facet) }}
+      onClick={() => onFacetFilter(facetFilter === facet ? null : facet)}
+    >
+      {facetLabel(facet)}
+    </button>
+  ));
 
   return (
     <nav className="navbar">
@@ -24,7 +36,7 @@ export default function Navbar({
           <input
             className={`navbar-search ${searchOpen ? 'open' : ''}`}
             type="text"
-            placeholder="Search titles..."
+            placeholder="Search all media..."
             value={search}
             onChange={e => onSearch(e.target.value)}
             autoFocus={searchOpen}
@@ -42,7 +54,7 @@ export default function Navbar({
         <input
           className="navbar-search desktop-only"
           type="text"
-          placeholder="Search titles..."
+          placeholder="Search all media..."
           value={search}
           onChange={e => onSearch(e.target.value)}
         />
@@ -59,36 +71,21 @@ export default function Navbar({
         </div>
       </div>
 
-      <div className="navbar-filters">
-        {[
-          { key: 'all',    label: 'All'    },
-          { key: 'movies', label: 'Movies' },
-          { key: 'shows',  label: 'Shows'  },
-        ].map(({ key, label }) => (
+      {/* Search spans every media type, so the tab selection goes inactive
+          while a query is present. */}
+      <div className={`navbar-filters ${isSearching ? 'searching' : ''}`}>
+        {MEDIA_TYPE_LIST.map(type => (
           <button
-            key={key}
-            className={`filter-chip ${typeFilter === key ? 'active' : ''}`}
-            onClick={() => onTypeFilter(key)}
+            key={type.key}
+            className={`filter-chip ${!isSearching && typeFilter === type.key ? 'active' : ''}`}
+            onClick={() => onTypeFilter(type.key)}
           >
-            {label}
+            {type.label}
           </button>
         ))}
 
-        <div className="filter-divider" />
-
-        <button
-          className={`filter-chip ${formatFilter === 'bluray' ? 'active-bluray' : ''}`}
-          onClick={() => onFormatFilter(formatFilter === 'bluray' ? null : 'bluray')}
-        >
-          Blu-ray
-        </button>
-
-        <button
-          className={`filter-chip ${formatFilter === 'vhs' ? 'active-vhs' : ''}`}
-          onClick={() => onFormatFilter(formatFilter === 'vhs' ? null : 'vhs')}
-        >
-          VHS
-        </button>
+        {facetChips.length > 0 && <div className="filter-divider" />}
+        {facetChips}
 
         <div className="filter-divider" />
 
@@ -103,6 +100,12 @@ export default function Navbar({
           </button>
         </div>
       </div>
+
+      {/* Mobile sub-filters: scrollable row under the bar, since the bottom nav
+          only has room for the four type icons. */}
+      {!isSearching && facetChips.length > 0 && (
+        <div className="navbar-facets-mobile mobile-only">{facetChips}</div>
+      )}
     </nav>
   );
 }

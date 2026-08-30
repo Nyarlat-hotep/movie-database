@@ -25,22 +25,18 @@
     gap: 0.15rem;
   }
 
+  /* Icon-only: four types plus logout is the most that fits at 320px. Labels
+     live on aria-label. */
   .mobile-nav-item {
     flex: 1;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3px;
-    padding: 0.35rem 0.25rem;
+    padding: 0.6rem 0.25rem;
     background: transparent;
     border: none;
     border-radius: 8px;
     color: rgb(195, 195, 195);
-    font-family: var(--font-mono);
-    font-size: 0.52rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
     transition: all 0.2s ease;
   }
 
@@ -60,42 +56,6 @@
     background: rgba(255, 255, 255, 0.2);
     flex-shrink: 0;
     margin: 0 0.3rem;
-  }
-
-  .mobile-nav-formats {
-    display: flex;
-    gap: 0.2rem;
-    flex-shrink: 0;
-  }
-
-  .mobile-nav-format {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    padding: 0.35rem 0.55rem;
-    background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.28);
-    border-radius: 8px;
-    color: rgb(195, 195, 195);
-    font-family: var(--font-mono);
-    font-size: 0.5rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
-  }
-
-  .mobile-nav-format.active-bluray {
-    color: #22d3ee;
-    border-color: rgba(34, 211, 238, 0.4);
-    background: rgba(34, 211, 238, 0.08);
-  }
-
-  .mobile-nav-format.active-vhs {
-    color: #f5c842;
-    border-color: rgba(245, 200, 66, 0.4);
-    background: rgba(245, 200, 66, 0.08);
   }
 
   .mobile-nav-logout {
