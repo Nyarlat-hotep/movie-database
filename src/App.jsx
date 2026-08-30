@@ -18,7 +18,7 @@ function App() {
     filtered, search, setSearch, isSearching,
     typeFilter, setTypeFilter,
     facetFilter, setFacetFilter, facetOptions,
-    addItem, editItem, removeItem,
+    addItems, editItem, removeItem,
     saving,
   } = useLibrary();
 
@@ -31,17 +31,31 @@ function App() {
   if (loading) return null;
   if (!user) return <LoginOverlay onLogin={login} />;
 
-  // Supabase rejections used to surface only as an unhandled promise rejection
-  // in the console — the modal just sat there with no explanation.
-  const handleSave = async (item) => {
+  // Adding hands over an array (the pending list); editing hands over one item.
+  // Returns the entries that failed so the modal keeps them rather than losing
+  // the work. Rejections surface in the error toast, never as an unhandled
+  // promise rejection in the console.
+  const handleSave = async (payload) => {
+    if (Array.isArray(payload)) {
+      const { added, failures } = await addItems(payload);
+      if (failures.length) {
+        setError(
+          `Saved ${added.length} of ${payload.length}. ${failures[0].error.message}`
+        );
+        return failures.map(f => f.item);
+      }
+      setEditing(null);
+      return [];
+    }
+
     try {
-      if (editing === 'new') await addItem(item);
-      else await editItem(item);
+      await editItem(payload);
       setEditing(null);
       setSelected(null);
     } catch (err) {
       setError(err.message || 'Could not save. Please try again.');
     }
+    return [];
   };
 
   const handleDelete = async (item) => {

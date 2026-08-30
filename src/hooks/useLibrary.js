@@ -98,12 +98,24 @@ export function useLibrary() {
       .map(([value]) => value);
   }, [items, typeFilter]);
 
-  async function addItem(item) {
+  // All adds go through here — the add modal queues entries and saves the
+  // batch, so a single add is just a batch of one.
+  //
+  // Inserted one at a time rather than as one array insert, so a single bad
+  // row can't reject the whole batch. The caller gets back exactly which
+  // entries failed and can keep them for another go.
+  async function addItems(list) {
     setSaving(true);
     try {
-      const { data, error } = await supabase.from('items').insert(toRow(item)).select().single();
-      if (error) throw error;
-      setItems(prev => [...prev, toItem(data)]);
+      const added = [];
+      const failures = [];
+      for (const item of list) {
+        const { data, error } = await supabase.from('items').insert(toRow(item)).select().single();
+        if (error) failures.push({ item, error });
+        else added.push(toItem(data));
+      }
+      if (added.length) setItems(prev => [...prev, ...added]);
+      return { added, failures };
     } finally {
       setSaving(false);
     }
@@ -135,7 +147,7 @@ export function useLibrary() {
     filtered, search, setSearch, isSearching,
     typeFilter, setTypeFilter,
     facetFilter, setFacetFilter, facetOptions,
-    addItem, editItem, removeItem,
+    addItems, editItem, removeItem,
     saving,
   };
 }

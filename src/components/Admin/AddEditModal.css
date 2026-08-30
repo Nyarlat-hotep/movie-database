@@ -287,3 +287,168 @@
 @media (prefers-reduced-motion: reduce) {
   .search-progress-bar { transition: none; }
 }
+
+/* ── Pending list — batch add ───────────────────────────────────────────── */
+.pending-list {
+  margin-bottom: 1.35rem;
+  border: 1px solid rgba(255, 119, 0, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 119, 0, 0.035);
+  overflow: hidden;
+}
+
+.pending-heading {
+  padding: 0.55rem 0.85rem;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 119, 0, 0.75);
+  border-bottom: 1px solid rgba(255, 119, 0, 0.18);
+}
+
+.pending-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.6rem 0.5rem 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pending-row:last-child { border-bottom: none; }
+
+.pending-thumb {
+  width: 30px;
+  height: 42px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 3px;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.pending-badge {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.45rem;
+  letter-spacing: 1px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: rgba(255, 119, 0, 0.16);
+  border: 1px solid rgba(255, 119, 0, 0.35);
+  color: #ff7700;
+}
+
+.pending-title {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pending-year {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.pending-facets {
+  display: flex;
+  gap: 0.25rem;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 45%;
+}
+
+/* Unfilled = not owned. Click to toggle. */
+.pending-chip {
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.3);
+  transition: all 0.15s ease;
+}
+
+.pending-chip:hover { border-color: var(--chip-color); color: var(--chip-color); }
+
+.pending-chip.on {
+  background: color-mix(in srgb, var(--chip-color) 18%, transparent);
+  border-color: color-mix(in srgb, var(--chip-color) 55%, transparent);
+  color: var(--chip-color);
+}
+
+.pending-remove {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  padding: 0.25rem 0.3rem;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.pending-remove:hover { color: #cc2200; }
+
+.form-manual-heading {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 0.2rem;
+}
+
+.btn-add-list {
+  padding: 0.55rem 1.2rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid rgba(255, 119, 0, 0.45);
+  border-radius: 6px;
+  color: #ff7700;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.btn-add-list:hover:not(:disabled) { background: rgba(255, 119, 0, 0.12); }
+.btn-add-list:disabled { opacity: 0.3; cursor: not-allowed; }
+.btn-save:disabled { opacity: 0.35; cursor: not-allowed; }
+
+/* On a phone the single row squeezes the title to a few characters, so drop
+   the chips onto their own line beneath it. */
+@media (max-width: 640px) {
+  .pending-row {
+    display: grid;
+    grid-template-columns: 30px auto 1fr auto;
+    grid-template-areas:
+      "thumb badge  title  remove"
+      "thumb facets facets facets";
+    column-gap: 0.5rem;
+    row-gap: 0.4rem;
+    align-items: center;
+  }
+
+  .pending-thumb  { grid-area: thumb; align-self: start; }
+  .pending-badge  { grid-area: badge; }
+  .pending-title  { grid-area: title; font-size: 0.72rem; }
+  .pending-remove { grid-area: remove; }
+
+  .pending-facets {
+    grid-area: facets;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+}

@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { artworkUrl } from '../../utils/format.js';
 import {
   MEDIA_TYPES, MEDIA_TYPE_LIST, mediaTypeOf,
-  facetLabel, clearForeignFields,
+  facetLabel, facetColor, clearForeignFields,
 } from '../../utils/mediaTypes.js';
 import './AddEditModal.css';
 
@@ -33,6 +33,56 @@ const defaultFacets = (typeKey) => {
   return facets?.length ? [facets[0]] : [];
 };
 
+// `_facets` drives the row's chips and is not a column. toRow() would drop it
+// anyway, but the modal shouldn't emit fields the data layer has to clean up.
+const stripUiFields = (entry) => {
+  const copy = { ...entry };
+  delete copy._facets;
+  return copy;
+};
+
+// A search result straight to a DB-ready entry, skipping the form. `_facets`
+// is the chip set offered for the row and never reaches Supabase — toRow()
+// whitelists real columns.
+function entryFromResult(r, type) {
+  const entry = {
+    id: uuidv4(),
+    _type: type.dbValue,
+    title: r.title || '',
+    year: r.year ? parseInt(r.year) : null,
+    synopsis: r.synopsis || '',
+    poster_path: r.poster_path ?? null,
+    notes: '',
+    genres: [],
+    cast: r.cast || [],
+    directors: r.directors || [],
+    creators: r.creators || [],
+    artists: r.artists || [],
+    developers: r.developers || [],
+    publishers: r.publishers || [],
+    platforms: r.platforms || [],
+    tmdb_id: r.tmdb_id ?? null,
+    mb_id: r.mb_id ?? null,
+    igdb_id: r.igdb_id ?? null,
+    label: r.label ?? null,
+    track_count: r.track_count ?? null,
+    // MusicBrainz reports the pressing's real format; otherwise fall back to
+    // the type's default (DVD for film/TV, CD for music).
+    formats: r.formats?.length ? r.formats : defaultFacets(type.key),
+  };
+
+  // Games have no fixed facet list — the chips are whichever systems IGDB
+  // returned, all owned by default so a single-platform title needs no clicks.
+  if (type.facetField === 'formats') {
+    entry._facets = type.facets;
+  } else {
+    entry.formats = [];
+    entry._facets = r.platforms || [];
+  }
+
+  return clearForeignFields(entry, type.dbValue);
+}
+
 export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, onClose }) {
   const isEdit = !!item;
   // Editing keeps the item's own type; adding follows the tab you came from.
@@ -51,7 +101,10 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
   const [selectedKey, setSelectedKey] = useState(null);
   const [searching, setSearching] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [pending, setPending] = useState([]);   // queued entries, add mode only
+  const [savingAll, setSavingAll] = useState(false);
   const resetTimer = useRef(null);
+  const searchInput = useRef(null);
 
   // A single fetch reports no real progress, and the sources vary widely in
   // speed (TMDB is ~1s, MusicBrainz 4-5s once it retries a 503). So trickle
@@ -102,28 +155,56 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
   // API results carry different id fields per source; use whichever is present.
   const resultKey = (r) => r.tmdb_id ?? r.mb_id ?? r.igdb_id ?? r.title;
 
+  // Editing fills the form. Adding queues the result and clears the search, so
+  // a stack of discs is search-click-search-click with no round trip.
   const handleSelectResult = (r) => {
-    setSelectedKey(resultKey(r));
-    setForm(f => {
-      const next = {
-        ...f,
-        title: r.title,
-        year: r.year || '',
-        synopsis: r.synopsis || '',
-        poster_path: r.poster_path,
-      };
-      // Only copy the fields this source actually returns.
-      for (const field of LIST_FIELDS) {
-        if (r[field]) next[field] = fromList(r[field]);
-      }
-      for (const field of ['tmdb_id', 'mb_id', 'igdb_id', 'label', 'track_count']) {
-        if (r[field] != null) next[field] = r[field];
-      }
-      // MusicBrainz reports the pressing's physical format — pre-check it.
-      if (r.formats?.length) next.formats = r.formats;
-      return next;
-    });
+    if (isEdit) {
+      setSelectedKey(resultKey(r));
+      setForm(f => {
+        const next = {
+          ...f,
+          title: r.title,
+          year: r.year || '',
+          synopsis: r.synopsis || '',
+          poster_path: r.poster_path,
+        };
+        // Only copy the fields this source actually returns.
+        for (const field of LIST_FIELDS) {
+          if (r[field]) next[field] = fromList(r[field]);
+        }
+        for (const field of ['tmdb_id', 'mb_id', 'igdb_id', 'label', 'track_count']) {
+          if (r[field] != null) next[field] = r[field];
+        }
+        // MusicBrainz reports the pressing's physical format — pre-check it.
+        if (r.formats?.length) next.formats = r.formats;
+        return next;
+      });
+      return;
+    }
+
+    setPending(p => [...p, entryFromResult(r, type)]);
+    setResults([]);
+    setSelectedKey(null);
+    setSearchQuery('');
+    searchInput.current?.focus();
   };
+
+  const togglePendingFacet = (id, facet) => {
+    setPending(p => p.map(entry => {
+      if (entry.id !== id) return entry;
+      // formats for film/TV/music, platforms for games
+      const key = mediaTypeOf(entry).facetField;
+      const current = entry[key] || [];
+      return {
+        ...entry,
+        [key]: current.includes(facet)
+          ? current.filter(x => x !== facet)
+          : [...current, facet],
+      };
+    }));
+  };
+
+  const removePending = (id) => setPending(p => p.filter(e => e.id !== id));
 
   const toggleFacet = (facet) => {
     setForm(f => ({
@@ -134,7 +215,7 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
     }));
   };
 
-  const handleSave = () => {
+  const entryFromForm = () => {
     const entry = {
       ...form,
       id: form.id || uuidv4(),
@@ -146,7 +227,38 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
     for (const field of LIST_FIELDS) entry[field] = toList(form[field]);
     // Games filter on `platforms`, not `formats`.
     if (type.facetField !== 'formats') entry.formats = [];
-    onSave(clearForeignFields(entry, type.dbValue));
+    const built = clearForeignFields(entry, type.dbValue);
+    built._facets = type.facetField === 'formats' ? type.facets : built.platforms;
+    return built;
+  };
+
+  // Edit mode saves the single item it opened with.
+  const handleSaveEdit = () => onSave(entryFromForm());
+
+  // Add mode: the form is the manual path for anything the databases don't
+  // have. It queues rather than saving, so there is one way in and one way out.
+  const handleAddToList = () => {
+    if (!form.title.trim()) return;
+    setPending(p => [...p, entryFromForm()]);
+    setForm({ ...BLANK_FORM, formats: defaultFacets(typeKey) });
+    setResults([]);
+    setSearchQuery('');
+  };
+
+  const handleSaveAll = async () => {
+    if (!pending.length) return;
+    setSavingAll(true);
+    try {
+      // Strip the UI-only chip list before the entries leave the modal.
+      const failed = await onSave(pending.map(stripUiFields));
+      // Anything rejected stays in the list so the work isn't lost.
+      if (Array.isArray(failed) && failed.length) {
+        const ids = new Set(failed.map(f => f.id));
+        setPending(p => p.filter(e => ids.has(e.id)));
+      }
+    } finally {
+      setSavingAll(false);
+    }
   };
 
   // Facet checkboxes: static list for film/TV/music. Games have no fixed set —
@@ -190,6 +302,7 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
 
         <div className="search-row">
           <input
+            ref={searchInput}
             placeholder={type.searchPlaceholder}
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
@@ -236,7 +349,54 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
           </div>
         )}
 
+        {pending.length > 0 && (
+          <div className="pending-list">
+            <div className="pending-heading">
+              Pending ({pending.length}) — nothing is saved until you save
+            </div>
+            {pending.map(entry => {
+              const rowType = mediaTypeOf(entry);
+              const owned = entry[rowType.facetField] || [];
+              return (
+                <div className="pending-row" key={entry.id}>
+                  {entry.poster_path
+                    ? <img className="pending-thumb" src={artworkUrl(entry.poster_path, 'w92')} alt="" />
+                    : <div className="pending-thumb pending-thumb--empty" />}
+                  <span className="pending-badge">{rowType.searchBadge}</span>
+                  <span className="pending-title">
+                    {entry.title}
+                    {entry.year ? <span className="pending-year"> {entry.year}</span> : null}
+                  </span>
+                  <span className="pending-facets">
+                    {(entry._facets || []).map(facet => (
+                      <button
+                        key={facet}
+                        type="button"
+                        className={`pending-chip ${owned.includes(facet) ? 'on' : ''}`}
+                        style={{ '--chip-color': facetColor(facet) }}
+                        onClick={() => togglePendingFacet(entry.id, facet)}
+                        aria-pressed={owned.includes(facet)}
+                      >
+                        {facetLabel(facet)}
+                      </button>
+                    ))}
+                  </span>
+                  <button
+                    type="button"
+                    className="pending-remove"
+                    onClick={() => removePending(entry.id)}
+                    aria-label={`Remove ${entry.title}`}
+                  >
+                    ✕
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        )}
+
         <div className="form-fields">
+          {!isEdit && <div className="form-manual-heading">Or enter one by hand</div>}
           {field('Title', 'title')}
 
           <div className="form-row">
@@ -281,7 +441,26 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
 
         <div className="form-actions">
           <button className="btn-cancel" onClick={onClose}>Cancel</button>
-          <button className="btn-save" onClick={handleSave}>Save</button>
+          {isEdit ? (
+            <button className="btn-save" onClick={handleSaveEdit}>Save</button>
+          ) : (
+            <>
+              <button
+                className="btn-add-list"
+                onClick={handleAddToList}
+                disabled={!form.title.trim()}
+              >
+                Add to list
+              </button>
+              <button
+                className="btn-save"
+                onClick={handleSaveAll}
+                disabled={!pending.length || savingAll}
+              >
+                {savingAll ? 'Saving...' : `Save all${pending.length ? ` (${pending.length})` : ''}`}
+              </button>
+            </>
+          )}
         </div>
       </motion.div>
     </div>
