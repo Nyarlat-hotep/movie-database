@@ -123,3 +123,43 @@
     padding-top: 56px !important;
   }
 }
+
+/* Save/delete failure — Supabase errors are worded for developers, so show the
+   raw message rather than swallowing the reason. */
+.save-error {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  max-width: min(560px, calc(100vw - 2rem));
+  padding: 0.6rem 0.75rem 0.6rem 1.1rem;
+  background: rgba(20, 6, 6, 0.97);
+  border: 1px solid rgba(204, 34, 0, 0.55);
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 1.45;
+  color: #ff6b4a;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
+}
+
+.save-error button {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  color: rgba(255, 107, 74, 0.7);
+  cursor: pointer;
+  padding: 0.2rem 0.35rem;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.save-error button:hover { color: #ff6b4a; }
+
+@media (max-width: 640px) {
+  .save-error { bottom: 76px; font-size: 0.65rem; }
+}

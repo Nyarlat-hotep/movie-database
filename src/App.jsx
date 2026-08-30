@@ -26,21 +26,33 @@ function App() {
   const [editing, setEditing]     = useState(null);  // item or 'new'
   const [deleting, setDeleting]   = useState(null);  // item pending delete
   const [view, setView]           = useState('grid'); // 'grid' | 'list'
+  const [error, setError]         = useState(null);  // save/delete failure message
 
   if (loading) return null;
   if (!user) return <LoginOverlay onLogin={login} />;
 
+  // Supabase rejections used to surface only as an unhandled promise rejection
+  // in the console — the modal just sat there with no explanation.
   const handleSave = async (item) => {
-    if (editing === 'new') await addItem(item);
-    else await editItem(item);
-    setEditing(null);
-    setSelected(null);
+    try {
+      if (editing === 'new') await addItem(item);
+      else await editItem(item);
+      setEditing(null);
+      setSelected(null);
+    } catch (err) {
+      setError(err.message || 'Could not save. Please try again.');
+    }
   };
 
   const handleDelete = async (item) => {
-    await removeItem(item);
-    setDeleting(null);
-    setSelected(null);
+    try {
+      await removeItem(item);
+      setDeleting(null);
+      setSelected(null);
+    } catch (err) {
+      setDeleting(null);
+      setError(err.message || 'Could not remove. Please try again.');
+    }
   };
 
   return (
@@ -128,6 +140,13 @@ function App() {
           zIndex: 500,
         }}>
           Saving...
+        </div>
+      )}
+
+      {error && (
+        <div className="save-error" role="alert">
+          <span>{error}</span>
+          <button onClick={() => setError(null)} aria-label="Dismiss">✕</button>
         </div>
       )}
 
