@@ -369,6 +369,12 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
         )}
 
         {results.length > 0 && (
+          <div className="tmdb-results-count">
+            {results.length} result{results.length !== 1 ? 's' : ''} — scroll for more
+          </div>
+        )}
+
+        {results.length > 0 && (
           <div className="tmdb-results">
             {results.map(r => (
               <div

@@ -1,5 +1,9 @@
 const TMDB_BASE = 'https://api.themoviedb.org/3';
 
+// Searching a director or a band should show the whole shelf, not a taster —
+// the picker scrolls horizontally.
+const MAX_RESULTS = 20;
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -21,7 +25,9 @@ export default async function handler(req, res) {
     `${TMDB_BASE}/${endpoint}?query=${encodeURIComponent(query)}&api_key=${apiKey}`
   );
   const searchData = await searchRes.json();
-  const results = (searchData.results || []).slice(0, 5);
+  // TMDB returns 20 per page; take them all. Each costs a credits lookup
+  // below, but those run in parallel.
+  const results = (searchData.results || []).slice(0, MAX_RESULTS);
 
   const enriched = await Promise.all(
     results.map(async (item) => {

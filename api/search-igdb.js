@@ -2,6 +2,9 @@ const TWITCH_TOKEN_URL = 'https://id.twitch.tv/oauth2/token';
 const IGDB_BASE = 'https://api.igdb.com/v4';
 const IGDB_IMAGE = 'https://images.igdb.com/igdb/image/upload';
 
+// One request either way, so a bigger page costs nothing extra.
+const MAX_RESULTS = 20;
+
 // IGDB blocks browser CORS, so all data calls go through here. The image CDN
 // is CORS-open, so cover URLs are safe to hand straight to the client.
 
@@ -49,7 +52,7 @@ async function queryGames(query, token) {
       'Content-Type': 'text/plain',
     },
     // APIcalypse. Escape quotes so a title containing one can't break the query.
-    body: `search "${query.replace(/"/g, '\\"')}"; fields ${FIELDS}; limit 5;`,
+    body: `search "${query.replace(/"/g, '\\"')}"; fields ${FIELDS}; limit ${MAX_RESULTS};`,
   });
 }
 

@@ -96,6 +96,8 @@
   margin-bottom: 1.25rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
+  /* otherwise every card stretches to the tallest label in the row */
+  align-items: flex-start;
 }
 
 .tmdb-result-card {
@@ -517,4 +519,32 @@
     min-height: 44px;      /* comfortable touch target */
     white-space: nowrap;
   }
+}
+
+/* The result strip scrolls horizontally and can hold 20+ cards, so give it a
+   visible scrollbar rather than leaving the overflow to be guessed at. */
+.tmdb-results {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 119, 0, 0.45) transparent;
+  overscroll-behavior-x: contain;
+}
+
+.tmdb-results::-webkit-scrollbar { height: 6px; }
+.tmdb-results::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+.tmdb-results::-webkit-scrollbar-thumb {
+  background: rgba(255, 119, 0, 0.45);
+  border-radius: 3px;
+}
+.tmdb-results::-webkit-scrollbar-thumb:hover { background: rgba(255, 119, 0, 0.7); }
+
+.tmdb-results-count {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.3);
+  margin: -0.85rem 0 0.5rem;
 }

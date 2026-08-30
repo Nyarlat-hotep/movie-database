@@ -2,6 +2,11 @@ const MB_BASE = 'https://musicbrainz.org/ws/2';
 const CAA_BASE = 'https://coverartarchive.org';
 const ITUNES_BASE = 'https://itunes.apple.com/search';
 
+// A band search should return a discography. The MusicBrainz call is already
+// one request for 100 pressings; this only adds cover-art probes, which are
+// unmetered and run in parallel.
+const MAX_RESULTS = 25;
+
 // MusicBrainz requires a descriptive User-Agent with contact info and rejects
 // requests without one.
 const contact = process.env.MUSICBRAINZ_CONTACT || 'vault@example.com';
@@ -38,6 +43,17 @@ function toFacets(media) {
 }
 
 const normalize = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+
+// Lucene reserves these; dismax queries are raw text but a fielded query is not.
+const escapeLucene = (s) => s.replace(/([+\-&|!(){}[\]^"~*?:\\/])/g, '\\$1');
+
+// dismax scores an exact title match at 100 whatever the artist, so a bare band
+// name returns records *called* "Radiohead" rather than Radiohead's albums. A
+// fielded artist query returns the discography instead. Only worth the extra
+// round trip (MusicBrainz allows one request a second) when the query is short
+// enough to plausibly be a band name — "kid a radiohead" is already served well
+// by dismax and shouldn't pay for this.
+const looksLikeArtist = (q) => q.trim().split(/\s+/).length <= 2;
 
 // Cover Art Archive has no entry for plenty of releases — probe before using it.
 async function coverArtUrl(releaseGroupId) {
@@ -80,20 +96,23 @@ function artworkByTitle(itunesResults) {
   return map;
 }
 
-// Used when MusicBrainz is unavailable. iTunes carries no physical-format data,
-// so `formats` comes back empty and the user ticks CD/Vinyl themselves.
+// iTunes carries no physical-format data, so `formats` comes back empty and the
+// user ticks CD/Vinyl themselves.
+const itunesEntry = (r) => ({
+  mb_id: null,
+  title: r.collectionName || '',
+  year: (r.releaseDate || '').slice(0, 4),
+  artists: r.artistName ? [r.artistName] : [],
+  label: null,
+  track_count: r.trackCount || null,
+  formats: [],
+  poster_path: itunesArt(r),
+  synopsis: '',
+});
+
+// Used when MusicBrainz is unavailable.
 function fromItunes(itunesResults) {
-  return itunesResults.slice(0, 5).map(r => ({
-    mb_id: null,
-    title: r.collectionName || '',
-    year: (r.releaseDate || '').slice(0, 4),
-    artists: r.artistName ? [r.artistName] : [],
-    label: null,
-    track_count: r.trackCount || null,
-    formats: [],
-    poster_path: itunesArt(r),
-    synopsis: '',
-  }));
+  return itunesResults.slice(0, MAX_RESULTS).map(itunesEntry);
 }
 
 export default async function handler(req, res) {
@@ -125,10 +144,23 @@ export default async function handler(req, res) {
   }
   const data = await searchRes.json();
 
+  // For a probable band name, put that artist's own releases ahead of whatever
+  // merely shares its title.
+  let releases = data.releases || [];
+  if (looksLikeArtist(query)) {
+    const artistRes = await mbFetch(
+      `${MB_BASE}/release?query=artist:(${encodeURIComponent(escapeLucene(query))})&fmt=json&limit=100`
+    );
+    if (artistRes?.ok) {
+      const artistData = await artistRes.json();
+      releases = [...(artistData.releases || []), ...releases];
+    }
+  }
+
   // Search returns every pressing of an album. Group by release group, keeping
   // MusicBrainz's score order.
   const groups = new Map();
-  for (const rel of data.releases || []) {
+  for (const rel of releases) {
     const rgId = rel['release-group']?.id;
     if (!rgId) continue;
     if (!groups.has(rgId)) groups.set(rgId, []);
@@ -148,7 +180,7 @@ export default async function handler(req, res) {
   }
 
   const picks = [...groups.entries()]
-    .slice(0, 5)
+    .slice(0, MAX_RESULTS)
     .map(([rgId, pressings]) => ({ rgId, rel: representative(pressings) }));
 
   const covers = await Promise.all(picks.map(p => coverArtUrl(p.rgId)));
@@ -169,5 +201,22 @@ export default async function handler(req, res) {
     };
   });
 
-  return res.status(200).json(results);
+  // MusicBrainz's dismax matches release TITLES, so a bare band name returns
+  // records *called* "Radiohead" by unrelated artists rather than Radiohead's
+  // discography. iTunes indexes by artist and is already fetched above at no
+  // extra cost, so fold in whatever it found that MusicBrainz missed.
+  const seen = new Set(results.map(r => normalize(r.title)));
+  const extras = [];
+  for (const r of itunesResults) {
+    const key = normalize(r.collectionName);
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    extras.push(itunesEntry(r));
+  }
+
+  // Deliberately no re-ranking on top of this. Boosting exact artist matches
+  // was tried and made things worse: "the dark side of the moon" promoted a
+  // band of that name over Pink Floyd, and "slipknot" promoted tribute covers.
+  // MusicBrainz's own relevance leads; the iTunes entries follow.
+  return res.status(200).json([...results, ...extras].slice(0, MAX_RESULTS));
 }
