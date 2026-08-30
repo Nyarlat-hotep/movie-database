@@ -249,3 +249,41 @@
 }
 
 .btn-cancel:hover { border-color: rgba(255, 255, 255, 0.25); color: rgba(255, 255, 255, 0.65); background: transparent; }
+
+/* Search progress — trickle bar. A single fetch reports no real progress, so
+   this conveys "working, still alive" rather than a measured percentage. */
+.search-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: -0.85rem 0 1.1rem;
+}
+
+.search-progress-track {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 119, 0, 0.14);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.search-progress-bar {
+  height: 100%;
+  background: #ff7700;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(255, 119, 0, 0.65);
+  transition: width 0.2s ease-out;
+}
+
+.search-progress-label {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 119, 0, 0.6);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-progress-bar { transition: none; }
+}

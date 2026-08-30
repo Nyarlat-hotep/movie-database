@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { v4 as uuidv4 } from 'uuid';
 import { artworkUrl } from '../../utils/format.js';
@@ -50,6 +50,21 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
   const [results, setResults] = useState([]);
   const [selectedKey, setSelectedKey] = useState(null);
   const [searching, setSearching] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const resetTimer = useRef(null);
+
+  // A single fetch reports no real progress, and the sources vary widely in
+  // speed (TMDB is ~1s, MusicBrainz 4-5s once it retries a 503). So trickle
+  // toward 90% on a decaying curve and let completion snap it to 100.
+  useEffect(() => {
+    if (!searching) return;
+    const id = setInterval(() => {
+      setProgress(p => (p >= 90 ? p : p + Math.max(0.6, (90 - p) * 0.06)));
+    }, 110);
+    return () => clearInterval(id);
+  }, [searching]);
+
+  useEffect(() => () => clearTimeout(resetTimer.current), []);
 
   const handleTypeChange = (nextKey) => {
     setTypeKey(nextKey);
@@ -62,8 +77,10 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return;
+    clearTimeout(resetTimer.current);
     setSearching(true);
     setResults([]);
+    setProgress(8);
     try {
       const res = await fetch(type.searchEndpoint, {
         method: 'POST',
@@ -76,6 +93,9 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
       // search failed silently — user can still fill manually
     } finally {
       setSearching(false);
+      setProgress(100);
+      // let the fill animation land before the bar clears
+      resetTimer.current = setTimeout(() => setProgress(0), 450);
     }
   };
 
@@ -179,6 +199,24 @@ export default function AddEditModal({ item, activeTypeKey = 'movies', onSave, o
             {searching ? '...' : 'Search'}
           </button>
         </div>
+
+        {progress > 0 && (
+          <div className="search-progress">
+            <div
+              className="search-progress-track"
+              role="progressbar"
+              aria-label={`Searching ${type.sourceName}`}
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-valuenow={Math.round(progress)}
+            >
+              <div className="search-progress-bar" style={{ width: `${progress}%` }} />
+            </div>
+            <div className="search-progress-label">
+              {searching ? `Searching ${type.sourceName}...` : 'Done'}
+            </div>
+          </div>
+        )}
 
         {results.length > 0 && (
           <div className="tmdb-results">

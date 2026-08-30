@@ -19,6 +19,7 @@ export const MEDIA_TYPES = {
     ],
     searchEndpoint: '/api/search-tmdb',
     searchPayload: { type: 'movie' },
+    sourceName: 'TMDB',
     searchPlaceholder: 'Search TMDB to auto-fill...',
   },
 
@@ -38,6 +39,7 @@ export const MEDIA_TYPES = {
     ],
     searchEndpoint: '/api/search-tmdb',
     searchPayload: { type: 'tv' },
+    sourceName: 'TMDB',
     searchPlaceholder: 'Search TMDB to auto-fill...',
   },
 
@@ -56,6 +58,7 @@ export const MEDIA_TYPES = {
     ],
     searchEndpoint: '/api/search-music',
     searchPayload: {},
+    sourceName: 'MusicBrainz',
     searchPlaceholder: 'Search MusicBrainz to auto-fill...',
   },
 
@@ -75,6 +78,7 @@ export const MEDIA_TYPES = {
     ],
     searchEndpoint: '/api/search-igdb',
     searchPayload: {},
+    sourceName: 'IGDB',
     searchPlaceholder: 'Search IGDB to auto-fill...',
   },
 };
