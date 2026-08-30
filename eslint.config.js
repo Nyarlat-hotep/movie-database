@@ -27,8 +27,9 @@ export default defineConfig([
     },
   },
   {
-    // Serverless functions run on Node, not in the browser
-    files: ['api/**/*.js'],
+    // Serverless functions, build config and one-off scripts run on Node,
+    // not in the browser
+    files: ['api/**/*.js', 'scripts/**/*.js', '*.config.js'],
     languageOptions: { globals: globals.node },
   },
 ])
